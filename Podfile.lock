@@ -1,0 +1,20 @@
+PODS:
+  - SwiftyJSON (4.3.0)
+  - UICircularProgressRing (6.1.0)
+
+DEPENDENCIES:
+  - SwiftyJSON (~> 4.0)
+  - UICircularProgressRing
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - SwiftyJSON
+    - UICircularProgressRing
+
+SPEC CHECKSUMS:
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+  UICircularProgressRing: b3eba859a515e4d9d38503eec913f09c28450785
+
+PODFILE CHECKSUM: ceba15b4424a00d920e90da577a94cb7769748a6
+
+COCOAPODS: 1.5.0
