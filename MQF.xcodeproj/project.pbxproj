@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11DB3EB4EA850C5B35141609 /* Pods_MQF.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1B39A4301C782F19EECB372 /* Pods_MQF.framework */; };
+		8320217822A46B89003BBB8C /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320217722A46B89003BBB8C /* ResultsTableViewController.swift */; };
+		8320217A22A47248003BBB8C /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320217922A47248003BBB8C /* SummaryTableViewCell.swift */; };
+		8320217C22A47253003BBB8C /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320217B22A47253003BBB8C /* QuestionTableViewCell.swift */; };
+		8320217F22A4C469003BBB8C /* available.json in Resources */ = {isa = PBXBuildFile; fileRef = 8320217E22A4C469003BBB8C /* available.json */; };
+		8320218122A4C77C003BBB8C /* c17-Pilot-AD.json in Resources */ = {isa = PBXBuildFile; fileRef = 8320218022A4C77C003BBB8C /* c17-Pilot-AD.json */; };
+		838838D822A39303000896C6 /* pentagon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 838838D722A39303000896C6 /* pentagon.jpg */; };
+		838838DA22A3993E000896C6 /* BG.png in Resources */ = {isa = PBXBuildFile; fileRef = 838838D922A3993E000896C6 /* BG.png */; };
 		83A9C70A2299BBEB00040119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C7092299BBEB00040119 /* AppDelegate.swift */; };
 		83A9C70C2299BBEB00040119 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C70B2299BBEB00040119 /* FirstViewController.swift */; };
 		83A9C70E2299BBEB00040119 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C70D2299BBEB00040119 /* SecondViewController.swift */; };
@@ -15,6 +23,22 @@
 		83A9C7162299BBEC00040119 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A9C7142299BBEC00040119 /* LaunchScreen.storyboard */; };
 		83A9C7212299BBEC00040119 /* MQFTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C7202299BBEC00040119 /* MQFTests.swift */; };
 		83A9C72C2299BBEC00040119 /* MQFUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C72B2299BBEC00040119 /* MQFUITests.swift */; };
+		83A9C7412299BE8B00040119 /* Array + Shuffled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C73A2299BE8B00040119 /* Array + Shuffled.swift */; };
+		83A9C7422299BE8B00040119 /* QKQuestionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C73B2299BE8B00040119 /* QKQuestionType.swift */; };
+		83A9C7432299BE8B00040119 /* QKSessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C73C2299BE8B00040119 /* QKSessionDelegate.swift */; };
+		83A9C7442299BE8B00040119 /* QKQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C73D2299BE8B00040119 /* QKQuestion.swift */; };
+		83A9C7452299BE8B00040119 /* QKQuiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C73E2299BE8B00040119 /* QKQuiz.swift */; };
+		83A9C7462299BE8B00040119 /* QKError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C73F2299BE8B00040119 /* QKError.swift */; };
+		83A9C7472299BE8B00040119 /* QKSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C7402299BE8B00040119 /* QKSession.swift */; };
+		83A9C7492299BF9400040119 /* example-quiz.json in Resources */ = {isa = PBXBuildFile; fileRef = 83A9C7482299BF9400040119 /* example-quiz.json */; };
+		83A9C74B2299C6AD00040119 /* c17-Pilot.json in Resources */ = {isa = PBXBuildFile; fileRef = 83A9C74A2299C6AD00040119 /* c17-Pilot.json */; };
+		83A9C74E229CA29800040119 /* QuestionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C74D229CA29800040119 /* QuestionCollectionViewController.swift */; };
+		83A9C750229CA6F700040119 /* QuestionheaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C74F229CA6F700040119 /* QuestionheaderCollectionReusableView.swift */; };
+		83A9C752229CAB3C00040119 /* QuestionAnswerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C751229CAB3C00040119 /* QuestionAnswerCollectionViewCell.swift */; };
+		83A9C754229DF0F600040119 /* QuestionFooterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C753229DF0F600040119 /* QuestionFooterCollectionReusableView.swift */; };
+		83A9C756229E297B00040119 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C755229E297B00040119 /* MenuViewController.swift */; };
+		A36D6D9319A1AEEC1FF36325 /* Pods_MQFTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC8B462921AA5CF346E5AE0 /* Pods_MQFTests.framework */; };
+		F86F0800ECAB936034974728 /* Pods_MQFUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14D23F84BA2E52DDC092092 /* Pods_MQFUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +59,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A332569BE513B41B434701C /* Pods-MQFUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MQFUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MQFUITests/Pods-MQFUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8320217722A46B89003BBB8C /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
+		8320217922A47248003BBB8C /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
+		8320217B22A47253003BBB8C /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
+		8320217E22A4C469003BBB8C /* available.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = available.json; sourceTree = "<group>"; };
+		8320218022A4C77C003BBB8C /* c17-Pilot-AD.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c17-Pilot-AD.json"; sourceTree = "<group>"; };
+		838838D722A39303000896C6 /* pentagon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pentagon.jpg; sourceTree = "<group>"; };
+		838838D922A3993E000896C6 /* BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BG.png; sourceTree = "<group>"; };
 		83A9C7062299BBEB00040119 /* MQF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MQF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A9C7092299BBEB00040119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A9C70B2299BBEB00040119 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +81,28 @@
 		83A9C7272299BBEC00040119 /* MQFUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MQFUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A9C72B2299BBEC00040119 /* MQFUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQFUITests.swift; sourceTree = "<group>"; };
 		83A9C72D2299BBEC00040119 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83A9C73A2299BE8B00040119 /* Array + Shuffled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array + Shuffled.swift"; sourceTree = "<group>"; };
+		83A9C73B2299BE8B00040119 /* QKQuestionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QKQuestionType.swift; sourceTree = "<group>"; };
+		83A9C73C2299BE8B00040119 /* QKSessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QKSessionDelegate.swift; sourceTree = "<group>"; };
+		83A9C73D2299BE8B00040119 /* QKQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QKQuestion.swift; sourceTree = "<group>"; };
+		83A9C73E2299BE8B00040119 /* QKQuiz.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QKQuiz.swift; sourceTree = "<group>"; };
+		83A9C73F2299BE8B00040119 /* QKError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QKError.swift; sourceTree = "<group>"; };
+		83A9C7402299BE8B00040119 /* QKSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QKSession.swift; sourceTree = "<group>"; };
+		83A9C7482299BF9400040119 /* example-quiz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "example-quiz.json"; sourceTree = "<group>"; };
+		83A9C74A2299C6AD00040119 /* c17-Pilot.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c17-Pilot.json"; sourceTree = "<group>"; };
+		83A9C74D229CA29800040119 /* QuestionCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewController.swift; sourceTree = "<group>"; };
+		83A9C74F229CA6F700040119 /* QuestionheaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionheaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		83A9C751229CAB3C00040119 /* QuestionAnswerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswerCollectionViewCell.swift; sourceTree = "<group>"; };
+		83A9C753229DF0F600040119 /* QuestionFooterCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFooterCollectionReusableView.swift; sourceTree = "<group>"; };
+		83A9C755229E297B00040119 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		9EC8B462921AA5CF346E5AE0 /* Pods_MQFTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MQFTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B14D23F84BA2E52DDC092092 /* Pods_MQFUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MQFUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6908C72ECD116D0AF52BD45 /* Pods-MQFTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MQFTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MQFTests/Pods-MQFTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CE39446D0D72E039F0CE7BAE /* Pods-MQF.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MQF.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MQF/Pods-MQF.debug.xcconfig"; sourceTree = "<group>"; };
+		CF8FD76D811873022D718D9C /* Pods-MQFTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MQFTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MQFTests/Pods-MQFTests.release.xcconfig"; sourceTree = "<group>"; };
+		D1B39A4301C782F19EECB372 /* Pods_MQF.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MQF.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E297EC74A931CDAB4559A21B /* Pods-MQFUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MQFUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MQFUITests/Pods-MQFUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F6D7E421D6B4F8E2CDFDD3D3 /* Pods-MQF.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MQF.release.xcconfig"; path = "Pods/Target Support Files/Pods-MQF/Pods-MQF.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11DB3EB4EA850C5B35141609 /* Pods_MQF.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A36D6D9319A1AEEC1FF36325 /* Pods_MQFTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +126,43 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F86F0800ECAB936034974728 /* Pods_MQFUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B0E5344493235B180451A60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1B39A4301C782F19EECB372 /* Pods_MQF.framework */,
+				9EC8B462921AA5CF346E5AE0 /* Pods_MQFTests.framework */,
+				B14D23F84BA2E52DDC092092 /* Pods_MQFUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8320217622A46B7A003BBB8C /* Results View */ = {
+			isa = PBXGroup;
+			children = (
+				8320217722A46B89003BBB8C /* ResultsTableViewController.swift */,
+				8320217922A47248003BBB8C /* SummaryTableViewCell.swift */,
+				8320217B22A47253003BBB8C /* QuestionTableViewCell.swift */,
+			);
+			path = "Results View";
+			sourceTree = "<group>";
+		};
+		8320217D22A4C3D9003BBB8C /* JSON Data */ = {
+			isa = PBXGroup;
+			children = (
+				8320217E22A4C469003BBB8C /* available.json */,
+				83A9C74A2299C6AD00040119 /* c17-Pilot.json */,
+				8320218022A4C77C003BBB8C /* c17-Pilot-AD.json */,
+			);
+			path = "JSON Data";
+			sourceTree = "<group>";
+		};
 		83A9C6FD2299BBEB00040119 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +170,8 @@
 				83A9C71F2299BBEC00040119 /* MQFTests */,
 				83A9C72A2299BBEC00040119 /* MQFUITests */,
 				83A9C7072299BBEB00040119 /* Products */,
+				D2F05950ADD1B082C79A4A3E /* Pods */,
+				0B0E5344493235B180451A60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,10 +188,15 @@
 		83A9C7082299BBEB00040119 /* MQF */ = {
 			isa = PBXGroup;
 			children = (
+				8320217D22A4C3D9003BBB8C /* JSON Data */,
+				8320217622A46B7A003BBB8C /* Results View */,
+				83A9C74C229CA27C00040119 /* Question View */,
+				83A9C7392299BE7A00040119 /* QuizKit */,
 				83A9C7092299BBEB00040119 /* AppDelegate.swift */,
 				83A9C70B2299BBEB00040119 /* FirstViewController.swift */,
 				83A9C70D2299BBEB00040119 /* SecondViewController.swift */,
 				83A9C70F2299BBEB00040119 /* Main.storyboard */,
+				83A9C755229E297B00040119 /* MenuViewController.swift */,
 				83A9C7122299BBEC00040119 /* Assets.xcassets */,
 				83A9C7142299BBEC00040119 /* LaunchScreen.storyboard */,
 				83A9C7172299BBEC00040119 /* Info.plist */,
@@ -128,6 +222,47 @@
 			path = MQFUITests;
 			sourceTree = "<group>";
 		};
+		83A9C7392299BE7A00040119 /* QuizKit */ = {
+			isa = PBXGroup;
+			children = (
+				83A9C73A2299BE8B00040119 /* Array + Shuffled.swift */,
+				83A9C73F2299BE8B00040119 /* QKError.swift */,
+				83A9C73D2299BE8B00040119 /* QKQuestion.swift */,
+				83A9C73B2299BE8B00040119 /* QKQuestionType.swift */,
+				83A9C73E2299BE8B00040119 /* QKQuiz.swift */,
+				83A9C7402299BE8B00040119 /* QKSession.swift */,
+				83A9C73C2299BE8B00040119 /* QKSessionDelegate.swift */,
+				83A9C7482299BF9400040119 /* example-quiz.json */,
+			);
+			path = QuizKit;
+			sourceTree = "<group>";
+		};
+		83A9C74C229CA27C00040119 /* Question View */ = {
+			isa = PBXGroup;
+			children = (
+				83A9C74D229CA29800040119 /* QuestionCollectionViewController.swift */,
+				83A9C74F229CA6F700040119 /* QuestionheaderCollectionReusableView.swift */,
+				83A9C751229CAB3C00040119 /* QuestionAnswerCollectionViewCell.swift */,
+				83A9C753229DF0F600040119 /* QuestionFooterCollectionReusableView.swift */,
+				838838D922A3993E000896C6 /* BG.png */,
+				838838D722A39303000896C6 /* pentagon.jpg */,
+			);
+			path = "Question View";
+			sourceTree = "<group>";
+		};
+		D2F05950ADD1B082C79A4A3E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE39446D0D72E039F0CE7BAE /* Pods-MQF.debug.xcconfig */,
+				F6D7E421D6B4F8E2CDFDD3D3 /* Pods-MQF.release.xcconfig */,
+				B6908C72ECD116D0AF52BD45 /* Pods-MQFTests.debug.xcconfig */,
+				CF8FD76D811873022D718D9C /* Pods-MQFTests.release.xcconfig */,
+				3A332569BE513B41B434701C /* Pods-MQFUITests.debug.xcconfig */,
+				E297EC74A931CDAB4559A21B /* Pods-MQFUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +270,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83A9C7302299BBEC00040119 /* Build configuration list for PBXNativeTarget "MQF" */;
 			buildPhases = (
+				5DD95146354A19027D539EBC /* [CP] Check Pods Manifest.lock */,
 				83A9C7022299BBEB00040119 /* Sources */,
 				83A9C7032299BBEB00040119 /* Frameworks */,
 				83A9C7042299BBEB00040119 /* Resources */,
+				9C8FD8B205B5F850ACD5FCC3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +289,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83A9C7332299BBEC00040119 /* Build configuration list for PBXNativeTarget "MQFTests" */;
 			buildPhases = (
+				3C6AE5E6356414BBE9E0C8D9 /* [CP] Check Pods Manifest.lock */,
 				83A9C7182299BBEC00040119 /* Sources */,
 				83A9C7192299BBEC00040119 /* Frameworks */,
 				83A9C71A2299BBEC00040119 /* Resources */,
@@ -170,6 +308,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83A9C7362299BBEC00040119 /* Build configuration list for PBXNativeTarget "MQFUITests" */;
 			buildPhases = (
+				35ABF07B9AA396477A138FA3 /* [CP] Check Pods Manifest.lock */,
 				83A9C7232299BBEC00040119 /* Sources */,
 				83A9C7242299BBEC00040119 /* Frameworks */,
 				83A9C7252299BBEC00040119 /* Resources */,
@@ -232,9 +371,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				838838D822A39303000896C6 /* pentagon.jpg in Resources */,
 				83A9C7162299BBEC00040119 /* LaunchScreen.storyboard in Resources */,
 				83A9C7132299BBEC00040119 /* Assets.xcassets in Resources */,
+				83A9C74B2299C6AD00040119 /* c17-Pilot.json in Resources */,
 				83A9C7112299BBEB00040119 /* Main.storyboard in Resources */,
+				8320218122A4C77C003BBB8C /* c17-Pilot-AD.json in Resources */,
+				83A9C7492299BF9400040119 /* example-quiz.json in Resources */,
+				838838DA22A3993E000896C6 /* BG.png in Resources */,
+				8320217F22A4C469003BBB8C /* available.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,13 +399,105 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		35ABF07B9AA396477A138FA3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MQFUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C6AE5E6356414BBE9E0C8D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MQFTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DD95146354A19027D539EBC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MQF-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C8FD8B205B5F850ACD5FCC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MQF/Pods-MQF-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MQF/Pods-MQF-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		83A9C7022299BBEB00040119 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83A9C750229CA6F700040119 /* QuestionheaderCollectionReusableView.swift in Sources */,
+				8320217A22A47248003BBB8C /* SummaryTableViewCell.swift in Sources */,
+				83A9C756229E297B00040119 /* MenuViewController.swift in Sources */,
+				83A9C752229CAB3C00040119 /* QuestionAnswerCollectionViewCell.swift in Sources */,
+				83A9C7412299BE8B00040119 /* Array + Shuffled.swift in Sources */,
+				83A9C7442299BE8B00040119 /* QKQuestion.swift in Sources */,
 				83A9C70E2299BBEB00040119 /* SecondViewController.swift in Sources */,
 				83A9C70A2299BBEB00040119 /* AppDelegate.swift in Sources */,
+				83A9C7452299BE8B00040119 /* QKQuiz.swift in Sources */,
+				8320217822A46B89003BBB8C /* ResultsTableViewController.swift in Sources */,
+				83A9C7432299BE8B00040119 /* QKSessionDelegate.swift in Sources */,
+				83A9C7422299BE8B00040119 /* QKQuestionType.swift in Sources */,
+				83A9C74E229CA29800040119 /* QuestionCollectionViewController.swift in Sources */,
+				83A9C7462299BE8B00040119 /* QKError.swift in Sources */,
+				83A9C7472299BE8B00040119 /* QKSession.swift in Sources */,
+				8320217C22A47253003BBB8C /* QuestionTableViewCell.swift in Sources */,
+				83A9C754229DF0F600040119 /* QuestionFooterCollectionReusableView.swift in Sources */,
 				83A9C70C2299BBEB00040119 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,7 +604,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -422,7 +659,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -434,6 +671,7 @@
 		};
 		83A9C7312299BBEC00040119 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE39446D0D72E039F0CE7BAE /* Pods-MQF.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -443,7 +681,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.opsneverstops.MQF;
+				PRODUCT_BUNDLE_IDENTIFIER = com.opsneverstops.mqf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -452,6 +690,7 @@
 		};
 		83A9C7322299BBEC00040119 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6D7E421D6B4F8E2CDFDD3D3 /* Pods-MQF.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -461,7 +700,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.opsneverstops.MQF;
+				PRODUCT_BUNDLE_IDENTIFIER = com.opsneverstops.mqf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -470,6 +709,7 @@
 		};
 		83A9C7342299BBEC00040119 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6908C72ECD116D0AF52BD45 /* Pods-MQFTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -491,6 +731,7 @@
 		};
 		83A9C7352299BBEC00040119 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF8FD76D811873022D718D9C /* Pods-MQFTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +753,7 @@
 		};
 		83A9C7372299BBEC00040119 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A332569BE513B41B434701C /* Pods-MQFUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +774,7 @@
 		};
 		83A9C7382299BBEC00040119 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E297EC74A931CDAB4559A21B /* Pods-MQFUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

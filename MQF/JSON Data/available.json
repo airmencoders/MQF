@@ -1,0 +1,34 @@
+{
+    "presets":
+    [
+        {
+            "base": "Charleston AFB",
+            "presets":
+            [
+                {
+                    "id":"KCHS-Pilot-Airland",                        "mqfs":
+                    [
+                        {
+                            "amount": 20,
+                            "file": "c17-Pilot.json"
+                        }
+                    ],                        "name": "437/315 AW Pilot Airland",
+                    "isPercentBased": false
+                }
+            ]
+        }
+    ],    "available":
+    [
+        {
+            "qual": "All",
+            "file": "c17-Pilot.json",
+            "rating": "Pilot",
+            "mds": "C-17"
+        },{
+            "qual": "Airdrop",
+            "file": "c17-Pilot-AD.json",
+            "rating": "Pilot",
+            "mds": "C-17"
+        }
+    ]
+}
