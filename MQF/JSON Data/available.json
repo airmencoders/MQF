@@ -6,28 +6,48 @@
             "presets":
             [
                 {
-                    "id":"KCHS-Pilot-Airland",                        "mqfs":
+                    "id":"KCHS-Pilot-Airland",
+                    "mqfs":
                     [
                         {
-                            "amount": 20,
+                            "testNum": 20,
                             "file": "c17-Pilot.json"
                         }
-                    ],                        "name": "437/315 AW Pilot Airland",
-                    "isPercentBased": false
+                    ],
+                    "name": "437/315 AW Pilot Airland",
+                    "positions": ["Pilot"],
+                    "testTotal":20
+                },
+                {
+                    "id":"KCHS-Pilot-Airdrop",
+                    "mqfs":
+                    [
+                        {
+                            "testNum": 20,
+                            "file": "c17-Pilot.json"
+                        },
+                        {
+                            "testNum": 20,
+                            "file": "c17-Pilot-AD.json"
+                        }
+                    ],
+                    "name": "437/315 AW Pilot Airdrop",
+                    "positions": ["Pilot"],
+                    "testTotal":20
                 }
             ]
         }
     ],    "available":
     [
         {
-            "qual": "All",
+            "name":"C-17 Pilot All","qual": "All",
             "file": "c17-Pilot.json",
-            "rating": "Pilot",
+            "positions": ["Pilot"],
             "mds": "C-17"
         },{
-            "qual": "Airdrop",
+            "name":"C-17 Pilot Airdrop","qual": "Airdrop",
             "file": "c17-Pilot-AD.json",
-            "rating": "Pilot",
+            "positions": ["Loadmaster","Pilot"],
             "mds": "C-17"
         }
     ]
