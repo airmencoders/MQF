@@ -6,6 +6,7 @@ target 'MQF' do
   use_frameworks!
 pod 'SwiftyJSON', '~> 4.0'
 pod 'UICircularProgressRing'
+pod 'Eureka'
 
   # Pods for MQF
 

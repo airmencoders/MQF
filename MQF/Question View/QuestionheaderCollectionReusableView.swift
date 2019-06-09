@@ -11,6 +11,7 @@ import UICircularProgressRing
 class QuestionheaderCollectionReusableView: UICollectionReusableView {
     @IBOutlet var questionLabel: UILabel!
 
+    @IBOutlet var scoreStackView: UIStackView!
     @IBOutlet var progressRing: UICircularProgressRing!
     
     @IBOutlet var scoreRing: UICircularProgressRing!
@@ -19,7 +20,11 @@ class QuestionheaderCollectionReusableView: UICollectionReusableView {
             let remaining = session.questionCount - session.responseCount
             let possibleCorrect = session.score + remaining
             let percent = Double(possibleCorrect) / Double(session.questionCount)
+        if(percent > 0.0){
             self.scoreRing.value = CGFloat(percent*100)
+        }else{
+            self.scoreRing.value = CGFloat(0)
+        }
             self.scoreRing.style = .ontop
     }
     

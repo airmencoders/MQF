@@ -15,20 +15,29 @@ class QuestionCollectionViewController: UICollectionViewController {
     var activeQuestion:QKQuestion?
     var quizSession:QKSession = QKSession.default
     var mode:QuizMode = .Study
+    var answerSubmitted = -1
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.loadQuiz()
+        let imageView : UIImageView = {
+            let iv = UIImageView()
+            iv.image = UIImage(named:"pentagon")
+            iv.contentMode = .scaleAspectFill
+            return iv
+        }()
+        self.collectionView?.backgroundView = imageView
+        self.startQuiz(self)
+        
     }
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using [segue destinationViewController].
+     // Pass the selected object to the new view controller.
+     }
+     */
     @IBAction func homeButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -39,18 +48,18 @@ class QuestionCollectionViewController: UICollectionViewController {
     
     
     // MARK: UICollectionViewDataSource
-
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
-
+    
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return self.activeQuestion?.responses.count ?? 0
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! QuestionAnswerCollectionViewCell
         if(self.activeQuestion != nil){
@@ -60,41 +69,42 @@ class QuestionCollectionViewController: UICollectionViewController {
         }else{
             cell.answerLabel.text = "Response not available"
         }
-    
+        
         cell.contentView.layer.cornerRadius = 20.0
         cell.contentView.layer.borderWidth = 1.0
         cell.contentView.layer.borderColor = UIColor.clear.cgColor
         cell.contentView.backgroundColor = UIColor.white
         cell.contentView.layer.masksToBounds = true;
-    
+        
         return cell
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if(kind == UICollectionView.elementKindSectionHeader){
-        let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "questionHeader", for: indexPath) as! QuestionheaderCollectionReusableView
+            let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "questionHeader", for: indexPath) as! QuestionheaderCollectionReusableView
             if(self.mode == .Test){
                 view.scoreRing.alpha = 0.5
+                view.scoreStackView.isHidden = true
                 view.scoreRing.style = .ontop
             }else{
                 view.updateScore(session: quizSession)
             }
-        if((activeQuestion) != nil){
-            view.questionLabel.text = activeQuestion?.question
-            view.updateProgress(session: quizSession, question: activeQuestion!)
+            if((activeQuestion) != nil){
+                view.questionLabel.text = activeQuestion?.question
+                view.updateProgress(session: quizSession, question: activeQuestion!)
+            }else{
+                view.questionLabel.text = "Please select a MQF"
+            }
+            
+            
+            return view
         }else{
-            view.questionLabel.text = "Please select a MQF"
+            let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "questionFooter", for: indexPath) as! QuestionFooterCollectionReusableView
+            return view
         }
-   
-        
-        return view
-    }else{
-    let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "questionFooter", for: indexPath) as! QuestionFooterCollectionReusableView
-    return view
-    }
     }
     
-  
+    
     // MARK: UICollectionViewDelegate
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -102,57 +112,45 @@ class QuestionCollectionViewController: UICollectionViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        if UIDevice.current.userInterfaceIdiom == .pad {
-//             return CGSize(width: 400, height: 55)
-//        }
+        //        if UIDevice.current.userInterfaceIdiom == .pad {
+        //             return CGSize(width: 400, height: 55)
+        //        }
         if(self.collectionView.frame.size.width >= 400){
-            return CGSize(width: 400, height: 55)
+            return CGSize(width: self.collectionView.frame.size.width * 0.60, height: 55)
         }
         return CGSize(width: self.collectionView.frame.size.width - (self.collectionView.frame.size.width * 0.05), height: 55)
     }
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
     
-    }
-    */
-
+    /*
+     // Uncomment this method to specify if the specified item should be highlighted during tracking
+     override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
+     return true
+     }
+     */
     
-    func loadQuiz() {
-        guard let path = Bundle.main.path(forResource: "c17-Pilot", ofType: "json") else {
-            return
-        }
-        
-        quizSession.limit = 10
-        
-        if let quiz = QKQuiz(loadFromJSONFile: path) {
-            quizSession.load(quiz: quiz)
-            self.startQuiz(self)
-        }
-    }
+    /*
+     // Uncomment this method to specify if the specified item should be selected
+     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+     return true
+     }
+     */
+    
+    /*
+     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
+     override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
+     return false
+     }
+     
+     override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
+     return false
+     }
+     
+     override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+     
+     }
+     */
+    
+    
     
     @IBAction func startQuiz(_ sender: Any) {
         do {
@@ -174,27 +172,15 @@ class QuestionCollectionViewController: UICollectionViewController {
         if let question = quizSession.nextQuestion(after: self.activeQuestion) {
             // SHOW THE QUESTION VIEW HERE
             self.activeQuestion = question
+            self.answerSubmitted = -1
             self.collectionView.reloadData()
         }else{
-//            print("end of quiz")
-//            let alert = UIAlertController.init(title: "Complete!", message: "Score: \(quizSession.formattedScore)", preferredStyle: .alert)
-//            let defaultAction = UIAlertAction(title: "Finish", style: .default, handler: { (action) -> Void in
-//                self.dismiss(animated: true, completion: nil)
-//            })
-//            let restart = UIAlertAction(title: "Restart", style: .default, handler: { (action) -> Void in
-//                self.startQuiz(self)
-//            })
-//            
-//            //now we are adding the default action to our alertcontroller
-//            alert.addAction(defaultAction)
-//            alert.addAction(restart)
-//            self.present(alert, animated: true, completion: nil)
-//            
+            
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nc = storyBoard.instantiateViewController(withIdentifier: "ResultsNC") as! UINavigationController
             let vc = nc.topViewController as! ResultsTableViewController
             vc.session = quizSession
-         
+            
             let parent = self.presentingViewController!
             
             parent.dismiss(animated: true, completion: {
@@ -208,25 +194,43 @@ class QuestionCollectionViewController: UICollectionViewController {
     
     func submitAnswer(indexPath:IndexPath){
         let row = indexPath.row
-        if(self.activeQuestion != nil){
-            let selectedAnswer = self.activeQuestion?.responses[row] ?? ""
-            let isCorrect = quizSession.submit(response: selectedAnswer, for: self.activeQuestion!)
-            let cell = collectionView.cellForItem(at: indexPath) as! QuestionAnswerCollectionViewCell
-            if(self.mode == .Test){
-                cell.setColor(answerColor: .Selected)
-            }else{
-            if(isCorrect){
-                print("correct")
-                cell.setColor(answerColor: .Correct)
-                
-            }else{
-                print("Wrong answer: \(selectedAnswer)")
-                cell.setColor(answerColor: .Incorrect)
+        if(self.answerSubmitted != row){
+            if(self.mode == .Test || (self.mode == .Study && self.answerSubmitted == -1)){
+                if(self.activeQuestion != nil){
+                    let selectedAnswer = self.activeQuestion?.responses[row] ?? ""
+                    let isCorrect = quizSession.submit(response: selectedAnswer, for: self.activeQuestion!)
+                    let cell = collectionView.cellForItem(at: indexPath) as! QuestionAnswerCollectionViewCell
+                    if(self.mode == .Test){
+                        cell.setColor(answerColor: .Selected)
+                    }else{
+                        if(isCorrect){
+                            print("correct")
+                            cell.setColor(answerColor: .Correct)
+                            
+                        }else{
+                            print("Wrong answer: \(selectedAnswer)")
+                            cell.setColor(answerColor: .Incorrect)
+                            
+                        }
+                    }
+                    self.answerSubmitted = row
+                    
+                }
+                self.resetAllOtherCells(except: row)
             }
-            }
-            
+        }else{
+            self.nextQuestion()
         }
-        
+    }
+    func resetAllOtherCells(except:Int){
+        var c = 0
+        while c < self.collectionView.numberOfItems(inSection: 0){
+            let cell = self.collectionView.cellForItem(at: IndexPath(item: c, section: 0)) as! QuestionAnswerCollectionViewCell
+            if(c != except){
+            cell.setColor(answerColor: .Normal)
+            }
+            c += 1
+        }
     }
     
     
@@ -248,7 +252,7 @@ class QuestionCollectionViewController: UICollectionViewController {
             return "F"
         case 6:
             return "G"
-        
+            
         default:
             return "?"
         }
@@ -264,10 +268,10 @@ class QuestionCollectionViewController: UICollectionViewController {
 
 
 extension QuestionCollectionViewController: UICollectionViewDelegateFlowLayout {
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        print(indexPath)
-//        return CGSize(width: self.view.frame.size.width, height: 425)
-//    }
+    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    //        print(indexPath)
+    //        return CGSize(width: self.view.frame.size.width, height: 425)
+    //    }
     
-   // func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout)
+    // func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout)
 }

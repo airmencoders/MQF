@@ -21,12 +21,16 @@ public struct QKQuiz {
         return questions
     }
     
+    public init(){
+        questions = [QKQuestion]()
+    }
     public init?(loadFromJSONFile path: String) {
         guard let jsonString = try? String(contentsOfFile: path) else {
             return nil
         }
         
         let json = JSON(parseJSON: jsonString)
+        
         let q = json["questions"]
         questions = q.arrayValue.map { QKQuestion(json: $0.dictionary!) }
     }
@@ -34,6 +38,20 @@ public struct QKQuiz {
     public init?(loadFromJSONString jsonString: String) {
         let json = JSON(parseJSON: jsonString)
         questions = json.arrayValue.map { QKQuestion(json: $0.dictionary!) }
+    }
+    
+    public mutating func appendQuiz(quiz:QKQuiz, limit:Int = 0){
+        if(limit == 0){
+            self.questions.append(contentsOf: quiz.questions)
+        }else{
+            var c = 0
+            let shuffled = quiz.shuffledQuestions
+            while c < limit && c < shuffled.count {
+                let q = shuffled[c]
+                self.questions.append(q)
+                c+=1
+            }
+        }
     }
     
     
