@@ -49,6 +49,8 @@
 		83F607F522AB661900ED22E7 /* MQFBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F607F422AB661900ED22E7 /* MQFBase.swift */; };
 		83F607F822AC62BB00ED22E7 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F607F722AC62BB00ED22E7 /* CenterAlignedCollectionViewFlowLayout.swift */; };
 		83F607FA22AC650C00ED22E7 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F607F922AC650C00ED22E7 /* QuestionViewController.swift */; };
+		83F607FC22AD89C400ED22E7 /* c17-Pilot-IP.json in Resources */ = {isa = PBXBuildFile; fileRef = 83F607FB22AD89C400ED22E7 /* c17-Pilot-IP.json */; };
+		83F607FE22AE01DF00ED22E7 /* c17-KCHS-Pilot.json in Resources */ = {isa = PBXBuildFile; fileRef = 83F607FD22AE01DF00ED22E7 /* c17-KCHS-Pilot.json */; };
 		A36D6D9319A1AEEC1FF36325 /* Pods_MQFTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC8B462921AA5CF346E5AE0 /* Pods_MQFTests.framework */; };
 		F86F0800ECAB936034974728 /* Pods_MQFUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14D23F84BA2E52DDC092092 /* Pods_MQFUITests.framework */; };
 /* End PBXBuildFile section */
@@ -120,6 +122,8 @@
 		83F607F422AB661900ED22E7 /* MQFBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQFBase.swift; sourceTree = "<group>"; };
 		83F607F722AC62BB00ED22E7 /* CenterAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		83F607F922AC650C00ED22E7 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
+		83F607FB22AD89C400ED22E7 /* c17-Pilot-IP.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c17-Pilot-IP.json"; sourceTree = "<group>"; };
+		83F607FD22AE01DF00ED22E7 /* c17-KCHS-Pilot.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c17-KCHS-Pilot.json"; sourceTree = "<group>"; };
 		9EC8B462921AA5CF346E5AE0 /* Pods_MQFTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MQFTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14D23F84BA2E52DDC092092 /* Pods_MQFUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MQFUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6908C72ECD116D0AF52BD45 /* Pods-MQFTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MQFTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MQFTests/Pods-MQFTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 				8320217E22A4C469003BBB8C /* available.json */,
 				83A9C74A2299C6AD00040119 /* c17-Pilot.json */,
 				8320218022A4C77C003BBB8C /* c17-Pilot-AD.json */,
+				83F607FB22AD89C400ED22E7 /* c17-Pilot-IP.json */,
+				83F607FD22AE01DF00ED22E7 /* c17-KCHS-Pilot.json */,
 			);
 			path = "JSON Data";
 			sourceTree = "<group>";
@@ -432,12 +438,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				838838D822A39303000896C6 /* pentagon.jpg in Resources */,
+				83F607FE22AE01DF00ED22E7 /* c17-KCHS-Pilot.json in Resources */,
 				83A9C7162299BBEC00040119 /* LaunchScreen.storyboard in Resources */,
 				83A9C7132299BBEC00040119 /* Assets.xcassets in Resources */,
 				83A9C74B2299C6AD00040119 /* c17-Pilot.json in Resources */,
 				83A9C7112299BBEB00040119 /* Main.storyboard in Resources */,
 				8320218122A4C77C003BBB8C /* c17-Pilot-AD.json in Resources */,
 				83A9C7492299BF9400040119 /* example-quiz.json in Resources */,
+				83F607FC22AD89C400ED22E7 /* c17-Pilot-IP.json in Resources */,
 				838838DA22A3993E000896C6 /* BG.png in Resources */,
 				8320217F22A4C469003BBB8C /* available.json in Resources */,
 			);
