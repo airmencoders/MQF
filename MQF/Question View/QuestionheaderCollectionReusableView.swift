@@ -31,7 +31,8 @@ class QuestionheaderCollectionReusableView: UICollectionReusableView {
     func updateProgress(session:QKSession, question:QKQuestion){
         self.progressRing.style = .ontop
         self.progressRing.maxValue = CGFloat(session.questionCount)
-        let vf = UICircularProgressRingFormatter.init(valueIndicator: " of \(session.questionCount)", rightToLeft: false, showFloatingPoint: false, decimalPlaces: 0)
+        
+        let vf = UICircularProgressRingFormatter.init(valueIndicator: "/\(session.questionCount)", rightToLeft: false, showFloatingPoint: false, decimalPlaces: 0)
         self.progressRing.valueFormatter = vf
         
         self.progressRing.value = CGFloat(session.questionIndex(for: question))

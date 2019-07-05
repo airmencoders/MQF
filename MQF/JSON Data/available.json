@@ -10,13 +10,31 @@
                     "mqfs":
                     [
                         {
-                            "testNum": 20,
+                            "testNum": 30,
                             "file": "c17-Pilot.json"
+                        },{
+                            "testNum": 5,
+                            "file": "c17-KCHS-Pilot.json"
                         }
+                        
                     ],
-                    "name": "437/315 AW Pilot Airland",
+                    "name": "437/315 AW Pilot",
                     "positions": ["Pilot"],
-                    "testTotal":20
+                    "testTotal":35
+                },
+                {
+                    "id":"KCHS-LM",
+                    "mqfs":
+                    [
+                        {
+                            "testNum": 30,
+                            "file": "c17-LM.json"
+                        }
+                        
+                    ],
+                    "name": "437/315 AW Loadmaster",
+                    "positions": ["Loadmaster"],
+                    "testTotal":35
                 },
                 {
                     "id":"KCHS-Pilot-Airdrop",
@@ -27,27 +45,95 @@
                             "file": "c17-Pilot.json"
                         },
                         {
-                            "testNum": 20,
+                            "testNum": 15,
                             "file": "c17-Pilot-AD.json"
+                        },{
+                            "testNum": 5,
+                            "file": "c17-KCHS-Pilot.json"
                         }
                     ],
                     "name": "437/315 AW Pilot Airdrop",
                     "positions": ["Pilot"],
-                    "testTotal":20
+                    "testTotal":40
+                },
+                {
+                    "id":"KCHS-Pilot-Airland-IP",
+                    "mqfs":
+                    [
+                        {
+                            "testNum": 30,
+                            "file": "c17-Pilot.json"
+                        },{
+                            "testNum": 5,
+                            "file": "c17-Pilot-IP.json"
+                        },{
+                            "testNum": 5,
+                            "file": "c17-KCHS-Pilot.json"
+                        }
+                        
+                    ],
+                    "name": "437/315 AW IP",
+                    "positions": ["Pilot"],
+                    "testTotal":35
+                },
+                {
+                    "id":"KCHS-Pilot-Airdrop-IP",
+                    "mqfs":
+                    [
+                        {
+                            "testNum": 20,
+                            "file": "c17-Pilot.json"
+                        },
+                        {
+                            "testNum": 15,
+                            "file": "c17-Pilot-AD.json"
+                        },{
+                            "testNum": 5,
+                            "file": "c17-Pilot-IP.json"
+                        },{
+                            "testNum": 5,
+                            "file": "c17-KCHS-Pilot.json"
+                        }
+                    ],
+                    "name": "437/315 AW IP  & Airdropper",
+                    "positions": ["Pilot"],
+                    "testTotal":45
                 }
             ]
         }
     ],    "available":
     [
         {
-            "name":"C-17 Pilot All","qual": "All",
+            "name":"C-17 Pilot","qual": "All",
             "file": "c17-Pilot.json",
             "positions": ["Pilot"],
             "mds": "C-17"
         },{
             "name":"C-17 Pilot Airdrop","qual": "Airdrop",
             "file": "c17-Pilot-AD.json",
-            "positions": ["Loadmaster","Pilot"],
+            "positions": ["Pilot"],
+            "mds": "C-17"
+        }
+        ,{
+            "name":"C-17 IP","qual": "Instructor",
+            "file": "c17-Pilot-IP.json",
+            "positions": ["Pilot"],
+            "mds": "C-17"
+        },{
+            "name":"KCHS Local Pilot MQF","qual": "All",
+            "file": "c17-KCHS-Pilot.json",
+            "positions": ["Pilot"],
+            "mds": "C-17"
+        }
+        ,{
+            "name":"C-17 Loadmaster","qual": "All",
+            "file": "c17-LM.json",
+            "positions": ["Loadmaster"],
+            "mds": "C-17"
+        },{
+            "name":"C-17 ILM","qual": "All",
+            "file": "c17-ILM.json",
+            "positions": ["Loadmaster"],
             "mds": "C-17"
         }
     ]

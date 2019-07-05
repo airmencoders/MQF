@@ -75,6 +75,19 @@ let previousQuizSize = MQFDefaults().object(forKey: MQFDefaults.quizSize) as? In
                             print("invalid")
                         }
                 }
+            <<< SwitchRow() {
+                $0.title = "Study on a Loop"
+                $0.value = MQFDefaults().object(forKey: MQFDefaults.studyLoop) as? Bool ?? true
+                $0.add(rule: RuleRequired())
+                $0.validationOptions = .validatesOnChange
+                }.onChange { row in
+                    if(row.value != nil){
+                        MQFDefaults().set(row.value, forKey: MQFDefaults.studyLoop)
+                    }else{
+                        row.value = MQFDefaults().object(forKey: MQFDefaults.studyLoop) as? Bool ?? true
+                    }
+                    MQFDefaults().synchronize()
+                }
         
         +++ Section(header: "About", footer: "MQFs was built by aircrew for aircrew. We hope to make one small aspect of your life simpler and easier with this app. Please help us continue to improve this app by sending feedback to christian.brechbuhl@us.af.mil.")
                 
