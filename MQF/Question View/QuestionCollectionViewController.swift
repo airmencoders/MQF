@@ -175,7 +175,12 @@ class QuestionCollectionViewController: UICollectionViewController {
             self.answerSubmitted = -1
             self.collectionView.reloadData()
         }else{
-            
+            let loop = MQFDefaults().object(forKey: MQFDefaults.studyLoop) as? Bool ?? true
+            if( self.mode == .Study && loop){
+               self.activeQuestion = self.quizSession.restartSessionNextQuestion()
+                self.answerSubmitted = -1
+                self.collectionView.reloadData()
+            }else{
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nc = storyBoard.instantiateViewController(withIdentifier: "ResultsNC") as! UINavigationController
             let vc = nc.topViewController as! ResultsTableViewController
@@ -188,7 +193,7 @@ class QuestionCollectionViewController: UICollectionViewController {
                 parent.present(nc, animated: true, completion: nil)
             })
             
-            
+            }
         }
     }
     
@@ -202,21 +207,36 @@ class QuestionCollectionViewController: UICollectionViewController {
                     let cell = collectionView.cellForItem(at: indexPath) as! QuestionAnswerCollectionViewCell
                     if(self.mode == .Test){
                         cell.setColor(answerColor: .Selected)
+                        self.resetAllOtherCells(except: row)
                     }else{
                         if(isCorrect){
                             print("correct")
                             cell.setColor(answerColor: .Correct)
+                            self.resetAllOtherCells(except: row)
                             
                         }else{
                             print("Wrong answer: \(selectedAnswer)")
                             cell.setColor(answerColor: .Incorrect)
+                            var c = 0
+                            let num = collectionView.numberOfItems(inSection: indexPath.section)
+                            while c < num{
+                                let cell = collectionView.cellForItem(at: IndexPath(item: c, section: indexPath.section)) as! QuestionAnswerCollectionViewCell
+                                let option = cell.answerLabel.text ?? ""
+                                if(option == self.activeQuestion?.correctResponse){
+                                    cell.setColor(answerColor: .Correct)
+                                    c = num
+                                }
+                                c += 1
+                            }
                             
                         }
+                        //set others
+                        
                     }
                     self.answerSubmitted = row
                     
                 }
-                self.resetAllOtherCells(except: row)
+                
             }
         }else{
             self.nextQuestion()

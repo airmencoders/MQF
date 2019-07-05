@@ -105,6 +105,17 @@ public class QKSession {
         return questionChunk[index + 1]
     }
     
+    
+    public func restartSessionNextQuestion() -> QKQuestion? {
+        self.responses = [QKQuestion:Bool]()
+        self.responsesDetail = [QKQuestion:String]()
+        guard let question = questionChunk.first else {
+            return nil
+            
+        }
+   return question
+    }
+    
     /// Submit a response to a question
     ///
     /// - Parameters:
