@@ -20,6 +20,7 @@ class MQFDefaults: UserDefaults {
     public static let quizSize = "MQF-QUIZ-SIZE"
     public static let squadronHidden = "MQF-SQUADRON-HIDDEN"
     public static let studyLoop = "MQF-STUDY-LOOP"
+    public static let hasBeenSetup = "MQF-HAS-BEEN-SETUP"
     
     init() {
         super.init(suiteName: "RQ9T47YT3S.group.mqf")!

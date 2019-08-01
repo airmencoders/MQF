@@ -9,5 +9,6 @@
 import UIKit
 
 class QuestionFooterCollectionReusableView: UICollectionReusableView {
-        
+    @IBOutlet var refOutlet: UILabel!
+    
 }

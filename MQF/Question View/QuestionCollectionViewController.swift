@@ -100,6 +100,9 @@ class QuestionCollectionViewController: UICollectionViewController {
             return view
         }else{
             let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "questionFooter", for: indexPath) as! QuestionFooterCollectionReusableView
+            if(activeQuestion != nil){
+                view.refOutlet.text = "Reference: \(activeQuestion!.reference ?? "")"
+            }
             return view
         }
     }

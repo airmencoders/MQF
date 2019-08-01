@@ -34,6 +34,24 @@
                     ],
                     "name": "437/315 AW Loadmaster",
                     "positions": ["Loadmaster"],
+                    "testTotal":30
+                },
+                {
+                    "id":"KCHS-LM-AD",
+                    "mqfs":
+                    [
+                        {
+                            "testNum": 30,
+                            "file": "c17-LM.json"
+                        },
+                        {
+                            "testNum": 5,
+                            "file": "c17-LM-AD.json"
+                        },
+                        
+                    ],
+                    "name": "437/315 AW Loadmaster AD",
+                    "positions": ["Loadmaster"],
                     "testTotal":35
                 },
                 {
@@ -74,7 +92,46 @@
                     ],
                     "name": "437/315 AW IP",
                     "positions": ["Pilot"],
+                    "testTotal":40
+                },
+                {
+                    "id":"KCHS-ILM",
+                    "mqfs":
+                    [
+                        {
+                            "testNum": 30,
+                            "file": "c17-LM.json"
+                        },{
+                            "testNum": 5,
+                            "file": "c17-ILM.json"
+                        }
+                        
+                    ],
+                    "name": "437/315 AW Inst Load",
+                    "positions": ["Loadmaster"],
                     "testTotal":35
+                },
+                
+                {
+                    "id":"KCHS-ILM-AD",
+                    "mqfs":
+                    [
+                        {
+                            "testNum": 30,
+                            "file": "c17-LM.json"
+                        },{
+                            "testNum": 5,
+                            "file": "c17-ILM.json"
+                        },{
+                            "testNum": 5,
+                            "file": "c17-LM-AD.json"
+                        }
+                        
+                        
+                    ],
+                    "name": "437/315 AW Inst Load AD",
+                    "positions": ["Loadmaster"],
+                    "testTotal":40
                 },
                 {
                     "id":"KCHS-Pilot-Airdrop-IP",
@@ -133,6 +190,11 @@
         },{
             "name":"C-17 ILM","qual": "All",
             "file": "c17-ILM.json",
+            "positions": ["Loadmaster"],
+            "mds": "C-17"
+        },{
+            "name":"C-17 LM AD","qual": "All",
+            "file": "c17-LM-AD.json",
             "positions": ["Loadmaster"],
             "mds": "C-17"
         }

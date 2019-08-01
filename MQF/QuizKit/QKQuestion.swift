@@ -20,6 +20,9 @@ public struct QKQuestion: Hashable {
     
     /// Responses for the question
     public let responses: [String]
+    
+    /// Reference for the question
+    public let reference: String?
 
     /// Optionally labels can be set for a question that can be used in addition to images or to replace responses visible to the player
     public let labels: [String]
@@ -45,7 +48,8 @@ public struct QKQuestion: Hashable {
     
     internal init(json: [String:JSON]) {
         question = json["question"]?.string ?? ""
-        category = json["category"]?.string
+        category = json["category"]?.string ?? ""
+        reference = json["ref"]?.string ?? ""
         responses = json["responses"]?.arrayObject as? [String] ?? []
         labels = json["labels"]?.arrayObject as? [String] ?? []
         correctResponseIndex = json["correct_response"]?.int ?? 0

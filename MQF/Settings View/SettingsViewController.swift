@@ -15,8 +15,8 @@ class SettingsViewController: FormViewController {
 
 let previousQuizSize = MQFDefaults().object(forKey: MQFDefaults.quizSize) as? Int ?? 0
             super.viewDidLoad()
-        form +++ SelectableSection<ListCheckRow<Int>>(header:"Number of Questions in Quiz",footer: "Applies to both Study and Test quizes.", selectionType: .singleSelection(enableDeselection: false)){
-            let options = [["title":"All", "number":0],["title":"Random 7", "number":7],["title":"Random 25", "number":25],["title":"Random 50", "number":50],["title":"Random 100", "number":100], ["title":"Random 200", "number":200]]
+        form +++ SelectableSection<ListCheckRow<Int>>(header:"Number of Questions in Quiz",footer: "Applies to Study mode only.", selectionType: .singleSelection(enableDeselection: false)){
+            let options = [["title":"All", "number":0],["title":"Random 10", "number":10],["title":"Random 25", "number":25],["title":"Random 50", "number":50],["title":"Random 100", "number":100], ["title":"Random 200", "number":200]]
             for option in options {
                 $0 <<< ListCheckRow<Int>(option["title"] as? String ?? ""){ listRow in
                     listRow.title = option["title"] as? String ?? ""
@@ -33,7 +33,8 @@ let previousQuizSize = MQFDefaults().object(forKey: MQFDefaults.quizSize) as? In
            
             }
            
-                +++ Section("Settings")
+  
+                +++ Section(header: "Settings", footer: "Don't see your MDS or crew position? Contact us to get your MQFs added, this app is open to all AF communities. ")
         
                 <<< PushRow<String>() {
                     $0.title = "MDS (Airframe)"
@@ -100,7 +101,7 @@ let previousQuizSize = MQFDefaults().object(forKey: MQFDefaults.quizSize) as? In
                     $0.value = self.build()
         }
         
-                +++ Section(header: "Credits:", footer: "We built this app using some awesome images inlcuding in app icons made by Freepik from www.flaticon.com and other frameworks licensed with the MIT License.")
+                +++ Section(header: "Credits:", footer: "We built this app using some awesome images including in app icons made by Freepik from www.flaticon.com and other frameworks licensed with the MIT License.")
      
         
     }

@@ -47,7 +47,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="haA-AZ-tq6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1575" y="-216"/>
+            <point key="canvasLocation" x="-2319" y="-186"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="J4g-W2-fOH">
+            <objects>
+                <navigationController storyboardIdentifier="setupNC" id="BlK-gu-NdX" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="wve-fJ-rMf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.074509803920000006" green="0.21176470589999999" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="UI6-V8-lnX" kind="relationship" relationship="rootViewController" id="McY-Va-3sI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EOt-p4-0rh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1472" y="-96"/>
+        </scene>
+        <!--Welcome-->
+        <scene sceneID="AKZ-JU-kB8">
+            <objects>
+                <viewController storyboardIdentifier="setupView" id="UI6-V8-lnX" customClass="SetUpViewController" customModule="MQF" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mx8-Mo-QPp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="CV2-JO-BY6"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Welcome" id="Q0C-w8-t5E"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5OC-Ej-6vz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-824" y="-96"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="D09-gz-vnA">
@@ -104,6 +140,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pilot" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phK-FL-bzI">
                                                 <rect key="frame" x="0.0" y="134.5" width="198" height="20.5"/>
+                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -228,7 +265,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="SPH-AL-KgK" kind="presentation" id="D8y-on-Lgk"/>
+                                                            <segue destination="SPH-AL-KgK" kind="presentation" identifier="openMQFPicker" id="D8y-on-Lgk"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwc-lh-eP0">
@@ -259,7 +296,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="kWs-6G-grj" kind="presentation" id="FID-60-LCD"/>
+                                                            <segue destination="kWs-6G-grj" kind="presentation" identifier="openSettings" id="FID-60-LCD"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJx-XE-kbr">
@@ -272,7 +309,7 @@
                                                             <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="kWs-6G-grj" kind="presentation" id="gpD-tT-eIZ"/>
+                                                            <segue destination="kWs-6G-grj" kind="presentation" identifier="" id="gpD-tT-eIZ"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -375,7 +412,7 @@
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="19R-ha-LQK">
                             <size key="itemSize" width="391" height="55"/>
                             <size key="headerReferenceSize" width="50" height="412"/>
-                            <size key="footerReferenceSize" width="50" height="117"/>
+                            <size key="footerReferenceSize" width="50" height="157"/>
                             <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
@@ -563,7 +600,7 @@
                             </connections>
                         </collectionReusableView>
                         <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="questionFooter" id="ha9-Bj-BMg" customClass="QuestionFooterCollectionReusableView" customModule="MQF" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="521" width="414" height="117"/>
+                            <rect key="frame" x="0.0" y="521" width="414" height="157"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKs-Ak-kno">
@@ -576,12 +613,24 @@
                                         <action selector="nextButton:" destination="Obm-l8-mTi" eventType="touchUpInside" id="EPi-pg-d0p"/>
                                     </connections>
                                 </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reference:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoO-6S-0mW">
+                                    <rect key="frame" x="15" y="128" width="384" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <constraints>
+                                <constraint firstAttribute="trailingMargin" secondItem="qoO-6S-0mW" secondAttribute="trailing" constant="7" id="CmA-4h-f3N"/>
+                                <constraint firstItem="qoO-6S-0mW" firstAttribute="leading" secondItem="ha9-Bj-BMg" secondAttribute="leadingMargin" constant="7" id="GtF-Dm-I4w"/>
                                 <constraint firstItem="EKs-Ak-kno" firstAttribute="top" secondItem="ha9-Bj-BMg" secondAttribute="topMargin" constant="25" id="MKg-yt-lPZ"/>
                                 <constraint firstAttribute="trailingMargin" secondItem="EKs-Ak-kno" secondAttribute="trailing" constant="7" id="Pm6-EW-Hei"/>
                                 <constraint firstItem="EKs-Ak-kno" firstAttribute="centerX" secondItem="ha9-Bj-BMg" secondAttribute="centerX" id="dGv-Zh-qc9"/>
+                                <constraint firstItem="qoO-6S-0mW" firstAttribute="top" secondItem="EKs-Ak-kno" secondAttribute="bottom" constant="9" id="yJB-iy-lZt"/>
                             </constraints>
+                            <connections>
+                                <outlet property="refOutlet" destination="qoO-6S-0mW" id="mlP-MO-0qf"/>
+                            </connections>
                         </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="Obm-l8-mTi" id="h7g-ka-oqz"/>
@@ -767,7 +816,7 @@
         <!--Navigation Controller-->
         <scene sceneID="lze-q5-XNi">
             <objects>
-                <navigationController id="kWs-6G-grj" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="settingsNC" id="kWs-6G-grj" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="weF-dz-jAF">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

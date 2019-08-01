@@ -24,6 +24,8 @@
 		8380A47622AF117C00D78B38 /* c17-LM.json in Resources */ = {isa = PBXBuildFile; fileRef = 8380A47522AF117C00D78B38 /* c17-LM.json */; };
 		838838D822A39303000896C6 /* pentagon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 838838D722A39303000896C6 /* pentagon.jpg */; };
 		838838DA22A3993E000896C6 /* BG.png in Resources */ = {isa = PBXBuildFile; fileRef = 838838D922A3993E000896C6 /* BG.png */; };
+		838DFFAA22F2280000B71F07 /* c17-LM-AD.json in Resources */ = {isa = PBXBuildFile; fileRef = 838DFFA922F2280000B71F07 /* c17-LM-AD.json */; };
+		838DFFAC22F2A61B00B71F07 /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DFFAB22F2A61B00B71F07 /* SetUpViewController.swift */; };
 		83A9C70A2299BBEB00040119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C7092299BBEB00040119 /* AppDelegate.swift */; };
 		83A9C70C2299BBEB00040119 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C70B2299BBEB00040119 /* FirstViewController.swift */; };
 		83A9C70E2299BBEB00040119 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C70D2299BBEB00040119 /* SecondViewController.swift */; };
@@ -93,6 +95,8 @@
 		8380A47522AF117C00D78B38 /* c17-LM.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c17-LM.json"; sourceTree = "<group>"; };
 		838838D722A39303000896C6 /* pentagon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pentagon.jpg; sourceTree = "<group>"; };
 		838838D922A3993E000896C6 /* BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BG.png; sourceTree = "<group>"; };
+		838DFFA922F2280000B71F07 /* c17-LM-AD.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c17-LM-AD.json"; sourceTree = "<group>"; };
+		838DFFAB22F2A61B00B71F07 /* SetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
 		83A9C7062299BBEB00040119 /* MQF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MQF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A9C7092299BBEB00040119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A9C70B2299BBEB00040119 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 				83F607FD22AE01DF00ED22E7 /* c17-KCHS-Pilot.json */,
 				8380A47522AF117C00D78B38 /* c17-LM.json */,
 				83D9386722CBB1F500648DDA /* c17-ILM.json */,
+				838DFFA922F2280000B71F07 /* c17-LM-AD.json */,
 			);
 			path = "JSON Data";
 			sourceTree = "<group>";
@@ -205,6 +210,7 @@
 			children = (
 				8320218522A71513003BBB8C /* SettingsViewController.swift */,
 				8320219322AB2FF0003BBB8C /* ChooseMQFViewController.swift */,
+				838DFFAB22F2A61B00B71F07 /* SetUpViewController.swift */,
 			);
 			path = "Settings View";
 			sourceTree = "<group>";
@@ -450,6 +456,7 @@
 				83A9C7132299BBEC00040119 /* Assets.xcassets in Resources */,
 				83A9C74B2299C6AD00040119 /* c17-Pilot.json in Resources */,
 				83D9386822CBB1F500648DDA /* c17-ILM.json in Resources */,
+				838DFFAA22F2280000B71F07 /* c17-LM-AD.json in Resources */,
 				83A9C7112299BBEB00040119 /* Main.storyboard in Resources */,
 				8320218122A4C77C003BBB8C /* c17-Pilot-AD.json in Resources */,
 				83A9C7492299BF9400040119 /* example-quiz.json in Resources */,
@@ -605,6 +612,7 @@
 				83F607FA22AC650C00ED22E7 /* QuestionViewController.swift in Sources */,
 				83A9C754229DF0F600040119 /* QuestionFooterCollectionReusableView.swift in Sources */,
 				8320219422AB2FF0003BBB8C /* ChooseMQFViewController.swift in Sources */,
+				838DFFAC22F2A61B00B71F07 /* SetUpViewController.swift in Sources */,
 				83A9C70C2299BBEB00040119 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,6 +14,7 @@ class ChooseMQFViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let previousSelection = MQFDefaults().object(forKey: MQFDefaults.activePresetID) as? String ?? "KCHS-Pilot-Airland"
+        let crewPosition = MQFDefaults().object(forKey: MQFDefaults.crewPosition) as? String ?? "Pilot"
         form +++ Section()
             <<< SegmentedRow<String>("switchRowTag"){
                 $0.title = "Select Mode:"
@@ -23,9 +24,14 @@ class ChooseMQFViewController: FormViewController {
                     MQFDefaults().set(row.value ?? "OGV Presets", forKey: MQFDefaults.pickerMode)
                     MQFDefaults().synchronize()
             }
-            +++ SelectableSection<ListCheckRow<String>>("Choose a set of MQFs", selectionType: .singleSelection(enableDeselection: false)){
+          
+            +++ SelectableSection<ListCheckRow<String>>(header: "Choose a set of MQFs", footer: "All presets available to your crew position, to view others change your crew position in settings.", selectionType: .singleSelection(enableDeselection: false)){
+                
                 for base in DataManager.shared.availableBases{
                 for option in base.presets {
+                    if(option.crewPositions.contains(crewPosition) || option.crewPositions.contains("All")){
+                        //Only show MQFs fro crew position
+                    
                     $0 <<< ListCheckRow<String>(option.name){ listRow in
                         listRow.title = "\(base.name) - \(option.name)"
                         listRow.selectableValue = option.id
@@ -34,6 +40,7 @@ class ChooseMQFViewController: FormViewController {
                         }else{
                         listRow.value = nil
                         }
+                    }
                     }
                 }
                 }
@@ -46,9 +53,10 @@ class ChooseMQFViewController: FormViewController {
                                         }
                                     })
                 }
-        
-            +++ SelectableSection<ListCheckRow<String>>("Choose an MQF", selectionType: .singleSelection(enableDeselection: false)){
+        +++ SelectableSection<ListCheckRow<String>>(header: "Choose an MQF", footer: "All MQFs available to your crew position, to view others change your crew position in settings.", selectionType: .singleSelection(enableDeselection: false)){
+           
                 for option in DataManager.shared.availableMQFs {
+                    if(option.crewPositions.contains(crewPosition) || option.crewPositions.contains("All")){
                     $0 <<< ListCheckRow<String>(option.name){ listRow in
                         listRow.title = option.name
                         listRow.selectableValue = option.filename
@@ -58,6 +66,7 @@ class ChooseMQFViewController: FormViewController {
                         }else{
                             listRow.value = nil
                         }
+                    }
                     }
                 }
                 $0.hidden = Condition.function(["switchRowTag"], { form in
@@ -71,6 +80,7 @@ class ChooseMQFViewController: FormViewController {
                 
         }
 
+        
 
         // Do any additional setup after loading the view.
     }
