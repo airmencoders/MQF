@@ -9,7 +9,7 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-
+    
     @IBOutlet var squadronLeft: UIImageView!
     @IBOutlet var squadronRight: UIImageView!
     @IBOutlet var mdsOutlet: UILabel!
@@ -25,12 +25,12 @@ class MenuViewController: UIViewController {
             self.squadronRight.isHidden = true
         }
         chooseOutlet.alignImageAndTitleVertically()
-        
         // Do any additional setup after loading the view.
         DataManager.shared.load()
-        
         let gr = UITapGestureRecognizer(target: self, action: #selector(MenuViewController.sixteenTaps(sender:)))
         self.mdsOutlet.addGestureRecognizer(gr)
+        let grtwo = UITapGestureRecognizer(target: self, action: #selector(MenuViewController.openSettings))
+        self.crewPositionOutlet.addGestureRecognizer(grtwo)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,8 +46,8 @@ class MenuViewController: UIViewController {
         self.activeMQFs = [MQFData]()
         if(mode == "MQF"){
             let mqf = DataManager.shared.getMQFData(for: activePresetID) ?? MQFData()
-           self.activeMQFs.append(mqf)
-           self.addLabelToStakcView(text: mqf.name)
+            self.activeMQFs.append(mqf)
+            self.addLabelToStakcView(text: mqf.name)
         }else{
             let preset = DataManager.shared.getPreset(for: activePresetID) ?? MQFPreset()
             for mqf in preset.mqfs{
@@ -56,11 +56,30 @@ class MenuViewController: UIViewController {
             }
         }
         
-        
+        let gr = UITapGestureRecognizer(target: self, action: #selector(MenuViewController.openMQFPicker))
+        self.mqfsStackView.addGestureRecognizer(gr)
     }
     
-  
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let beenSetup = MQFDefaults().bool(forKey: MQFDefaults.hasBeenSetup)
+        let mqf = MQFDefaults().object(forKey: MQFDefaults.activePresetID) as? String ?? "NONECHOSEN"
+        if(!beenSetup){
+            self.showSetUp()
+        }else if(mqf == "NONECHOSEN"){
+            self.openMQFPicker()
+        }
+    }
+    
+    func showSetUp(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let nc = storyboard.instantiateViewController(withIdentifier: "setupNC") as! UINavigationController
+        let vc = nc.topViewController as! SetUpViewController
+        self.present(nc, animated: true, completion: nil)
+    }
+    
     @objc private func sixteenTaps(sender:UITapGestureRecognizer){
+        // print("tapped sixteen")
         self.hiddenTapCount += 1
         if(self.hiddenTapCount == 6){
             self.squadronLeft.isHidden = true
@@ -75,41 +94,46 @@ class MenuViewController: UIViewController {
             MQFDefaults().synchronize()
         }
     }
-  
+    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "Study" || segue.identifier == "Test"){
-        let quizSession = QKSession.default
-        var superQuiz = QKQuiz()
-        let quizSize = MQFDefaults().object(forKey: MQFDefaults.quizSize) as? Int ?? 0
-        var testTotalQuestions = 0
-        for mqf in self.activeMQFs{
-            testTotalQuestions += mqf.testNum
-        }
-        for mqf in self.activeMQFs{
-            var limit = 0
-            if(quizSize != 0 && testTotalQuestions != 0){
-                let proportion = Double (mqf.testNum) / Double(testTotalQuestions)
-                limit = Int(proportion * Double(quizSize))
+            let quizSession = QKSession.default
+            var superQuiz = QKQuiz()
+            var quizSize = MQFDefaults().object(forKey: MQFDefaults.quizSize) as? Int ?? 0
+            var testTotalQuestions = 0
+            for mqf in self.activeMQFs{
+                testTotalQuestions += mqf.testNum
             }
-            let name = mqf.filename.replacingOccurrences(of: ".json", with: "")
-            guard let path = Bundle.main.path(forResource: name, ofType: "json") else {
-                return
+            if(segue.identifier == "Test"){
+                quizSize = testTotalQuestions
             }
-            if let quiz = QKQuiz(loadFromJSONFile: path) {
-                if(mqf == self.activeMQFs.last){
-                    if(superQuiz.orderedQuestions.count + limit < quizSize){
-                        limit = quizSize - superQuiz.orderedQuestions.count
+            for mqf in self.activeMQFs{
+                var limit = 0
+                if(quizSize != 0 && testTotalQuestions != 0){
+                    let proportion = Double (mqf.testNum) / Double(testTotalQuestions)
+                    limit = Int(proportion * Double(quizSize))
+                    if(limit == 0){
+                        limit = 1;
                     }
+                    print("Proportion: \(proportion) - Limit: \(limit)")
                 }
-                superQuiz.appendQuiz(quiz: quiz, limit:limit)
+                let name = mqf.filename.replacingOccurrences(of: ".json", with: "")
+                guard let path = Bundle.main.path(forResource: name, ofType: "json") else {
+                    return
+                }
+                if let quiz = QKQuiz(loadFromJSONFile: path) {
+                    if(mqf == self.activeMQFs.last){
+                        if(superQuiz.orderedQuestions.count + limit < quizSize){
+                            limit = quizSize - superQuiz.orderedQuestions.count
+                        }
+                    }
+                    superQuiz.appendQuiz(quiz: quiz, limit:limit)
+                }
             }
-            
-        }
-        
-            quizSession.limit = 10
+            //quizSession.limit = 10
             quizSession.load(quiz: superQuiz)
             if(segue.identifier == "Study"){
                 let vc = segue.destination as! QuestionCollectionViewController
@@ -120,15 +144,9 @@ class MenuViewController: UIViewController {
                 vc.mode = .Test
                 vc.quizSession = quizSession
             }
-                
         }
-        
-        
-       
     }
- 
-   
-    
+
     @IBAction func sendFeedback(_ sender: Any) {
         let alert = UIAlertController.init(title: "We'd love to hear from you!", message: "This app was built for aircrew by aircrew to make one small part of your life simpler and easier. Help us achieve that goal with your feedback. Please email it to christian.brechbuhl@us.af.mil. Thanks!", preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "Will Do!", style: .default, handler: nil)
@@ -138,12 +156,29 @@ class MenuViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-
+    @objc func openSettings(){
+        print("tapped label settings")
+        //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //        let nc = storyboard.instantiateViewController(withIdentifier: "settingsNC") as! UINavigationController
+        //        let vc = nc.topViewController as! SettingsViewController
+        //        self.present(vc, animated: true, completion: nil)
+        self.performSegue(withIdentifier: "openSettings", sender: nil)
+    }
+    
+    @objc func openMQFPicker(){
+        print("tapped label mqf")
+        //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        //        let nc = storyboard.instantiateViewController(withIdentifier: "settingsNC") as! UINavigationController
+        //        let vc = nc.topViewController as! SettingsViewController
+        //        self.present(vc, animated: true, completion: nil)
+        self.performSegue(withIdentifier: "openMQFPicker", sender: nil)
+    }
     
     func addLabelToStakcView(text:String){
         let label = UILabel.init()
         label.text = text
         label.textColor = .lightText
         self.mqfsStackView.addArrangedSubview(label)
+        
     }
 }

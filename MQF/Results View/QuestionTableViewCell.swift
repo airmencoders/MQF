@@ -53,6 +53,12 @@ class QuestionTableViewCell: UITableViewCell {
             self.answersStackView.addArrangedSubview(label)
             c += 1
         }
+        let label = UILabel()
+        label.text = "Ref: \(question.reference ?? "")"
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
+        label.textColor = UIColor.darkGray
+        self.answersStackView.addArrangedSubview(label)
         self.layoutSubviews()
     }
  
