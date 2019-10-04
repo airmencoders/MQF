@@ -90,7 +90,7 @@ let previousQuizSize = MQFDefaults().object(forKey: MQFDefaults.quizSize) as? In
                     MQFDefaults().synchronize()
                 }
         
-        +++ Section(header: "About", footer: "MQFs was built by aircrew for aircrew. We hope to make one small aspect of your life simpler and easier with this app. Please help us continue to improve this app by sending feedback to christian.brechbuhl@us.af.mil.")
+        +++ Section(header: "About", footer: "MQFs was built by aircrew for aircrew. We hope to make one small aspect of your life simpler and easier with this app. Please help us continue to improve this app by sending feedback to AirmenCoders@us.af.mil.")
                 
                 <<< LabelRow() {
                     $0.title = "Version"

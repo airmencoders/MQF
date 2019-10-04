@@ -13,7 +13,7 @@ class ChooseMQFViewController: FormViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let previousSelection = MQFDefaults().object(forKey: MQFDefaults.activePresetID) as? String ?? "KCHS-Pilot-Airland"
+        let previousSelection = MQFDefaults().object(forKey: MQFDefaults.activePresetID) as? String ?? "KCHS-Pilot-Airland2"
         let crewPosition = MQFDefaults().object(forKey: MQFDefaults.crewPosition) as? String ?? "Pilot"
         form +++ Section()
             <<< SegmentedRow<String>("switchRowTag"){
