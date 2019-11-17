@@ -43,7 +43,10 @@ class MQFPreset: NSObject, NSCoding {
             let data = requestedMQF.dictionary ?? [String:JSON]()
             let mqf = DataManager.shared.getMQFData(for: data["file"]?.string ?? "")
             if(mqf != nil){
-                mqf?.testNum = data["testNum"]?.int ?? 0
+                print(data)
+                let tn = data["testNum"]
+                let tni = tn?.intValue
+                mqf!.testNum = tni ?? 0
                 self.mqfs.append(mqf!)
             }
         }
