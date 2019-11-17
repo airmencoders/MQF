@@ -26,6 +26,9 @@
 		838838DA22A3993E000896C6 /* BG.png in Resources */ = {isa = PBXBuildFile; fileRef = 838838D922A3993E000896C6 /* BG.png */; };
 		838DFFAA22F2280000B71F07 /* c17-LM-AD.json in Resources */ = {isa = PBXBuildFile; fileRef = 838DFFA922F2280000B71F07 /* c17-LM-AD.json */; };
 		838DFFAC22F2A61B00B71F07 /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DFFAB22F2A61B00B71F07 /* SetUpViewController.swift */; };
+		83A894ED23609EF400E8D269 /* c17-Pilot-1nov.json in Resources */ = {isa = PBXBuildFile; fileRef = 83A894EC23609EF400E8D269 /* c17-Pilot-1nov.json */; };
+		83A894EF2364A96D00E8D269 /* c17-Pilot-IP-1nov.json in Resources */ = {isa = PBXBuildFile; fileRef = 83A894EE2364A96D00E8D269 /* c17-Pilot-IP-1nov.json */; };
+		83A894F12364A9B700E8D269 /* c17-Pilot-AD-1nov.json in Resources */ = {isa = PBXBuildFile; fileRef = 83A894F02364A9B700E8D269 /* c17-Pilot-AD-1nov.json */; };
 		83A9C70A2299BBEB00040119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C7092299BBEB00040119 /* AppDelegate.swift */; };
 		83A9C70C2299BBEB00040119 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C70B2299BBEB00040119 /* FirstViewController.swift */; };
 		83A9C70E2299BBEB00040119 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C70D2299BBEB00040119 /* SecondViewController.swift */; };
@@ -97,6 +100,9 @@
 		838838D922A3993E000896C6 /* BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BG.png; sourceTree = "<group>"; };
 		838DFFA922F2280000B71F07 /* c17-LM-AD.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c17-LM-AD.json"; sourceTree = "<group>"; };
 		838DFFAB22F2A61B00B71F07 /* SetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
+		83A894EC23609EF400E8D269 /* c17-Pilot-1nov.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c17-Pilot-1nov.json"; sourceTree = "<group>"; };
+		83A894EE2364A96D00E8D269 /* c17-Pilot-IP-1nov.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c17-Pilot-IP-1nov.json"; sourceTree = "<group>"; };
+		83A894F02364A9B700E8D269 /* c17-Pilot-AD-1nov.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c17-Pilot-AD-1nov.json"; sourceTree = "<group>"; };
 		83A9C7062299BBEB00040119 /* MQF.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MQF.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A9C7092299BBEB00040119 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A9C70B2299BBEB00040119 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +207,9 @@
 				8380A47522AF117C00D78B38 /* c17-LM.json */,
 				83D9386722CBB1F500648DDA /* c17-ILM.json */,
 				838DFFA922F2280000B71F07 /* c17-LM-AD.json */,
+				83A894EC23609EF400E8D269 /* c17-Pilot-1nov.json */,
+				83A894EE2364A96D00E8D269 /* c17-Pilot-IP-1nov.json */,
+				83A894F02364A9B700E8D269 /* c17-Pilot-AD-1nov.json */,
 			);
 			path = "JSON Data";
 			sourceTree = "<group>";
@@ -449,10 +458,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83A894ED23609EF400E8D269 /* c17-Pilot-1nov.json in Resources */,
 				8380A47622AF117C00D78B38 /* c17-LM.json in Resources */,
 				838838D822A39303000896C6 /* pentagon.jpg in Resources */,
+				83A894F12364A9B700E8D269 /* c17-Pilot-AD-1nov.json in Resources */,
 				83F607FE22AE01DF00ED22E7 /* c17-KCHS-Pilot.json in Resources */,
 				83A9C7162299BBEC00040119 /* LaunchScreen.storyboard in Resources */,
+				83A894EF2364A96D00E8D269 /* c17-Pilot-IP-1nov.json in Resources */,
 				83A9C7132299BBEC00040119 /* Assets.xcassets in Resources */,
 				83A9C74B2299C6AD00040119 /* c17-Pilot.json in Resources */,
 				83D9386822CBB1F500648DDA /* c17-ILM.json in Resources */,

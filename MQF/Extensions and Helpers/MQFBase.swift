@@ -20,7 +20,7 @@ class MQFBase: NSObject {
     
     init(json:JSON){
         let dict = json.dictionary ?? [String:JSON]()
-        self.name = dict["base"]?.string ?? "Base not found"
+        self.name = dict["name"]?.string ?? "Base not found"
         self.presets = [MQFPreset]()
         for preset in dict["presets"]?.array ?? [JSON]() {
             let p = MQFPreset(json: preset)

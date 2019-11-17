@@ -16,6 +16,7 @@ class MenuViewController: UIViewController {
     @IBOutlet var crewPositionOutlet: UILabel!
     @IBOutlet var chooseOutlet: UIButton!
     @IBOutlet var mqfsStackView: UIStackView!
+    @IBOutlet var backgroundImageView: UIImageView!
     private var activeMQFs = [MQFData]()
     private var hiddenTapCount = 0
     override func viewDidLoad() {
@@ -38,7 +39,9 @@ class MenuViewController: UIViewController {
             self.mqfsStackView.removeArrangedSubview(v)
             v.removeFromSuperview()
         }
-        self.mdsOutlet.text = MQFDefaults().string(forKey: MQFDefaults.mds) ?? "C-17"
+        let mds = MQFDefaults().string(forKey: MQFDefaults.mds) ?? "C-17"
+        self.mdsOutlet.text = mds
+        self.backgroundImageView.image = UIImage.init(named: mds)
         self.crewPositionOutlet.text = MQFDefaults().string(forKey: MQFDefaults.crewPosition) ?? "Pilot"
         
         let mode = MQFDefaults().object(forKey: MQFDefaults.activeMode) as? String ?? "MQF"
@@ -58,7 +61,10 @@ class MenuViewController: UIViewController {
         
         let gr = UITapGestureRecognizer(target: self, action: #selector(MenuViewController.openMQFPicker))
         self.mqfsStackView.addGestureRecognizer(gr)
+        print("View will Appear")
     }
+   
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -69,6 +75,8 @@ class MenuViewController: UIViewController {
         }else if(mqf == "NONECHOSEN"){
             self.openMQFPicker()
         }
+        
+        print("View Did Appear")
     }
     
     func showSetUp(){
