@@ -56,6 +56,8 @@ class ChooseMQFViewController: FormViewController {
         +++ SelectableSection<ListCheckRow<String>>(header: "Choose an MQF", footer: "All MQFs available to your crew position, to view others change your crew position in settings.", selectionType: .singleSelection(enableDeselection: false)){
            
                 for option in DataManager.shared.availableMQFs {
+                    print(option.crewPositions)
+                    print(crewPosition)
                     if(option.crewPositions.contains(crewPosition) || option.crewPositions.contains("All")){
                     $0 <<< ListCheckRow<String>(option.name){ listRow in
                         listRow.title = option.name

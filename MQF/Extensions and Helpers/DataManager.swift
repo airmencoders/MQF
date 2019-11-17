@@ -39,6 +39,7 @@ class DataManager: NSObject {
     }
     
     public func load(){
+        print("loading data")
         guard let path = Bundle.main.path(forResource: "available", ofType: "json") else {
             return
         }
@@ -55,10 +56,11 @@ class DataManager: NSObject {
 
         
         
-        let presets = dict["presets"]?.array ?? [JSON]()
+        let presets = dict["presets"]?.dictionary ?? [String:JSON]()
         self.availableBases = [MQFBase]()
+       // print(presets)
         for mqfJson in presets{
-            let base = MQFBase(json: mqfJson)
+            let base = MQFBase(json: mqfJson.value)
             self.availableBases.append(base)
         }
 

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6KG-it-pw7">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6KG-it-pw7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -189,7 +188,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="Obm-l8-mTi" kind="presentation" identifier="Study" id="cOO-FD-UJy"/>
+                                                    <segue destination="Obm-l8-mTi" kind="presentation" identifier="Study" modalPresentationStyle="fullScreen" id="cOO-FD-UJy"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQ4-9A-rHj" customClass="BorderedButton" customModule="MQF" customModuleProvider="target">
@@ -213,7 +212,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="Obm-l8-mTi" kind="presentation" identifier="Test" id="PZj-DK-VrJ"/>
+                                                    <segue destination="Obm-l8-mTi" kind="presentation" identifier="Test" modalPresentationStyle="fullScreen" id="PZj-DK-VrJ"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -265,7 +264,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="SPH-AL-KgK" kind="presentation" identifier="openMQFPicker" id="D8y-on-Lgk"/>
+                                                            <segue destination="SPH-AL-KgK" kind="presentation" identifier="openMQFPicker" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="D8y-on-Lgk"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vwc-lh-eP0">
@@ -278,7 +277,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="SPH-AL-KgK" kind="presentation" id="fyh-57-vds"/>
+                                                            <segue destination="SPH-AL-KgK" kind="presentation" modalPresentationStyle="fullScreen" id="fyh-57-vds"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -296,7 +295,7 @@
                                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="kWs-6G-grj" kind="presentation" identifier="openSettings" id="FID-60-LCD"/>
+                                                            <segue destination="kWs-6G-grj" kind="presentation" identifier="openSettings" modalPresentationStyle="fullScreen" id="FID-60-LCD"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJx-XE-kbr">
@@ -309,7 +308,7 @@
                                                             <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         </state>
                                                         <connections>
-                                                            <segue destination="kWs-6G-grj" kind="presentation" identifier="" id="gpD-tT-eIZ"/>
+                                                            <segue destination="kWs-6G-grj" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="gpD-tT-eIZ"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -342,6 +341,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="9R0-HW-xel"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="luI-x4-ZTj" id="3HM-qD-V4N"/>
                         <outlet property="chooseOutlet" destination="VxB-AX-jBj" id="4dr-XB-NDG"/>
                         <outlet property="crewPositionOutlet" destination="phK-FL-bzI" id="R0o-rT-Jum"/>
                         <outlet property="mdsOutlet" destination="gtw-gY-6Xr" id="4ON-uw-ahp"/>
@@ -604,7 +604,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKs-Ak-kno">
-                                    <rect key="frame" x="15" y="77" width="384" height="42"/>
+                                    <rect key="frame" x="15" y="33" width="384" height="42"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                     <state key="normal" title="Next">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -614,7 +614,7 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reference:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoO-6S-0mW">
-                                    <rect key="frame" x="15" y="128" width="384" height="21"/>
+                                    <rect key="frame" x="15" y="84" width="384" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
@@ -872,7 +872,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="200"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Iuc-NT-XLv" id="vd4-lC-evK">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="199.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Fxd-Vw-TW0">
@@ -881,13 +881,13 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="xav-Xn-4Mk">
                                                     <rect key="frame" x="0.0" y="32.5" width="119.5" height="93.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mn-1e-r49">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="C" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4mn-1e-r49">
                                                             <rect key="frame" x="44" y="0.0" width="31.5" height="54"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                                             <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dc-q9-ArW">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Correct" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6dc-q9-ArW">
                                                             <rect key="frame" x="32" y="74" width="55" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -982,11 +982,11 @@
                                 <rect key="frame" x="0.0" y="228" width="414" height="204"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wLS-Ic-LFg" id="RuZ-7u-BjL">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="203.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="204"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zpD-RY-zs4">
-                                            <rect key="frame" x="10" y="10" width="394" height="183.5"/>
+                                            <rect key="frame" x="10" y="10" width="394" height="184"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="7z4-cy-IFU">
                                                     <rect key="frame" x="0.0" y="50.5" width="394" height="83"/>
@@ -1086,8 +1086,8 @@
         <image name="settings" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="gpD-tT-eIZ"/>
-        <segue reference="cOO-FD-UJy"/>
-        <segue reference="D8y-on-Lgk"/>
+        <segue reference="FID-60-LCD"/>
+        <segue reference="PZj-DK-VrJ"/>
+        <segue reference="fyh-57-vds"/>
     </inferredMetricsTieBreakers>
 </document>

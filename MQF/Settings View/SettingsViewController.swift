@@ -101,6 +101,7 @@ let previousQuizSize = MQFDefaults().object(forKey: MQFDefaults.quizSize) as? In
                     $0.value = self.build()
         }
         
+             +++ Section(header: "Disclaimer:", footer: "This app is not the official source for MQF studying, just a tool to help you. Check your ePubs and with your OGV & A3V for the official MQF. We have made every effort to have the app reflect your MQF, including all typos.")
                 +++ Section(header: "Credits:", footer: "We built this app using some awesome images including in app icons made by Freepik from www.flaticon.com and other frameworks licensed with the MIT License.")
      
         
