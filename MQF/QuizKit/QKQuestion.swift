@@ -34,7 +34,11 @@ public struct QKQuestion: Hashable {
     
     /// The correct response for the question
     public var correctResponse: String {
+        if(responses.count > correctResponseIndex){
         return responses[correctResponseIndex]
+        }else{
+            return ""
+        }
     }
     
     /// The index of the correct response
