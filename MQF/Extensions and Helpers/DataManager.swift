@@ -91,6 +91,21 @@ class DataManager: NSObject {
         return nil
     }
     
+    public func getPresets(for mds:String? = nil, position:String?=nil, baseName:String? = nil)->[MQFPreset]{
+        var availablePresets = [MQFPreset]()
+        for base in self.availableBases{
+            if(baseName == nil || base.name == baseName ){
+                   for preset in base.presets{
+                    if((mds == nil || preset.mds == mds!) && (position == nil || preset.crewPositions.contains(position!))){
+                        availablePresets.append(preset)
+                    }
+
+                   }
+               }
+        }
+        return availablePresets;
+    }
+    
     private func loadFromJSONFile (path: String)->JSON? {
         guard let jsonString = try? String(contentsOfFile: path) else {
             return nil

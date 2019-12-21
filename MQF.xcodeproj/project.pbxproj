@@ -12,7 +12,6 @@
 		8320217A22A47248003BBB8C /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320217922A47248003BBB8C /* SummaryTableViewCell.swift */; };
 		8320217C22A47253003BBB8C /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320217B22A47253003BBB8C /* QuestionTableViewCell.swift */; };
 		8320217F22A4C469003BBB8C /* available.json in Resources */ = {isa = PBXBuildFile; fileRef = 8320217E22A4C469003BBB8C /* available.json */; };
-		8320218122A4C77C003BBB8C /* c17-Pilot-AD.json in Resources */ = {isa = PBXBuildFile; fileRef = 8320218022A4C77C003BBB8C /* c17-Pilot-AD.json */; };
 		8320218322A6F7DA003BBB8C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320218222A6F7DA003BBB8C /* GradientView.swift */; };
 		8320218622A71513003BBB8C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320218522A71513003BBB8C /* SettingsViewController.swift */; };
 		8320218922A775E2003BBB8C /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320218822A775E2003BBB8C /* extensions.swift */; };
@@ -45,7 +44,6 @@
 		83A9C7462299BE8B00040119 /* QKError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C73F2299BE8B00040119 /* QKError.swift */; };
 		83A9C7472299BE8B00040119 /* QKSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C7402299BE8B00040119 /* QKSession.swift */; };
 		83A9C7492299BF9400040119 /* example-quiz.json in Resources */ = {isa = PBXBuildFile; fileRef = 83A9C7482299BF9400040119 /* example-quiz.json */; };
-		83A9C74B2299C6AD00040119 /* c17-Pilot.json in Resources */ = {isa = PBXBuildFile; fileRef = 83A9C74A2299C6AD00040119 /* c17-Pilot.json */; };
 		83A9C74E229CA29800040119 /* QuestionCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C74D229CA29800040119 /* QuestionCollectionViewController.swift */; };
 		83A9C750229CA6F700040119 /* QuestionheaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C74F229CA6F700040119 /* QuestionheaderCollectionReusableView.swift */; };
 		83A9C752229CAB3C00040119 /* QuestionAnswerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C751229CAB3C00040119 /* QuestionAnswerCollectionViewCell.swift */; };
@@ -56,7 +54,6 @@
 		83F607F522AB661900ED22E7 /* MQFBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F607F422AB661900ED22E7 /* MQFBase.swift */; };
 		83F607F822AC62BB00ED22E7 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F607F722AC62BB00ED22E7 /* CenterAlignedCollectionViewFlowLayout.swift */; };
 		83F607FA22AC650C00ED22E7 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F607F922AC650C00ED22E7 /* QuestionViewController.swift */; };
-		83F607FC22AD89C400ED22E7 /* c17-Pilot-IP.json in Resources */ = {isa = PBXBuildFile; fileRef = 83F607FB22AD89C400ED22E7 /* c17-Pilot-IP.json */; };
 		83F607FE22AE01DF00ED22E7 /* c17-KCHS-Pilot.json in Resources */ = {isa = PBXBuildFile; fileRef = 83F607FD22AE01DF00ED22E7 /* c17-KCHS-Pilot.json */; };
 		A36D6D9319A1AEEC1FF36325 /* Pods_MQFTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC8B462921AA5CF346E5AE0 /* Pods_MQFTests.framework */; };
 		F86F0800ECAB936034974728 /* Pods_MQFUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14D23F84BA2E52DDC092092 /* Pods_MQFUITests.framework */; };
@@ -85,7 +82,6 @@
 		8320217922A47248003BBB8C /* SummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryTableViewCell.swift; sourceTree = "<group>"; };
 		8320217B22A47253003BBB8C /* QuestionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionTableViewCell.swift; sourceTree = "<group>"; };
 		8320217E22A4C469003BBB8C /* available.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = available.json; sourceTree = "<group>"; };
-		8320218022A4C77C003BBB8C /* c17-Pilot-AD.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c17-Pilot-AD.json"; sourceTree = "<group>"; };
 		8320218222A6F7DA003BBB8C /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		8320218522A71513003BBB8C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8320218822A775E2003BBB8C /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
@@ -125,7 +121,6 @@
 		83A9C73F2299BE8B00040119 /* QKError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QKError.swift; sourceTree = "<group>"; };
 		83A9C7402299BE8B00040119 /* QKSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QKSession.swift; sourceTree = "<group>"; };
 		83A9C7482299BF9400040119 /* example-quiz.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "example-quiz.json"; sourceTree = "<group>"; };
-		83A9C74A2299C6AD00040119 /* c17-Pilot.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c17-Pilot.json"; sourceTree = "<group>"; };
 		83A9C74D229CA29800040119 /* QuestionCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionCollectionViewController.swift; sourceTree = "<group>"; };
 		83A9C74F229CA6F700040119 /* QuestionheaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionheaderCollectionReusableView.swift; sourceTree = "<group>"; };
 		83A9C751229CAB3C00040119 /* QuestionAnswerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionAnswerCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -136,7 +131,6 @@
 		83F607F422AB661900ED22E7 /* MQFBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQFBase.swift; sourceTree = "<group>"; };
 		83F607F722AC62BB00ED22E7 /* CenterAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		83F607F922AC650C00ED22E7 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
-		83F607FB22AD89C400ED22E7 /* c17-Pilot-IP.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c17-Pilot-IP.json"; sourceTree = "<group>"; };
 		83F607FD22AE01DF00ED22E7 /* c17-KCHS-Pilot.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c17-KCHS-Pilot.json"; sourceTree = "<group>"; };
 		9EC8B462921AA5CF346E5AE0 /* Pods_MQFTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MQFTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14D23F84BA2E52DDC092092 /* Pods_MQFUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MQFUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,9 +194,6 @@
 			isa = PBXGroup;
 			children = (
 				8320217E22A4C469003BBB8C /* available.json */,
-				83A9C74A2299C6AD00040119 /* c17-Pilot.json */,
-				8320218022A4C77C003BBB8C /* c17-Pilot-AD.json */,
-				83F607FB22AD89C400ED22E7 /* c17-Pilot-IP.json */,
 				83F607FD22AE01DF00ED22E7 /* c17-KCHS-Pilot.json */,
 				8380A47522AF117C00D78B38 /* c17-LM.json */,
 				83D9386722CBB1F500648DDA /* c17-ILM.json */,
@@ -466,13 +457,10 @@
 				83A9C7162299BBEC00040119 /* LaunchScreen.storyboard in Resources */,
 				83A894EF2364A96D00E8D269 /* c17-Pilot-IP-1nov.json in Resources */,
 				83A9C7132299BBEC00040119 /* Assets.xcassets in Resources */,
-				83A9C74B2299C6AD00040119 /* c17-Pilot.json in Resources */,
 				83D9386822CBB1F500648DDA /* c17-ILM.json in Resources */,
 				838DFFAA22F2280000B71F07 /* c17-LM-AD.json in Resources */,
 				83A9C7112299BBEB00040119 /* Main.storyboard in Resources */,
-				8320218122A4C77C003BBB8C /* c17-Pilot-AD.json in Resources */,
 				83A9C7492299BF9400040119 /* example-quiz.json in Resources */,
-				83F607FC22AD89C400ED22E7 /* c17-Pilot-IP.json in Resources */,
 				838838DA22A3993E000896C6 /* BG.png in Resources */,
 				8320217F22A4C469003BBB8C /* available.json in Resources */,
 			);
@@ -809,6 +797,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = mil.airmen.coders.mqf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -829,6 +818,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = mil.airmen.coders.mqf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
