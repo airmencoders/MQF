@@ -20,6 +20,8 @@
 		8320219022A81904003BBB8C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320218F22A81904003BBB8C /* DataManager.swift */; };
 		8320219222A81A8D003BBB8C /* MQFData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320219122A81A8D003BBB8C /* MQFData.swift */; };
 		8320219422AB2FF0003BBB8C /* ChooseMQFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320219322AB2FF0003BBB8C /* ChooseMQFViewController.swift */; };
+		837E02A923B136B000489C2A /* Quiz Kit LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 837E02A823B136B000489C2A /* Quiz Kit LICENSE */; };
+		837E02AB23B136E000489C2A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 837E02AA23B136E000489C2A /* README.md */; };
 		8380A47622AF117C00D78B38 /* c17-LM.json in Resources */ = {isa = PBXBuildFile; fileRef = 8380A47522AF117C00D78B38 /* c17-LM.json */; };
 		838838D822A39303000896C6 /* pentagon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 838838D722A39303000896C6 /* pentagon.jpg */; };
 		838838DA22A3993E000896C6 /* BG.png in Resources */ = {isa = PBXBuildFile; fileRef = 838838D922A3993E000896C6 /* BG.png */; };
@@ -94,6 +96,8 @@
 		8320218F22A81904003BBB8C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		8320219122A81A8D003BBB8C /* MQFData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQFData.swift; sourceTree = "<group>"; };
 		8320219322AB2FF0003BBB8C /* ChooseMQFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMQFViewController.swift; sourceTree = "<group>"; };
+		837E02A823B136B000489C2A /* Quiz Kit LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Quiz Kit LICENSE"; sourceTree = "<group>"; };
+		837E02AA23B136E000489C2A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8380A47522AF117C00D78B38 /* c17-LM.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c17-LM.json"; sourceTree = "<group>"; };
 		838838D722A39303000896C6 /* pentagon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pentagon.jpg; sourceTree = "<group>"; };
 		838838D922A3993E000896C6 /* BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BG.png; sourceTree = "<group>"; };
@@ -311,6 +315,8 @@
 				83A9C73E2299BE8B00040119 /* QKQuiz.swift */,
 				83A9C7402299BE8B00040119 /* QKSession.swift */,
 				83A9C73C2299BE8B00040119 /* QKSessionDelegate.swift */,
+				837E02A823B136B000489C2A /* Quiz Kit LICENSE */,
+				837E02AA23B136E000489C2A /* README.md */,
 				83A9C7482299BF9400040119 /* example-quiz.json */,
 			);
 			path = QuizKit;
@@ -413,7 +419,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 1020;
-				ORGANIZATIONNAME = "Umbo LLC";
+				ORGANIZATIONNAME = "Airmen Coders, US Air Force - See INTENT.md for license type information";
 				TargetAttributes = {
 					83A9C7052299BBEB00040119 = {
 						CreatedOnToolsVersion = 10.2.1;
@@ -470,6 +476,8 @@
 				83A9C7132299BBEC00040119 /* Assets.xcassets in Resources */,
 				83D9386822CBB1F500648DDA /* c17-ILM.json in Resources */,
 				838DFFAA22F2280000B71F07 /* c17-LM-AD.json in Resources */,
+				837E02A923B136B000489C2A /* Quiz Kit LICENSE in Resources */,
+				837E02AB23B136E000489C2A /* README.md in Resources */,
 				83A9C7112299BBEB00040119 /* Main.storyboard in Resources */,
 				83FCF2AA23B087C300E4C958 /* c17-LM-AD-May18.json in Resources */,
 				83A9C7492299BF9400040119 /* example-quiz.json in Resources */,

@@ -3,8 +3,6 @@
 //  MQF
 //
 //  Created by Christian Brechbuhl on 6/7/19.
-//  Copyright © 2019 Umbo LLC. All rights reserved.
-//
 
 
 import UIKit
