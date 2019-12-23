@@ -98,6 +98,8 @@
 		8320219322AB2FF0003BBB8C /* ChooseMQFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMQFViewController.swift; sourceTree = "<group>"; };
 		837E02A823B136B000489C2A /* Quiz Kit LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Quiz Kit LICENSE"; sourceTree = "<group>"; };
 		837E02AA23B136E000489C2A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		837E02AC23B13F6900489C2A /* INTENT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = INTENT.md; sourceTree = "<group>"; };
+		837E02AD23B13F9D00489C2A /* LICENSE.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
 		8380A47522AF117C00D78B38 /* c17-LM.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c17-LM.json"; sourceTree = "<group>"; };
 		838838D722A39303000896C6 /* pentagon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pentagon.jpg; sourceTree = "<group>"; };
 		838838D922A3993E000896C6 /* BG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BG.png; sourceTree = "<group>"; };
@@ -245,6 +247,8 @@
 		83A9C6FD2299BBEB00040119 = {
 			isa = PBXGroup;
 			children = (
+				837E02AD23B13F9D00489C2A /* LICENSE.md */,
+				837E02AC23B13F6900489C2A /* INTENT.md */,
 				83A9C7082299BBEB00040119 /* MQF */,
 				83A9C71F2299BBEC00040119 /* MQFTests */,
 				83A9C72A2299BBEC00040119 /* MQFUITests */,
