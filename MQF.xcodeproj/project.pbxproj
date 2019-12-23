@@ -55,6 +55,9 @@
 		83F607F822AC62BB00ED22E7 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F607F722AC62BB00ED22E7 /* CenterAlignedCollectionViewFlowLayout.swift */; };
 		83F607FA22AC650C00ED22E7 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F607F922AC650C00ED22E7 /* QuestionViewController.swift */; };
 		83F607FE22AE01DF00ED22E7 /* c17-KCHS-Pilot.json in Resources */ = {isa = PBXBuildFile; fileRef = 83F607FD22AE01DF00ED22E7 /* c17-KCHS-Pilot.json */; };
+		83FCF2A823B04A3700E4C958 /* c17-LM-May18.json in Resources */ = {isa = PBXBuildFile; fileRef = 83FCF2A723B04A3700E4C958 /* c17-LM-May18.json */; };
+		83FCF2AA23B087C300E4C958 /* c17-LM-AD-May18.json in Resources */ = {isa = PBXBuildFile; fileRef = 83FCF2A923B087C300E4C958 /* c17-LM-AD-May18.json */; };
+		83FCF2AC23B087D500E4C958 /* c17-ILM-May18.json in Resources */ = {isa = PBXBuildFile; fileRef = 83FCF2AB23B087D500E4C958 /* c17-ILM-May18.json */; };
 		A36D6D9319A1AEEC1FF36325 /* Pods_MQFTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC8B462921AA5CF346E5AE0 /* Pods_MQFTests.framework */; };
 		F86F0800ECAB936034974728 /* Pods_MQFUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14D23F84BA2E52DDC092092 /* Pods_MQFUITests.framework */; };
 /* End PBXBuildFile section */
@@ -132,6 +135,9 @@
 		83F607F722AC62BB00ED22E7 /* CenterAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		83F607F922AC650C00ED22E7 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		83F607FD22AE01DF00ED22E7 /* c17-KCHS-Pilot.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c17-KCHS-Pilot.json"; sourceTree = "<group>"; };
+		83FCF2A723B04A3700E4C958 /* c17-LM-May18.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c17-LM-May18.json"; sourceTree = "<group>"; };
+		83FCF2A923B087C300E4C958 /* c17-LM-AD-May18.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c17-LM-AD-May18.json"; sourceTree = "<group>"; };
+		83FCF2AB23B087D500E4C958 /* c17-ILM-May18.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c17-ILM-May18.json"; sourceTree = "<group>"; };
 		9EC8B462921AA5CF346E5AE0 /* Pods_MQFTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MQFTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B14D23F84BA2E52DDC092092 /* Pods_MQFUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MQFUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6908C72ECD116D0AF52BD45 /* Pods-MQFTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MQFTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MQFTests/Pods-MQFTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -201,6 +207,9 @@
 				83A894EC23609EF400E8D269 /* c17-Pilot-1nov.json */,
 				83A894EE2364A96D00E8D269 /* c17-Pilot-IP-1nov.json */,
 				83A894F02364A9B700E8D269 /* c17-Pilot-AD-1nov.json */,
+				83FCF2A723B04A3700E4C958 /* c17-LM-May18.json */,
+				83FCF2A923B087C300E4C958 /* c17-LM-AD-May18.json */,
+				83FCF2AB23B087D500E4C958 /* c17-ILM-May18.json */,
 			);
 			path = "JSON Data";
 			sourceTree = "<group>";
@@ -453,6 +462,8 @@
 				8380A47622AF117C00D78B38 /* c17-LM.json in Resources */,
 				838838D822A39303000896C6 /* pentagon.jpg in Resources */,
 				83A894F12364A9B700E8D269 /* c17-Pilot-AD-1nov.json in Resources */,
+				83FCF2A823B04A3700E4C958 /* c17-LM-May18.json in Resources */,
+				83FCF2AC23B087D500E4C958 /* c17-ILM-May18.json in Resources */,
 				83F607FE22AE01DF00ED22E7 /* c17-KCHS-Pilot.json in Resources */,
 				83A9C7162299BBEC00040119 /* LaunchScreen.storyboard in Resources */,
 				83A894EF2364A96D00E8D269 /* c17-Pilot-IP-1nov.json in Resources */,
@@ -460,6 +471,7 @@
 				83D9386822CBB1F500648DDA /* c17-ILM.json in Resources */,
 				838DFFAA22F2280000B71F07 /* c17-LM-AD.json in Resources */,
 				83A9C7112299BBEB00040119 /* Main.storyboard in Resources */,
+				83FCF2AA23B087C300E4C958 /* c17-LM-AD-May18.json in Resources */,
 				83A9C7492299BF9400040119 /* example-quiz.json in Resources */,
 				838838DA22A3993E000896C6 /* BG.png in Resources */,
 				8320217F22A4C469003BBB8C /* available.json in Resources */,
