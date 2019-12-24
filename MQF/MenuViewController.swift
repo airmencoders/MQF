@@ -2,6 +2,8 @@
 //  MenuViewController.swift
 //  MQF
 //
+//  This is the main screen that shows when the app opens
+//
 //  Created by Christian Brechbuhl on 5/28/19.
 
 import UIKit
