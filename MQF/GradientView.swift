@@ -1,5 +1,7 @@
 import UIKit
 @IBDesignable
+
+/// Creates a gradient view, used  for the black overlay on each question. Applied through the Storyboard
 class GradientView: UIView {
     
     @IBInspectable var startColor:   UIColor = .black { didSet { updateColors() }}

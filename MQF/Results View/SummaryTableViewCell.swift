@@ -7,6 +7,8 @@
 
 import UIKit
 import UICircularProgressRing
+
+/// Summery table cell for `ResultsTableViewController`
 class SummaryTableViewCell: UITableViewCell {
 
     @IBOutlet var correctOutlet: UILabel!

@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Cell for each question in `ResultTableViewController`
 class QuestionTableViewCell: UITableViewCell {
 
     @IBOutlet var questionLabel: UILabel!
@@ -22,10 +23,17 @@ class QuestionTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    /// Set up the cell for the given question
+    /// Adds the question and each answer and collors them
+    ///
+    /// - parameters:
+    ///     -  question:  `QKQuestion` the relevant question
+    ///     - session: `QKSession` the current quiz sesson
     func setUp(question:QKQuestion, session:QKSession){
         self.questionLabel.text = question.question
         let responseProvided = session.response(for: question)
         var correct = true
+        //If wrong response, make the question red
         if(responseProvided != question.correctResponse){
             self.questionLabel.textColor = UIColor.red
             correct = false
@@ -33,10 +41,13 @@ class QuestionTableViewCell: UITableViewCell {
             self.questionLabel.textColor = UIColor.darkText
         }
         
+        //Remove any existing answers, required because table view reuses cells
         for v in self.answersStackView.arrangedSubviews{
             self.answersStackView.removeArrangedSubview(v)
             v.removeFromSuperview()
         }
+        
+        //Add each reponse and color it
         var c = 0
         for response in question.responses{
             let label = UILabel()

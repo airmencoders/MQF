@@ -7,12 +7,20 @@
 
 import UIKit
 import SwiftyJSON
+
+/// `MQFPreset` represents a preset collecton of MQFs in the app. They are show in the Choose MQF UI under OGV Presets.
 class MQFPreset: NSObject, NSCoding {
+    ///Name of the MQF Preset (`String`)
     public var name:String
+    /// Name of the MDS it applies to (`String`)
     public var mds:String
+    /// Array of the crew positions the preset applies to (`[String`)
     public var crewPositions:[String]
+    /// Id of this `MQFPreset` (`String`)
     public var id:String
+    /// Number of question in a test based on this preset (`Int`)
     public var testTotal:Int
+    /// Array of the MQFs used in this preset (`[MQFData]`)
     public var mqfs:[MQFData]
    
     
@@ -26,8 +34,14 @@ class MQFPreset: NSObject, NSCoding {
     
     }
     
+    /// Init an instance of `MQFPreset` with given `JSON` object
+    ///
+    /// - parameters:
+    ///   - json:  `JSON` for the desired MQF
+    /// - returns: `MQFPreset`
     init(json:JSON){
         let dict = json.dictionary ?? [String:JSON]()
+        
         self.name = dict["name"]?.string ?? "Name not found"
         self.id = dict["id"]?.string ?? "ID not found"
         self.mds = dict["mds"]?.string ?? "MDS-NF"
@@ -39,18 +53,23 @@ class MQFPreset: NSObject, NSCoding {
         self.mqfs = [MQFData]();
         for requestedMQF in dict["mqfs"]?.array ?? [JSON]() {
             let data = requestedMQF.dictionary ?? [String:JSON]()
-            let mqf = DataManager.shared.getMQFData(for: data["file"]?.string ?? "")
+            let mqf = DataManager.shared.getMQFData(for: data["file"]?.string ?? "") // Searches loaded MQFs for one with that filename
             if(mqf != nil){
                 print(data)
                 let tn = data["testNum"]
                 let tni = tn?.intValue
-                mqf!.testNum = tni ?? 0
+                mqf!.testNum = tni ?? 0 //If there is no test number, use 0
                 self.mqfs.append(mqf!)
             }
         }
         
     }
     
+    /// Init an instance of `MQFData` with encoded version, used to load from file
+    ///
+    /// - parameters:
+    ///   - decoder:  `NSCoder`
+    /// - returns: `MQFPreset`
     required init(coder decoder: NSCoder) {
         self.name = decoder.decodeObject(forKey: "name") as? String ?? ""
         self.id = decoder.decodeObject(forKey: "id") as? String ?? ""
@@ -60,6 +79,10 @@ class MQFPreset: NSObject, NSCoding {
         self.mqfs = [MQFData]()
     }
     
+    /// Encodes `MQFPreset` using `NSCoder` to save in file
+    ///
+    /// - parameters:
+    ///   - coder:  `NSCoder`
     func encode(with coder: NSCoder) {
         coder.encode(self.name, forKey: "name")
         coder.encode(self.id, forKey: "id")

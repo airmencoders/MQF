@@ -83,6 +83,7 @@ class MenuViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let nc = storyboard.instantiateViewController(withIdentifier: "setupNC") as! UINavigationController
         let vc = nc.topViewController as! SetUpViewController
+        nc.modalPresentationStyle = .fullScreen
         self.present(nc, animated: true, completion: nil)
     }
     

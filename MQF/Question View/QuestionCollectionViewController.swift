@@ -10,11 +10,18 @@ import UICircularProgressRing
 
 private let reuseIdentifier = "answerCell"
 
+/// View that controls taking the quiz
 class QuestionCollectionViewController: UICollectionViewController {
+    /// Currently active question
     var activeQuestion:QKQuestion?
+    /// Current Quiz Session
     var quizSession:QKSession = QKSession.default
+    /// Test mode (Study or Test)
     var mode:QuizMode = .Study
+    /// Submitted Answer
     var answerSubmitted = -1
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let imageView : UIImageView = {
@@ -37,9 +44,13 @@ class QuestionCollectionViewController: UICollectionViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    
+    /// Dismisses quiz view
     @IBAction func homeButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    /// Goes to next question
     @IBAction func nextButton(_ sender: Any) {
         self.nextQuestion()
     }
@@ -49,16 +60,16 @@ class QuestionCollectionViewController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
     
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return self.activeQuestion?.responses.count ?? 0
     }
     
+    /// Sets the data on the cell for each row in the table
+    /// - Returns:`UICollectionViewCell` for the given index
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! QuestionAnswerCollectionViewCell
         if(self.activeQuestion != nil){
@@ -78,6 +89,9 @@ class QuestionCollectionViewController: UICollectionViewController {
         return cell
     }
     
+    /// Creates supplimentary views (header, footer)
+    /// In this case the header includes both the current score and the actually questions
+    /// The footer includes the reference
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         if(kind == UICollectionView.elementKindSectionHeader){
             let view = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "questionHeader", for: indexPath) as! QuestionheaderCollectionReusableView
@@ -108,15 +122,13 @@ class QuestionCollectionViewController: UICollectionViewController {
     
     
     // MARK: UICollectionViewDelegate
-    
+    /// When an answer row is selected, submit it
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.submitAnswer(indexPath: indexPath)
     }
     
+    /// sets size of each item
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //        if UIDevice.current.userInterfaceIdiom == .pad {
-        //             return CGSize(width: 400, height: 55)
-        //        }
         if(self.collectionView.frame.size.width >= 400){
             return CGSize(width: self.collectionView.frame.size.width * 0.60, height: 55)
         }
@@ -153,7 +165,7 @@ class QuestionCollectionViewController: UICollectionViewController {
      */
     
     
-    
+    //TODO: Determine if still used
     @IBAction func startQuiz(_ sender: Any) {
         do {
             try quizSession.start()
@@ -168,6 +180,7 @@ class QuestionCollectionViewController: UICollectionViewController {
         }
     }
     
+    /// Moves quiz to next question
     func nextQuestion(){
         print("next")
         
@@ -199,9 +212,12 @@ class QuestionCollectionViewController: UICollectionViewController {
         }
     }
     
+    /// Submits an answer to the current quiz session or moves to the next question if already submitted
+    /// - Parameters:
+    ///     - indexPath: `indexPath` of selected answer
     func submitAnswer(indexPath:IndexPath){
         let row = indexPath.row
-        if(self.answerSubmitted != row){
+        if(self.answerSubmitted != row){ // Checks to see if the user clicked the answer once already, if first click process, if second move to next question
             if(self.mode == .Test || (self.mode == .Study && self.answerSubmitted == -1)){
                 if(self.activeQuestion != nil){
                     let selectedAnswer = self.activeQuestion?.responses[row] ?? ""
@@ -244,6 +260,10 @@ class QuestionCollectionViewController: UICollectionViewController {
             self.nextQuestion()
         }
     }
+    
+    /// Resets the color of each cell to normal, except the indicated one
+    /// - Parameters:
+    ///     - except: `Int ` of cell to not change the color of
     func resetAllOtherCells(except:Int){
         var c = 0
         while c < self.collectionView.numberOfItems(inSection: 0){
@@ -255,7 +275,10 @@ class QuestionCollectionViewController: UICollectionViewController {
         }
     }
     
-    
+    /// Labels the answer A,B,C,D, etc
+    /// - Parameters:
+    ///     - indexPath: `indexPath` index of the current answer
+    ///- Returns: `String` with a letter (A, B, C, D, etc)
     func generateAnswerIdForIndexPath(indexPath:IndexPath)->String{
         let row = indexPath.row
         
