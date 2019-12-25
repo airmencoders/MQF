@@ -71,7 +71,7 @@ class DataManager: NSObject {
             let base = MQFBase(json: mqfJson.value)
             self.availableBases.append(base)
         }
-
+  
         
         
     }

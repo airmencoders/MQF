@@ -6,7 +6,7 @@
 
 
 import UIKit
-
+/// Footer for each question
 class QuestionFooterCollectionReusableView: UICollectionReusableView {
     @IBOutlet var refOutlet: UILabel!
     

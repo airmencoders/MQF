@@ -7,14 +7,19 @@
 
 import UIKit
 import Eureka
+
+/// Initial screen shown to user on new install, has them pick an MDS and crew position.
 class SetUpViewController: FormViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let previousQuizSize = MQFDefaults().object(forKey: MQFDefaults.quizSize) as? Int ?? 0
-        form +++ Section(header: "Choose your MDS & Crew Position", footer: "You can always change them later in Settings. Don't see your MDS or crew position? Contact us to get your MQFs added, this app is open to all AF communities.")
+        //Instantiate form
+        form
             
+            +++ Section(header: "Choose your MDS & Crew Position", footer: "You can always change them later in Settings. Don't see your MDS or crew position? Contact us to get your MQFs added, this app is open to all AF communities.")
+            
+            //Adds row to choose MDS from list of all available MDSs
             <<< PushRow<String>() {
                 $0.title = "MDS (Airframe)"
                 $0.selectorTitle = "Pick an MDS"
@@ -35,6 +40,8 @@ class SetUpViewController: FormViewController {
                         print("invalid")
                     }
             }
+            
+            //Adds row to choose crew position from list of all available
             <<< PushRow<String>() {
                 $0.title = "Crew Position"
                 $0.selectorTitle = "Pick a position"
@@ -56,6 +63,7 @@ class SetUpViewController: FormViewController {
                     }
             }
         
+            //Adds button that dismisses view
             <<< ButtonRow(){ row in
                 row.title = "Begin"
                 row.onCellSelection({ (button, row) in
@@ -70,18 +78,12 @@ class SetUpViewController: FormViewController {
         MQFDefaults().synchronize()
     
     }
+    
+    ///Dismisses the screen
     func dismissSetup(){
         self.dismiss(animated: true, completion: nil)
     }
-        
-    override func valueHasBeenChanged(for row: BaseRow, oldValue: Any?, newValue: Any?) {
-        if row.section === form[0] {
-            let value = row.baseValue as? Int ?? 0
-            MQFDefaults().set(value, forKey: MQFDefaults.quizSize)
-            MQFDefaults().synchronize()
-        }
-        
-    }
+    
 
 
     /*

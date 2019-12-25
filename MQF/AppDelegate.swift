@@ -8,6 +8,8 @@
 import UIKit
 
 @UIApplicationMain
+
+/// Entry point for the app
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?

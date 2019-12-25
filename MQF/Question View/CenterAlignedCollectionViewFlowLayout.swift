@@ -7,6 +7,8 @@
 
 import Foundation
 import UIKit
+
+/// Layout thar aligns collection view cells to the center
 class CenterAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
