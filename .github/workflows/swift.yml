@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Install Dependences
-      run:
+      run: |
         pod repo update
         pod install
     - name: Build
