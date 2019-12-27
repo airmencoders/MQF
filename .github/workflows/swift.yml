@@ -17,7 +17,6 @@ jobs:
         pod install
       shell: bash
     - name: Test and Lint
-      uses: ty0x2333/cocoapods-action@master
       with:
         additional_build_params: -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.0'
         additional_lint_params: --private
