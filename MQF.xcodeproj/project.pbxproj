@@ -20,6 +20,16 @@
 		8320219022A81904003BBB8C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320218F22A81904003BBB8C /* DataManager.swift */; };
 		8320219222A81A8D003BBB8C /* MQFData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320219122A81A8D003BBB8C /* MQFData.swift */; };
 		8320219422AB2FF0003BBB8C /* ChooseMQFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320219322AB2FF0003BBB8C /* ChooseMQFViewController.swift */; };
+		8378DED623B55C0A0031579A /* test-c17-Pilot-AD-1nov.json in Resources */ = {isa = PBXBuildFile; fileRef = 8378DECC23B55C0A0031579A /* test-c17-Pilot-AD-1nov.json */; };
+		8378DED723B55C0A0031579A /* test-c17-LM.json in Resources */ = {isa = PBXBuildFile; fileRef = 8378DECD23B55C0A0031579A /* test-c17-LM.json */; };
+		8378DED823B55C0A0031579A /* test-c17-ILM.json in Resources */ = {isa = PBXBuildFile; fileRef = 8378DECE23B55C0A0031579A /* test-c17-ILM.json */; };
+		8378DED923B55C0A0031579A /* test-c17-LM-May18.json in Resources */ = {isa = PBXBuildFile; fileRef = 8378DECF23B55C0A0031579A /* test-c17-LM-May18.json */; };
+		8378DEDA23B55C0A0031579A /* test-c17-LM-AD-May18.json in Resources */ = {isa = PBXBuildFile; fileRef = 8378DED023B55C0A0031579A /* test-c17-LM-AD-May18.json */; };
+		8378DEDB23B55C0A0031579A /* test-c17-LM-AD.json in Resources */ = {isa = PBXBuildFile; fileRef = 8378DED123B55C0A0031579A /* test-c17-LM-AD.json */; };
+		8378DEDC23B55C0A0031579A /* test-c17-Pilot-1nov.json in Resources */ = {isa = PBXBuildFile; fileRef = 8378DED223B55C0A0031579A /* test-c17-Pilot-1nov.json */; };
+		8378DEDD23B55C0A0031579A /* test-c17-Pilot-IP-1nov.json in Resources */ = {isa = PBXBuildFile; fileRef = 8378DED323B55C0A0031579A /* test-c17-Pilot-IP-1nov.json */; };
+		8378DEDE23B55C0A0031579A /* test-c17-ILM-May18.json in Resources */ = {isa = PBXBuildFile; fileRef = 8378DED423B55C0A0031579A /* test-c17-ILM-May18.json */; };
+		8378DEDF23B55C0A0031579A /* test-c17-KCHS-Pilot.json in Resources */ = {isa = PBXBuildFile; fileRef = 8378DED523B55C0A0031579A /* test-c17-KCHS-Pilot.json */; };
 		837E02A923B136B000489C2A /* Quiz Kit LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 837E02A823B136B000489C2A /* Quiz Kit LICENSE */; };
 		837E02AB23B136E000489C2A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 837E02AA23B136E000489C2A /* README.md */; };
 		8380A47622AF117C00D78B38 /* c17-LM.json in Resources */ = {isa = PBXBuildFile; fileRef = 8380A47522AF117C00D78B38 /* c17-LM.json */; };
@@ -93,6 +103,17 @@
 		8320218F22A81904003BBB8C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		8320219122A81A8D003BBB8C /* MQFData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQFData.swift; sourceTree = "<group>"; };
 		8320219322AB2FF0003BBB8C /* ChooseMQFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMQFViewController.swift; sourceTree = "<group>"; };
+		8378DECB23B55AC00031579A /* test-available.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "test-available.json"; sourceTree = "<group>"; };
+		8378DECC23B55C0A0031579A /* test-c17-Pilot-AD-1nov.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-c17-Pilot-AD-1nov.json"; sourceTree = "<group>"; };
+		8378DECD23B55C0A0031579A /* test-c17-LM.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-c17-LM.json"; sourceTree = "<group>"; };
+		8378DECE23B55C0A0031579A /* test-c17-ILM.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-c17-ILM.json"; sourceTree = "<group>"; };
+		8378DECF23B55C0A0031579A /* test-c17-LM-May18.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-c17-LM-May18.json"; sourceTree = "<group>"; };
+		8378DED023B55C0A0031579A /* test-c17-LM-AD-May18.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-c17-LM-AD-May18.json"; sourceTree = "<group>"; };
+		8378DED123B55C0A0031579A /* test-c17-LM-AD.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-c17-LM-AD.json"; sourceTree = "<group>"; };
+		8378DED223B55C0A0031579A /* test-c17-Pilot-1nov.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-c17-Pilot-1nov.json"; sourceTree = "<group>"; };
+		8378DED323B55C0A0031579A /* test-c17-Pilot-IP-1nov.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-c17-Pilot-IP-1nov.json"; sourceTree = "<group>"; };
+		8378DED423B55C0A0031579A /* test-c17-ILM-May18.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-c17-ILM-May18.json"; sourceTree = "<group>"; };
+		8378DED523B55C0A0031579A /* test-c17-KCHS-Pilot.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-c17-KCHS-Pilot.json"; sourceTree = "<group>"; };
 		837E02A823B136B000489C2A /* Quiz Kit LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Quiz Kit LICENSE"; sourceTree = "<group>"; };
 		837E02AA23B136E000489C2A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		837E02AC23B13F6900489C2A /* INTENT.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = INTENT.md; sourceTree = "<group>"; };
@@ -239,6 +260,24 @@
 			path = "Extensions and Helpers";
 			sourceTree = "<group>";
 		};
+		8378DECA23B55A940031579A /* Test JSON Data */ = {
+			isa = PBXGroup;
+			children = (
+				8378DED423B55C0A0031579A /* test-c17-ILM-May18.json */,
+				8378DECE23B55C0A0031579A /* test-c17-ILM.json */,
+				8378DED523B55C0A0031579A /* test-c17-KCHS-Pilot.json */,
+				8378DED023B55C0A0031579A /* test-c17-LM-AD-May18.json */,
+				8378DED123B55C0A0031579A /* test-c17-LM-AD.json */,
+				8378DECF23B55C0A0031579A /* test-c17-LM-May18.json */,
+				8378DECD23B55C0A0031579A /* test-c17-LM.json */,
+				8378DED223B55C0A0031579A /* test-c17-Pilot-1nov.json */,
+				8378DECC23B55C0A0031579A /* test-c17-Pilot-AD-1nov.json */,
+				8378DED323B55C0A0031579A /* test-c17-Pilot-IP-1nov.json */,
+				8378DECB23B55AC00031579A /* test-available.json */,
+			);
+			path = "Test JSON Data";
+			sourceTree = "<group>";
+		};
 		83A9C6FD2299BBEB00040119 = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +308,7 @@
 			children = (
 				8320218C22A78FF1003BBB8C /* MQF.entitlements */,
 				8320218722A775D5003BBB8C /* Extensions and Helpers */,
+				8378DECA23B55A940031579A /* Test JSON Data */,
 				8320217D22A4C3D9003BBB8C /* JSON Data */,
 				8320218422A714FD003BBB8C /* Settings View */,
 				8320217622A46B7A003BBB8C /* Results View */,
@@ -310,9 +350,9 @@
 				83A9C73F2299BE8B00040119 /* QKError.swift */,
 				83A9C73D2299BE8B00040119 /* QKQuestion.swift */,
 				83A9C73B2299BE8B00040119 /* QKQuestionType.swift */,
+				83A9C73C2299BE8B00040119 /* QKSessionDelegate.swift */,
 				83A9C73E2299BE8B00040119 /* QKQuiz.swift */,
 				83A9C7402299BE8B00040119 /* QKSession.swift */,
-				83A9C73C2299BE8B00040119 /* QKSessionDelegate.swift */,
 				837E02A823B136B000489C2A /* Quiz Kit LICENSE */,
 				837E02AA23B136E000489C2A /* README.md */,
 				83A9C7482299BF9400040119 /* example-quiz.json */,
@@ -469,14 +509,24 @@
 				83FCF2AC23B087D500E4C958 /* c17-ILM-May18.json in Resources */,
 				83F607FE22AE01DF00ED22E7 /* c17-KCHS-Pilot.json in Resources */,
 				83A9C7162299BBEC00040119 /* LaunchScreen.storyboard in Resources */,
+				8378DED823B55C0A0031579A /* test-c17-ILM.json in Resources */,
+				8378DEDD23B55C0A0031579A /* test-c17-Pilot-IP-1nov.json in Resources */,
 				83A894EF2364A96D00E8D269 /* c17-Pilot-IP-1nov.json in Resources */,
+				8378DED723B55C0A0031579A /* test-c17-LM.json in Resources */,
+				8378DED623B55C0A0031579A /* test-c17-Pilot-AD-1nov.json in Resources */,
 				83A9C7132299BBEC00040119 /* Assets.xcassets in Resources */,
 				83D9386822CBB1F500648DDA /* c17-ILM.json in Resources */,
+				8378DEDB23B55C0A0031579A /* test-c17-LM-AD.json in Resources */,
 				838DFFAA22F2280000B71F07 /* c17-LM-AD.json in Resources */,
+				8378DEDF23B55C0A0031579A /* test-c17-KCHS-Pilot.json in Resources */,
+				8378DED923B55C0A0031579A /* test-c17-LM-May18.json in Resources */,
 				837E02A923B136B000489C2A /* Quiz Kit LICENSE in Resources */,
 				837E02AB23B136E000489C2A /* README.md in Resources */,
 				83A9C7112299BBEB00040119 /* Main.storyboard in Resources */,
+				8378DEDE23B55C0A0031579A /* test-c17-ILM-May18.json in Resources */,
 				83FCF2AA23B087C300E4C958 /* c17-LM-AD-May18.json in Resources */,
+				8378DEDA23B55C0A0031579A /* test-c17-LM-AD-May18.json in Resources */,
+				8378DEDC23B55C0A0031579A /* test-c17-Pilot-1nov.json in Resources */,
 				83A9C7492299BF9400040119 /* example-quiz.json in Resources */,
 				838838DA22A3993E000896C6 /* BG.png in Resources */,
 				8320217F22A4C469003BBB8C /* available.json in Resources */,

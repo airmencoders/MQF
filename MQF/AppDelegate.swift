@@ -17,6 +17,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let uiTesting = ProcessInfo.processInfo.arguments.contains("ui-testing")
+        let uiTestingSetup = ProcessInfo.processInfo.arguments.contains("ui-testing-setup")
+        
+        print("App Started with Arguments :\(ProcessInfo.processInfo.arguments)")
+        //If ui testing the set up, reset user selections
+        if(uiTestingSetup){
+        MQFDefaults().set(false, forKey: MQFDefaults.hasBeenSetup)
+        MQFDefaults().set("NONECHOSEN", forKey: MQFDefaults.activePresetID)
+        MQFDefaults().set("OGV Presets", forKey: MQFDefaults.pickerMode)
+        MQFDefaults().synchronize()
+        }else if(uiTesting){
+            MQFDefaults().set(true, forKey: MQFDefaults.hasBeenSetup)
+            MQFDefaults().set("KCHS-Pilot-Airland", forKey: MQFDefaults.activePresetID)
+            MQFDefaults().set("OGV Presets", forKey: MQFDefaults.pickerMode)
+            MQFDefaults().synchronize()
+            
+        }
+            DataManager.shared.load()
+        
+
         return true
     }
 
