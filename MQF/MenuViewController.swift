@@ -26,8 +26,7 @@ class MenuViewController: UIViewController {
             self.squadronRight.isHidden = true
         }
         chooseOutlet.alignImageAndTitleVertically()
-        // Do any additional setup after loading the view.
-        DataManager.shared.load()
+   
         let gr = UITapGestureRecognizer(target: self, action: #selector(MenuViewController.sixteenTaps(sender:)))
         self.mdsOutlet.addGestureRecognizer(gr)
         let grtwo = UITapGestureRecognizer(target: self, action: #selector(MenuViewController.openSettings))
