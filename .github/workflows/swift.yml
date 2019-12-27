@@ -9,10 +9,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Bundle Install
-      run: bundle install
-    - name: Dependencies
-      run: bundle exec pod install
+    - name: Install Dependences
+      run:
+        cd Example
+        pod repo update
+        pod install
     - name: Build
       run: swift build -v
     - name: Run tests
