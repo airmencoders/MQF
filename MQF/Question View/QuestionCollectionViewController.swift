@@ -75,6 +75,7 @@ class QuestionCollectionViewController: UICollectionViewController {
         if(self.activeQuestion != nil){
             cell.answerLabel.text = self.activeQuestion?.responses[indexPath.row]
             cell.answerIDlabel.text = self.generateAnswerIdForIndexPath(indexPath: indexPath)
+            cell.tag = indexPath.row
             cell.setColor(answerColor: .Normal)
         }else{
             cell.answerLabel.text = "Response not available"
