@@ -13,11 +13,15 @@ We would love to have you join the team, please submit an issue or PR with your 
 
 
 ## How to run the code locally
-1. Requires [Xcode](https://developer.apple.com/xcode/) (from Apple) and [Cocoapods](https://cocoapods.org).
+1. Requires [XCode](https://developer.apple.com/xcode/) (from Apple) and [Cocoapods](https://cocoapods.org).
 1. Download or Clone the project
 1. Run pod install
 1. Open MQF.xcworkspace
 1. Click Run
+
+
+## A note on our CI/CD pipeline
+Because this is a static iOS app the continuous delivery portion of the pipeline does not exist. However, we test each commit using GitHub Actions and XCode’s Unit and UI Tests. A branch must pass the tests before it will be merged into Master.
 
 
 ## Libraries we use
@@ -25,3 +29,5 @@ We would love to have you join the team, please submit an issue or PR with your 
 * [Eureka Forms](https://eurekacommunity.github.io) - MIT License
 * [UICircularProgressRing](https://github.com/luispadron/UICircularProgressRing) - MIT License
 * [QuizKit](https://github.com/steve228uk/QuizKit) - MIT License
+
+
