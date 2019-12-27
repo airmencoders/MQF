@@ -26,12 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if(uiTestingSetup){
         MQFDefaults().set(false, forKey: MQFDefaults.hasBeenSetup)
         MQFDefaults().set("NONECHOSEN", forKey: MQFDefaults.activePresetID)
-        MQFDefaults().set("OGV Presets", forKey: MQFDefaults.pickerMode)
+        MQFDefaults().set("PRESET", forKey: MQFDefaults.activeMode)
         MQFDefaults().synchronize()
         }else if(uiTesting){
             MQFDefaults().set(true, forKey: MQFDefaults.hasBeenSetup)
             MQFDefaults().set("KCHS-Pilot-Airland", forKey: MQFDefaults.activePresetID)
-            MQFDefaults().set("OGV Presets", forKey: MQFDefaults.pickerMode)
+            MQFDefaults().set("PRESET", forKey: MQFDefaults.activeMode)
             MQFDefaults().synchronize()
             
         }
