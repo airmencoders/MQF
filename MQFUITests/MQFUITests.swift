@@ -4,6 +4,8 @@
 //
 //  Created by Christian Brechbuhl on 5/25/19.
 //
+//
+//xcodebuild -workspace MQF.xcworkspace -scheme "MQF"  -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.2.2' test
 
 import XCTest
 import MQF
@@ -41,7 +43,7 @@ class MQFUITests: XCTestCase {
         tablesQuery/*@START_MENU_TOKEN@*/.staticTexts["Charleston AFB - 437/315 AW Pilot"]/*[[".cells.staticTexts[\"Charleston AFB - 437\/315 AW Pilot\"]",".staticTexts[\"Charleston AFB - 437\/315 AW Pilot\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         app.navigationBars["Choose your MQFs"].buttons["Done"].tap()
 
-//   
+//
 //        XCUIApplication().children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 1).children(matching: .other).element(boundBy: 0).children(matching: .other).element.tap()
         
     }
