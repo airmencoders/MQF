@@ -13,7 +13,7 @@ jobs:
       run: | 
         pod repo update
         pod install
-    - name: Build
-      run: swift build -v
+    - name: Generate xcodeproj
+      run: swift package generate-xcodeproj
     - name: Run tests
-      run: swift test -v
+      run: xcodebuild build test -destination ‘name=iPhone 11’ -scheme ‘MQF’
