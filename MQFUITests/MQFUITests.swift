@@ -95,27 +95,27 @@ class MQFUITests: XCTestCase {
     }
     
     /// Runs through an entire mqf in study mode, once the results show it makes sure there are enough results for each question it saw in the run through
-    func testEntireMQF(){
-
-        let app = XCUIApplication()
-        app.buttons["Test"].tap()
-        
-
-        let resultsNavigationBar = app.navigationBars["Results"]
-        var c = 0
-        while !resultsNavigationBar.exists {
-            let aStaticText = app.collectionViews/*@START_MENU_TOKEN@*/.staticTexts["A"]/*[[".cells.staticTexts[\"A\"]",".staticTexts[\"A\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
-            aStaticText.tap()
-            c = c + 1
-        }
-
-        
-        let cellCount = app.tables.cells.count
-        XCTAssertEqual(c / 2, cellCount - 1, "Wrong Result Cell Count")
-
-        resultsNavigationBar.buttons["Done"].tap()
-
-
-    }
+//    func testEntireMQF(){
+//
+//        let app = XCUIApplication()
+//        app.buttons["Test"].tap()
+//        
+//
+//        let resultsNavigationBar = app.navigationBars["Results"]
+//        var c = 0
+//        while !resultsNavigationBar.exists {
+//            let aStaticText = app.collectionViews/*@START_MENU_TOKEN@*/.staticTexts["A"]/*[[".cells.staticTexts[\"A\"]",".staticTexts[\"A\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+//            aStaticText.tap()
+//            c = c + 1
+//        }
+//
+//        
+//        let cellCount = app.tables.cells.count
+//        XCTAssertEqual(c / 2, cellCount - 1, "Wrong Result Cell Count")
+//
+//        resultsNavigationBar.buttons["Done"].tap()
+//
+//
+//    }
 
 }
