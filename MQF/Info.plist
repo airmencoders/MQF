@@ -19,11 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-<<<<<<< Updated upstream
-	<string>922</string>
-=======
-	<string>981</string>
->>>>>>> Stashed changes
+	<string>984</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>LSRequiresIPhoneOS</key>
