@@ -26,6 +26,7 @@ class ChooseMQFViewController: FormViewController {
         let previousSelection = MQFDefaults().object(forKey: MQFDefaults.activePresetID) as? String ?? "KCHS-Pilot-Airland2"
         ///Current crew position
         let crewPosition = MQFDefaults().object(forKey: MQFDefaults.crewPosition) as? String ?? "Pilot"
+        let mds = MQFDefaults().object(forKey: MQFDefaults.mds) as? String ?? "C-17"
         
         //Instatiate form
         form
@@ -49,7 +50,8 @@ class ChooseMQFViewController: FormViewController {
                 //Add a row for each `MQFPreset` base on each `MQFBase`
                 for base in DataManager.shared.availableBases{
                     for option in base.presets {
-                        if(option.crewPositions.contains(crewPosition) || option.crewPositions.contains("All")){
+                        print(option.mds)
+                        if((option.crewPositions.contains(crewPosition) || option.crewPositions.contains("All")) && option.mds == mds){
                             //Only show MQFs for crew position
                             
                             $0 <<< ListCheckRow<String>(option.name){ listRow in
@@ -80,7 +82,7 @@ class ChooseMQFViewController: FormViewController {
                 
                 //Add row for each MQF available to the selected crew position
                 for option in DataManager.shared.availableMQFs {
-                    if(option.crewPositions.contains(crewPosition) || option.crewPositions.contains("All")){
+                    if((option.crewPositions.contains(crewPosition) || option.crewPositions.contains("All")) && option.mds == mds){
                         $0 <<< ListCheckRow<String>(option.name){ listRow in
                             listRow.title = option.name
                             listRow.selectableValue = option.filename
