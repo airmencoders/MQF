@@ -53,6 +53,7 @@ class MQFTests: XCTestCase {
             for mqf in activeMQFs{
                 let name = mqf.filename.replacingOccurrences(of: ".json", with: "")
                 guard let path = Bundle.main.path(forResource: name, ofType: "json") else {
+                    XCTFail("File not loaded")
                     return
                 }
                 if let quiz = QKQuiz(loadFromJSONFile: path) {
