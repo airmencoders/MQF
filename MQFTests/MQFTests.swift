@@ -65,6 +65,7 @@ class MQFTests: XCTestCase {
        
             for question in superQuiz.orderedQuestions{
                 XCTAssert(question.responses.count > 1, "Not enough responses found for \(question.question)")
+                XCTAssert(question.responses.count < 8, "Too many possible answers found for \(question.question)") //If more than 7 ammend QKQuestion to include more labels and then update test
             }
      
             do {
