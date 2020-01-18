@@ -90,6 +90,64 @@ class MQFTests: XCTestCase {
         
        }
     
+    /// Iterates through every MQF to make sure it loads properly
+       /// Then goes through each question to make sure it has at least 2 possible answers
+       /// Submits the correct answer for each question to ensure user can get credit if they choose the correct one
+       func testAllMQFs(){
+           DataManager.shared.load()
+     
+           
+            let mqfs = DataManager.shared.availableMQFs
+     
+           XCTAssert(mqfs.count > 0, "No MQFs found")
+           
+           for mqf in mqfs{ // For each MQF in data set
+            print("Testing \(mqf.mds) \(mqf.name)")
+          
+               let quizSession = QKSession.default
+               var superQuiz = QKQuiz()
+               var testTotalQuestions = 0
+                   testTotalQuestions += mqf.testNum
+            
+                   let name = mqf.filename.replacingOccurrences(of: ".json", with: "")
+                   guard let path = Bundle.main.path(forResource: name, ofType: "json") else {
+                    XCTFail("File not loaded")
+                       return
+                   }
+                   if let quiz = QKQuiz(loadFromJSONFile: path) {
+                       XCTAssert(quiz.orderedQuestions.count > 0, "No questions found for MQF \(name)")
+                       superQuiz.appendQuiz(quiz: quiz, limit:0)
+                   }
+               
+               quizSession.load(quiz: superQuiz)
+               XCTAssert(superQuiz.orderedQuestions.count > 0, "No questions found")
+          
+               for question in superQuiz.orderedQuestions{
+                   XCTAssert(question.responses.count > 1, "Not enough responses found for \(question.question)")
+                   XCTAssert(question.responses.count < 8, "Too many possible answers found for \(question.question)") //If more than 7 ammend QKQuestion to include more labels and then update test
+               }
+        
+               do {
+                   try quizSession.start()
+               } catch {
+                   fatalError("Quiz started without quiz set on the session")
+               }
+               var activeQuestion:QKQuestion? = nil
+               while let question = quizSession.nextQuestion(after: activeQuestion){
+                   XCTAssert(question.responses.count > 1, "No question responses found for \(question.question)")
+                   quizSession.submit(response: question.correctResponse, for: question)
+                   
+                   activeQuestion = question
+               }
+               
+               XCTAssertEqual(quizSession.responseCount, superQuiz.orderedQuestions.count, "Different number of answers than questions")
+               XCTAssertEqual(quizSession.score, superQuiz.orderedQuestions.count, "Score was not 100")
+             
+               
+
+           }
+           
+          }
     
     func testCreatePreset(){
            let jsonString = "{\"name\":\"437/315 AW Pilot Test\",\"id\":\"KCHS-Pilot-Airland\",\"positions\":[\"Pilot\"],\"mqfs\":[{\"testNum\":30,\"file\":\"c17-Pilot-1nov\"},{\"testNum\":5,\"file\":\"c17-KCHS-Pilot\"}],\"testTotal\":35}"

@@ -20,6 +20,7 @@
 		8320219022A81904003BBB8C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320218F22A81904003BBB8C /* DataManager.swift */; };
 		8320219222A81A8D003BBB8C /* MQFData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320219122A81A8D003BBB8C /* MQFData.swift */; };
 		8320219422AB2FF0003BBB8C /* ChooseMQFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320219322AB2FF0003BBB8C /* ChooseMQFViewController.swift */; };
+		835594BF23D3931B005A7530 /* kc135-pilot-sep13.json in Resources */ = {isa = PBXBuildFile; fileRef = 835594BD23D38D39005A7530 /* kc135-pilot-sep13.json */; };
 		8378DED623B55C0A0031579A /* test-c17-Pilot-AD-1nov.json in Resources */ = {isa = PBXBuildFile; fileRef = 8378DECC23B55C0A0031579A /* test-c17-Pilot-AD-1nov.json */; };
 		8378DED723B55C0A0031579A /* test-c17-LM.json in Resources */ = {isa = PBXBuildFile; fileRef = 8378DECD23B55C0A0031579A /* test-c17-LM.json */; };
 		8378DED823B55C0A0031579A /* test-c17-ILM.json in Resources */ = {isa = PBXBuildFile; fileRef = 8378DECE23B55C0A0031579A /* test-c17-ILM.json */; };
@@ -103,6 +104,7 @@
 		8320218F22A81904003BBB8C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		8320219122A81A8D003BBB8C /* MQFData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQFData.swift; sourceTree = "<group>"; };
 		8320219322AB2FF0003BBB8C /* ChooseMQFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseMQFViewController.swift; sourceTree = "<group>"; };
+		835594BD23D38D39005A7530 /* kc135-pilot-sep13.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "kc135-pilot-sep13.json"; sourceTree = "<group>"; };
 		8378DECB23B55AC00031579A /* test-available.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "test-available.json"; sourceTree = "<group>"; };
 		8378DECC23B55C0A0031579A /* test-c17-Pilot-AD-1nov.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-c17-Pilot-AD-1nov.json"; sourceTree = "<group>"; };
 		8378DECD23B55C0A0031579A /* test-c17-LM.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-c17-LM.json"; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 				83FCF2A723B04A3700E4C958 /* c17-LM-May18.json */,
 				83FCF2A923B087C300E4C958 /* c17-LM-AD-May18.json */,
 				83FCF2AB23B087D500E4C958 /* c17-ILM-May18.json */,
+				835594BD23D38D39005A7530 /* kc135-pilot-sep13.json */,
 			);
 			path = "JSON Data";
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				835594BF23D3931B005A7530 /* kc135-pilot-sep13.json in Resources */,
 				83A894ED23609EF400E8D269 /* c17-Pilot-1nov.json in Resources */,
 				8380A47622AF117C00D78B38 /* c17-LM.json in Resources */,
 				838838D822A39303000896C6 /* pentagon.jpg in Resources */,
