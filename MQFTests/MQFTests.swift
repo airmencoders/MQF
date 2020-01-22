@@ -150,6 +150,62 @@ class MQFTests: XCTestCase {
            
           }
     
+    /// Iterates through every MQF to make sure there are no bad charectors
+       func testAllAnswersBadChars(){
+           DataManager.shared.load()
+     
+           
+            let mqfs = DataManager.shared.availableMQFs
+     
+           XCTAssert(mqfs.count > 0, "No MQFs found")
+           
+           for mqf in mqfs{ // For each MQF in data set
+            print("Testing \(mqf.mds) \(mqf.name)")
+          
+               let quizSession = QKSession.default
+               var superQuiz = QKQuiz()
+               var testTotalQuestions = 0
+                   testTotalQuestions += mqf.testNum
+            
+                   let name = mqf.filename.replacingOccurrences(of: ".json", with: "")
+                   guard let path = Bundle.main.path(forResource: name, ofType: "json") else {
+                    XCTFail("File not loaded")
+                       return
+                   }
+                   if let quiz = QKQuiz(loadFromJSONFile: path) {
+                       XCTAssert(quiz.orderedQuestions.count > 0, "No questions found for MQF \(name)")
+                       superQuiz.appendQuiz(quiz: quiz, limit:0)
+                   }
+               
+               quizSession.load(quiz: superQuiz)
+               XCTAssert(superQuiz.orderedQuestions.count > 0, "No questions found")
+          
+          
+        
+               do {
+                   try quizSession.start()
+               } catch {
+                XCTFail("Quiz Failed to Start")
+                   fatalError("Quiz started without quiz set on the session")
+               }
+               var activeQuestion:QKQuestion? = nil
+               while let question = quizSession.nextQuestion(after: activeQuestion){
+                   
+                for answer in activeQuestion?.responses ?? [String](){
+                    if answer.contains("\\/") {
+                        XCTFail("Answer includes \\/ ")
+                    }
+                }
+                   
+                   activeQuestion = question
+               }
+             
+               
+
+           }
+           
+          }
+    
     func testCreatePreset(){
            let jsonString = "{\"name\":\"437/315 AW Pilot Test\",\"id\":\"KCHS-Pilot-Airland\",\"positions\":[\"Pilot\"],\"mqfs\":[{\"testNum\":30,\"file\":\"c17-Pilot-1nov\"},{\"testNum\":5,\"file\":\"c17-KCHS-Pilot\"}],\"testTotal\":35}"
            let json = JSON(parseJSON: jsonString)
