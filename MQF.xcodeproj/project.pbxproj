@@ -220,7 +220,7 @@
 			path = "Results View";
 			sourceTree = "<group>";
 		};
-		8320217D22A4C3D9003BBB8C /* JSON Data */ = {
+		8320217D22A4C3D9003BBB8C /* JSONData */ = {
 			isa = PBXGroup;
 			children = (
 				8320217E22A4C469003BBB8C /* available.json */,
@@ -236,7 +236,7 @@
 				83FCF2AB23B087D500E4C958 /* c17-ILM-May18.json */,
 				835594BD23D38D39005A7530 /* kc135-pilot-sep13.json */,
 			);
-			path = "JSON Data";
+			path = JSONData;
 			sourceTree = "<group>";
 		};
 		8320218422A714FD003BBB8C /* Settings View */ = {
@@ -312,7 +312,7 @@
 				8320218C22A78FF1003BBB8C /* MQF.entitlements */,
 				8320218722A775D5003BBB8C /* Extensions and Helpers */,
 				8378DECA23B55A940031579A /* Test JSON Data */,
-				8320217D22A4C3D9003BBB8C /* JSON Data */,
+				8320217D22A4C3D9003BBB8C /* JSONData */,
 				8320218422A714FD003BBB8C /* Settings View */,
 				8320217622A46B7A003BBB8C /* Results View */,
 				83A9C74C229CA27C00040119 /* Question View */,
@@ -865,7 +865,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = mil.airmen.coders.mqf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -886,7 +886,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.2;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = mil.airmen.coders.mqf;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
