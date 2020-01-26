@@ -46,9 +46,9 @@ class DataManager: NSObject {
     
     /// Loads MQFs listed in `available.json`
     /// Does not take any parameters or return anything. Once called the loaded MQFs can be accessed view the `DataManager` class, shared instantiation.
-    public func load(){
+    public func load(file:String = "test-available"){
         print("loading data")
-        guard let path = Bundle.main.path(forResource: "available", ofType: "json") else {
+        guard let path = Bundle.main.path(forResource: file, ofType: "json") else {
             return
         }
         let json = loadFromJSONFile(path: path)
