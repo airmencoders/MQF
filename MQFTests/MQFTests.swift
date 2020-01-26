@@ -122,7 +122,7 @@ class MQFTests: XCTestCase {
                
                quizSession.load(quiz: superQuiz)
                XCTAssert(superQuiz.orderedQuestions.count > 0, "No questions found")
-          
+            XCTAssert(superQuiz.orderedQuestions.count == mqf.expectedTotal, "Wrong number of questions loaded in MQF \(mqf.filename)")
                for question in superQuiz.orderedQuestions{
                    XCTAssert(question.responses.count > 1, "Not enough responses found for \(question.question)")
                    XCTAssert(question.responses.count < 8, "Too many possible answers found for \(question.question)") //If more than 7 ammend QKQuestion to include more labels and then update test
