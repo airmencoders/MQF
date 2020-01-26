@@ -20,6 +20,9 @@ class MQFData: NSObject {
     public var testNum = 0
     /// Filename of the MQF (for searching later, MQFData is based on JSON object supplied to `init`)
     public var filename:String
+    
+    /// Total number of questions that the MQF SHOULD have
+    public var expectedTotal = 0
 
     /// Required `init()` - do not use, this creates an instance of MQFData with dummy data.
     /// Instead use `init(json:JSON)` or `init(json:JSON, total:Int)`
@@ -42,6 +45,7 @@ class MQFData: NSObject {
         self.name = dict["name"]?.string ?? "Name not found"
         self.mds = dict["mds"]?.string ?? "MDS not found"
         self.filename = dict["file"]?.string ?? "c17-Pilot.json"
+        self.expectedTotal = dict["expected"]?.int ?? 0
         self.crewPositions = [String]()
         for position in dict["positions"]?.array ?? [JSON]() {
             self.crewPositions.append(position.string ?? "Not Found")

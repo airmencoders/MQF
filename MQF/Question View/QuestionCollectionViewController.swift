@@ -171,7 +171,23 @@ class QuestionCollectionViewController: UICollectionViewController {
         do {
             try quizSession.start()
         } catch {
-            fatalError("Quiz started without quiz set on the session")
+            let alert = UIAlertController(title: "Error", message: "We couldn't load that MQF, please try a different one and let us know at AirmenCoders@us.af.mil", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                  switch action.style{
+                  case .default:
+                        print("default")
+
+                  case .cancel:
+                        print("cancel")
+
+                  case .destructive:
+                        print("destructive")
+
+
+            }}))
+            self.present(alert, animated: true, completion: nil)
+      
+          //  fatalError("Quiz started without quiz set on the session")
         }
         
         if let question = quizSession.nextQuestion() {
