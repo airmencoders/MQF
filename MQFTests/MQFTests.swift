@@ -13,8 +13,13 @@ class MQFTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        
+//        let isProduction = ProcessInfo.processInfo.arguments.contains("MQF-ENV-VAR-IS-PROD")
+//              if (isProduction){
+//                  DataManager.shared.load(file: "available")
+//              }else{
+//                  DataManager.shared.load()
+//              }
+//        
     }
 
     override func tearDown() {
@@ -25,7 +30,6 @@ class MQFTests: XCTestCase {
     /// Then goes through each question to make sure it has at least 2 possible answers
     /// Submits the correct answer for each question to ensure user can get credit if they choose the correct one
     func testAllPresets(){
-        DataManager.shared.load()
         let bases = DataManager.shared.availableBases
         XCTAssert(bases.count > 0, "No bases found")
         
@@ -95,9 +99,7 @@ class MQFTests: XCTestCase {
        /// Then goes through each question to make sure it has at least 2 possible answers
        /// Submits the correct answer for each question to ensure user can get credit if they choose the correct one
        func testAllMQFs(){
-           DataManager.shared.load()
-     
-           
+    
             let mqfs = DataManager.shared.availableMQFs
      
            XCTAssert(mqfs.count > 0, "No MQFs found")
@@ -152,7 +154,6 @@ class MQFTests: XCTestCase {
     
     /// Iterates through every MQF to make sure there are no bad charectors
        func testAllAnswersBadChars(){
-           DataManager.shared.load()
      
            
             let mqfs = DataManager.shared.availableMQFs
@@ -206,15 +207,15 @@ class MQFTests: XCTestCase {
            
           }
     
-    func testCreatePreset(){
-           let jsonString = "{\"name\":\"437/315 AW Pilot Test\",\"id\":\"KCHS-Pilot-Airland\",\"positions\":[\"Pilot\"],\"mqfs\":[{\"testNum\":30,\"file\":\"c17-Pilot-1nov\"},{\"testNum\":5,\"file\":\"c17-KCHS-Pilot\"}],\"testTotal\":35}"
-           let json = JSON(parseJSON: jsonString)
-           let preset = MQFPreset.init(json: json)
-           
-        XCTAssertEqual(preset.name, "437/315 AW Pilot Test", "Wrong preset name")
-        XCTAssertEqual(preset.crewPositions, ["Pilot"], "Wrong crew positions")
-        XCTAssertEqual(preset.mqfs.count, 2, "Wrong number of MQFs")
-       }
+ //   func testCreatePreset(){
+//           let jsonString = "{\"name\":\"437/315 AW Pilot Test\",\"id\":\"KCHS-Pilot-Airland\",\"positions\":[\"Pilot\"],\"mqfs\":[{\"testNum\":30,\"file\":\"c17-Pilot-1nov\"},{\"testNum\":5,\"file\":\"c17-KCHS-Pilot\"}],\"testTotal\":35}"
+//           let json = JSON(parseJSON: jsonString)
+//           let preset = MQFPreset.init(json: json)
+//
+//        XCTAssertEqual(preset.name, "437/315 AW Pilot Test", "Wrong preset name")
+//        XCTAssertEqual(preset.crewPositions, ["Pilot"], "Wrong crew positions")
+//        XCTAssertEqual(preset.mqfs.count, 2, "Wrong number of MQFs")
+//       }
 
     
     func testCreateBase(){
