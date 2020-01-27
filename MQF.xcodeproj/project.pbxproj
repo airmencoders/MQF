@@ -11,7 +11,6 @@
 		8320217822A46B89003BBB8C /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320217722A46B89003BBB8C /* ResultsTableViewController.swift */; };
 		8320217A22A47248003BBB8C /* SummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320217922A47248003BBB8C /* SummaryTableViewCell.swift */; };
 		8320217C22A47253003BBB8C /* QuestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320217B22A47253003BBB8C /* QuestionTableViewCell.swift */; };
-		8320217F22A4C469003BBB8C /* available.json in Resources */ = {isa = PBXBuildFile; fileRef = 8320217E22A4C469003BBB8C /* available.json */; };
 		8320218322A6F7DA003BBB8C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320218222A6F7DA003BBB8C /* GradientView.swift */; };
 		8320218622A71513003BBB8C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320218522A71513003BBB8C /* SettingsViewController.swift */; };
 		8320218922A775E2003BBB8C /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320218822A775E2003BBB8C /* extensions.swift */; };
@@ -20,7 +19,6 @@
 		8320219022A81904003BBB8C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320218F22A81904003BBB8C /* DataManager.swift */; };
 		8320219222A81A8D003BBB8C /* MQFData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320219122A81A8D003BBB8C /* MQFData.swift */; };
 		8320219422AB2FF0003BBB8C /* ChooseMQFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8320219322AB2FF0003BBB8C /* ChooseMQFViewController.swift */; };
-		8326A3F223DDFDF2009B2934 /* kc135-boom-sep13.json in Resources */ = {isa = PBXBuildFile; fileRef = 8326A3F123DDFDC9009B2934 /* kc135-boom-sep13.json */; };
 		8326A3F323DE54C3009B2934 /* test-available.json in Resources */ = {isa = PBXBuildFile; fileRef = 8378DECB23B55AC00031579A /* test-available.json */; };
 		8326A40023DE563B009B2934 /* test-c17-ILM-May18.json in Resources */ = {isa = PBXBuildFile; fileRef = 8326A3F423DE563B009B2934 /* test-c17-ILM-May18.json */; };
 		8326A40123DE563B009B2934 /* test-c17-LM-May18.json in Resources */ = {isa = PBXBuildFile; fileRef = 8326A3F523DE563B009B2934 /* test-c17-LM-May18.json */; };
@@ -34,17 +32,11 @@
 		8326A40923DE563B009B2934 /* test-c17-ILM.json in Resources */ = {isa = PBXBuildFile; fileRef = 8326A3FD23DE563B009B2934 /* test-c17-ILM.json */; };
 		8326A40A23DE563B009B2934 /* test-kc135-pilot-sep13.json in Resources */ = {isa = PBXBuildFile; fileRef = 8326A3FE23DE563B009B2934 /* test-kc135-pilot-sep13.json */; };
 		8326A40B23DE563B009B2934 /* test-c17-LM-AD.json in Resources */ = {isa = PBXBuildFile; fileRef = 8326A3FF23DE563B009B2934 /* test-c17-LM-AD.json */; };
-		835594BF23D3931B005A7530 /* kc135-pilot-sep13.json in Resources */ = {isa = PBXBuildFile; fileRef = 835594BD23D38D39005A7530 /* kc135-pilot-sep13.json */; };
 		837E02A923B136B000489C2A /* Quiz Kit LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 837E02A823B136B000489C2A /* Quiz Kit LICENSE */; };
 		837E02AB23B136E000489C2A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 837E02AA23B136E000489C2A /* README.md */; };
-		8380A47622AF117C00D78B38 /* c17-LM.json in Resources */ = {isa = PBXBuildFile; fileRef = 8380A47522AF117C00D78B38 /* c17-LM.json */; };
 		838838D822A39303000896C6 /* pentagon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 838838D722A39303000896C6 /* pentagon.jpg */; };
 		838838DA22A3993E000896C6 /* BG.png in Resources */ = {isa = PBXBuildFile; fileRef = 838838D922A3993E000896C6 /* BG.png */; };
-		838DFFAA22F2280000B71F07 /* c17-LM-AD.json in Resources */ = {isa = PBXBuildFile; fileRef = 838DFFA922F2280000B71F07 /* c17-LM-AD.json */; };
 		838DFFAC22F2A61B00B71F07 /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838DFFAB22F2A61B00B71F07 /* SetUpViewController.swift */; };
-		83A894ED23609EF400E8D269 /* c17-Pilot-1nov.json in Resources */ = {isa = PBXBuildFile; fileRef = 83A894EC23609EF400E8D269 /* c17-Pilot-1nov.json */; };
-		83A894EF2364A96D00E8D269 /* c17-Pilot-IP-1nov.json in Resources */ = {isa = PBXBuildFile; fileRef = 83A894EE2364A96D00E8D269 /* c17-Pilot-IP-1nov.json */; };
-		83A894F12364A9B700E8D269 /* c17-Pilot-AD-1nov.json in Resources */ = {isa = PBXBuildFile; fileRef = 83A894F02364A9B700E8D269 /* c17-Pilot-AD-1nov.json */; };
 		83A9C70A2299BBEB00040119 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C7092299BBEB00040119 /* AppDelegate.swift */; };
 		83A9C7112299BBEB00040119 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A9C70F2299BBEB00040119 /* Main.storyboard */; };
 		83A9C7132299BBEC00040119 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83A9C7122299BBEC00040119 /* Assets.xcassets */; };
@@ -64,14 +56,9 @@
 		83A9C752229CAB3C00040119 /* QuestionAnswerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C751229CAB3C00040119 /* QuestionAnswerCollectionViewCell.swift */; };
 		83A9C754229DF0F600040119 /* QuestionFooterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C753229DF0F600040119 /* QuestionFooterCollectionReusableView.swift */; };
 		83A9C756229E297B00040119 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9C755229E297B00040119 /* MenuViewController.swift */; };
-		83D9386822CBB1F500648DDA /* c17-ILM.json in Resources */ = {isa = PBXBuildFile; fileRef = 83D9386722CBB1F500648DDA /* c17-ILM.json */; };
 		83F607F322AB629500ED22E7 /* MQFPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F607F222AB629500ED22E7 /* MQFPreset.swift */; };
 		83F607F522AB661900ED22E7 /* MQFBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F607F422AB661900ED22E7 /* MQFBase.swift */; };
 		83F607F822AC62BB00ED22E7 /* CenterAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F607F722AC62BB00ED22E7 /* CenterAlignedCollectionViewFlowLayout.swift */; };
-		83F607FE22AE01DF00ED22E7 /* c17-KCHS-Pilot.json in Resources */ = {isa = PBXBuildFile; fileRef = 83F607FD22AE01DF00ED22E7 /* c17-KCHS-Pilot.json */; };
-		83FCF2A823B04A3700E4C958 /* c17-LM-May18.json in Resources */ = {isa = PBXBuildFile; fileRef = 83FCF2A723B04A3700E4C958 /* c17-LM-May18.json */; };
-		83FCF2AA23B087C300E4C958 /* c17-LM-AD-May18.json in Resources */ = {isa = PBXBuildFile; fileRef = 83FCF2A923B087C300E4C958 /* c17-LM-AD-May18.json */; };
-		83FCF2AC23B087D500E4C958 /* c17-ILM-May18.json in Resources */ = {isa = PBXBuildFile; fileRef = 83FCF2AB23B087D500E4C958 /* c17-ILM-May18.json */; };
 		A36D6D9319A1AEEC1FF36325 /* Pods_MQFTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EC8B462921AA5CF346E5AE0 /* Pods_MQFTests.framework */; };
 		F86F0800ECAB936034974728 /* Pods_MQFUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B14D23F84BA2E52DDC092092 /* Pods_MQFUITests.framework */; };
 /* End PBXBuildFile section */
@@ -244,7 +231,6 @@
 				83FCF2AB23B087D500E4C958 /* c17-ILM-May18.json */,
 				835594BD23D38D39005A7530 /* kc135-pilot-sep13.json */,
 				8326A3F123DDFDC9009B2934 /* kc135-boom-sep13.json */,
-				8326A40C23DE56DA009B2934 /* PROD-Data.md */,
 			);
 			path = JSONData;
 			sourceTree = "<group>";
@@ -276,6 +262,7 @@
 		8378DECA23B55A940031579A /* Test JSON Data */ = {
 			isa = PBXGroup;
 			children = (
+				8326A40C23DE56DA009B2934 /* PROD-Data.md */,
 				8326A3F423DE563B009B2934 /* test-c17-ILM-May18.json */,
 				8326A3FD23DE563B009B2934 /* test-c17-ILM.json */,
 				8326A3F923DE563B009B2934 /* test-c17-KCHS-Pilot.json */,
@@ -415,6 +402,7 @@
 				83A9C7042299BBEB00040119 /* Resources */,
 				9C8FD8B205B5F850ACD5FCC3 /* [CP] Embed Pods Frameworks */,
 				83F607F622AB755400ED22E7 /* ShellScript */,
+				8326A40D23DE5A94009B2934 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -518,38 +506,25 @@
 			files = (
 				8326A40923DE563B009B2934 /* test-c17-ILM.json in Resources */,
 				8326A3F323DE54C3009B2934 /* test-available.json in Resources */,
-				8326A3F223DDFDF2009B2934 /* kc135-boom-sep13.json in Resources */,
 				8326A40B23DE563B009B2934 /* test-c17-LM-AD.json in Resources */,
-				835594BF23D3931B005A7530 /* kc135-pilot-sep13.json in Resources */,
 				8326A40A23DE563B009B2934 /* test-kc135-pilot-sep13.json in Resources */,
 				8326A40423DE563B009B2934 /* test-c17-Pilot-IP-1nov.json in Resources */,
-				83A894ED23609EF400E8D269 /* c17-Pilot-1nov.json in Resources */,
-				8380A47622AF117C00D78B38 /* c17-LM.json in Resources */,
 				8326A40323DE563B009B2934 /* test-c17-Pilot-AD-1nov.json in Resources */,
 				838838D822A39303000896C6 /* pentagon.jpg in Resources */,
 				8326A40823DE563B009B2934 /* test-c17-LM-AD-May18.json in Resources */,
 				8326A40023DE563B009B2934 /* test-c17-ILM-May18.json in Resources */,
-				83A894F12364A9B700E8D269 /* c17-Pilot-AD-1nov.json in Resources */,
 				8326A40223DE563B009B2934 /* test-c17-Pilot-1nov.json in Resources */,
-				83FCF2A823B04A3700E4C958 /* c17-LM-May18.json in Resources */,
-				83FCF2AC23B087D500E4C958 /* c17-ILM-May18.json in Resources */,
-				83F607FE22AE01DF00ED22E7 /* c17-KCHS-Pilot.json in Resources */,
 				83A9C7162299BBEC00040119 /* LaunchScreen.storyboard in Resources */,
 				8326A40523DE563B009B2934 /* test-c17-KCHS-Pilot.json in Resources */,
-				83A894EF2364A96D00E8D269 /* c17-Pilot-IP-1nov.json in Resources */,
 				83A9C7132299BBEC00040119 /* Assets.xcassets in Resources */,
-				83D9386822CBB1F500648DDA /* c17-ILM.json in Resources */,
-				838DFFAA22F2280000B71F07 /* c17-LM-AD.json in Resources */,
 				837E02A923B136B000489C2A /* Quiz Kit LICENSE in Resources */,
 				8326A40123DE563B009B2934 /* test-c17-LM-May18.json in Resources */,
 				837E02AB23B136E000489C2A /* README.md in Resources */,
 				83A9C7112299BBEB00040119 /* Main.storyboard in Resources */,
-				83FCF2AA23B087C300E4C958 /* c17-LM-AD-May18.json in Resources */,
 				8326A40723DE563B009B2934 /* test-kc135-boom-sep13.json in Resources */,
 				83A9C7492299BF9400040119 /* example-quiz.json in Resources */,
 				838838DA22A3993E000896C6 /* BG.png in Resources */,
 				8326A40623DE563B009B2934 /* test-c17-LM.json in Resources */,
-				8320217F22A4C469003BBB8C /* available.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,6 +598,24 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		8326A40D23DE5A94009B2934 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "
+";
 		};
 		83F607F622AB755400ED22E7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
