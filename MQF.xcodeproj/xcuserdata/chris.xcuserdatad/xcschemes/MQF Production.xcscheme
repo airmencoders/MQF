@@ -5,6 +5,15 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <PreActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;&#10;dirsToCopy=(&quot;MQF/JSONData&quot;)&#10;for INPATTERN in &quot;${dirsToCopy[@]}&quot;; do&#10;    INDIR=${PROJECT_DIR}/$INPATTERN/&quot;&#10;    OUTDIR=$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH&#10;    cp -R &quot;$INDIR&quot; $OUTDIR&#10;done&#10;">
+            </ActionContent>
+         </ExecutionAction>
+      </PreActions>
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -76,6 +85,13 @@
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "MQF_ENV_IS_PROD"
+            value = "true"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
