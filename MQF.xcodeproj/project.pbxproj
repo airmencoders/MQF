@@ -109,6 +109,7 @@
 		8326A3FE23DE563B009B2934 /* test-kc135-pilot-sep13.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-kc135-pilot-sep13.json"; sourceTree = "<group>"; };
 		8326A3FF23DE563B009B2934 /* test-c17-LM-AD.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-c17-LM-AD.json"; sourceTree = "<group>"; };
 		8326A40C23DE56DA009B2934 /* PROD-Data.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "PROD-Data.md"; sourceTree = "<group>"; };
+		832F079D23E2669200BBA3C6 /* c130h-pilot-mission.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c130h-pilot-mission.json"; sourceTree = "<group>"; };
 		835594BD23D38D39005A7530 /* kc135-pilot-sep13.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "kc135-pilot-sep13.json"; sourceTree = "<group>"; };
 		8378DECB23B55AC00031579A /* test-available.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "test-available.json"; sourceTree = "<group>"; };
 		837E02A823B136B000489C2A /* Quiz Kit LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Quiz Kit LICENSE"; sourceTree = "<group>"; };
@@ -231,6 +232,7 @@
 				83FCF2AB23B087D500E4C958 /* c17-ILM-May18.json */,
 				835594BD23D38D39005A7530 /* kc135-pilot-sep13.json */,
 				8326A3F123DDFDC9009B2934 /* kc135-boom-sep13.json */,
+				832F079D23E2669200BBA3C6 /* c130h-pilot-mission.json */,
 			);
 			path = JSONData;
 			sourceTree = "<group>";
