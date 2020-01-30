@@ -13,13 +13,13 @@ class MQFTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-//        let isProduction = ProcessInfo.processInfo.arguments.contains("MQF-ENV-VAR-IS-PROD")
-//              if (isProduction){
-//                  DataManager.shared.load(file: "available")
-//              }else{
-//                  DataManager.shared.load()
-//              }
-//        
+        let isProduction = ProcessInfo.processInfo.arguments.contains("MQF-ENV-VAR-IS-PROD")
+              if (isProduction){
+                  DataManager.shared.load(file: "available")
+              }else{
+                  DataManager.shared.load()
+              }
+        
     }
 
     override func tearDown() {
@@ -217,27 +217,7 @@ class MQFTests: XCTestCase {
 //        XCTAssertEqual(preset.mqfs.count, 2, "Wrong number of MQFs")
 //       }
 
-    
-    func testCreateBase(){
-        let jsonString = "{\"name\":\"Charleston AFB Test\",\"id\":\"1\",\"presets\":[{\"name\":\"437/315 AW Pilot\",\"id\":\"KCHS-Pilot-Airland\",\"positions\":[\"Pilot\"],\"mqfs\":[{\"testNum\":30,\"file\":\"c17-Pilot-1nov\"},{\"testNum\":5,\"file\":\"c17-KCHS-Pilot\"}],\"testTotal\":35}]}"
-        let json = JSON(parseJSON: jsonString)
-        let base = MQFBase.init(json: json)
-        
-        XCTAssertEqual(base.name, "Charleston AFB Test", "Wrong base name")
-        XCTAssertEqual(base.presets.count, 1, "Wrong number of presets")
-    }
-    
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
 
 }
