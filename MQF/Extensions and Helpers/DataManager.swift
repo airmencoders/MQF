@@ -34,6 +34,20 @@ class DataManager: NSObject {
         return cps.unique()
     }
     
+    /// List all available crew positions
+    /// - returns: `[String]` containing each available crew position
+    public func availableCrewPositionsForMWS(mds:String)->[String]{
+        var cps = [String]()
+        for mqf in availableMQFs{
+            if(mqf.mds == mds){
+            for position in mqf.crewPositions{
+                cps.append(position)
+            }
+            }
+        }
+        return cps.unique()
+    }
+    
     /// List of all available MDSs
     /// - returns: `[String]`of each MDS found
     public var availableMDS: [String] {

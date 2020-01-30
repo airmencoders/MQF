@@ -10,10 +10,12 @@ import Eureka
 
 /// `SettingsViewController`  subclasses `FormViewController`. It controls the Settings view that users see.
 class SettingsViewController: FormViewController {
-    
+    var currentMWS = "C-5"
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.currentMWS = MQFDefaults().string(forKey: MQFDefaults.mds) ?? "C-17"
         self.setUpForm()
+        
     }
     
     /// Overides `valueHasBeenChanged` to save new value to  `MQFDefaults` for Quiz Size
@@ -36,7 +38,27 @@ class SettingsViewController: FormViewController {
     func setUpForm(){
         let previousQuizSize = MQFDefaults().object(forKey: MQFDefaults.quizSize) as? Int ?? 0
         super.viewDidLoad()
-        
+        let crewPosRow = PushRow<String>() {
+                       $0.title = "Crew Position"
+                       $0.selectorTitle = "Pick a position"
+                       $0.options = DataManager.shared.availableCrewPositionsForMWS(mds: self.currentMWS)
+                       $0.value = MQFDefaults().object(forKey: MQFDefaults.crewPosition) as? String ?? "Pilot"
+                       $0.add(rule: RuleRequired())
+                       $0.validationOptions = .validatesOnChange
+                   }.onChange { row in
+                       if(row.value != nil){
+                           MQFDefaults().set(row.value, forKey: MQFDefaults.crewPosition)
+                       }else{
+                           row.value = MQFDefaults().string(forKey: MQFDefaults.crewPosition) ?? "C-17"
+                       }
+                       MQFDefaults().synchronize()
+                   }.cellUpdate { cell, row in
+                    row.options = DataManager.shared.availableCrewPositionsForMWS(mds: self.currentMWS)
+                       if !row.isValid {
+                           cell.textLabel?.textColor = .red
+                           print("invalid")
+                       }
+                   }
         // Instantiates an Eureka form instance
         form
         
@@ -76,36 +98,21 @@ class SettingsViewController: FormViewController {
             }.onChange { row in // Handle changes
                 if(row.value != nil){
                     MQFDefaults().set(row.value, forKey: MQFDefaults.mds)
+                    self.currentMWS = row.value ?? "C-17"
                 }else{
                     row.value = MQFDefaults().string(forKey: MQFDefaults.mds) ?? "C-17"
                 }
+                crewPosRow.reload()
                 MQFDefaults().synchronize() // saves defaults
             }.cellUpdate { cell, row in
+                
                 if !row.isValid {
                     cell.textLabel?.textColor = .red
                     print("invalid")
                 }
             }
-            <<< PushRow<String>() {
-                $0.title = "Crew Position"
-                $0.selectorTitle = "Pick a position"
-                $0.options = DataManager.shared.availableCrewPositions
-                $0.value = MQFDefaults().object(forKey: MQFDefaults.crewPosition) as? String ?? "Pilot"
-                $0.add(rule: RuleRequired())
-                $0.validationOptions = .validatesOnChange
-            }.onChange { row in
-                if(row.value != nil){
-                    MQFDefaults().set(row.value, forKey: MQFDefaults.crewPosition)
-                }else{
-                    row.value = MQFDefaults().string(forKey: MQFDefaults.crewPosition) ?? "C-17"
-                }
-                MQFDefaults().synchronize()
-            }.cellUpdate { cell, row in
-                if !row.isValid {
-                    cell.textLabel?.textColor = .red
-                    print("invalid")
-                }
-            }
+           
+            <<< crewPosRow
             <<< SwitchRow() {
                 $0.title = "Study on a Loop"
                 $0.value = MQFDefaults().object(forKey: MQFDefaults.studyLoop) as? Bool ?? true
