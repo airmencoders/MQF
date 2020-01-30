@@ -10,59 +10,73 @@ import Eureka
 
 /// Initial screen shown to user on new install, has them pick an MDS and crew position.
 class SetUpViewController: FormViewController {
-
+var currentMWS = "C-17"
     override func viewDidLoad() {
         super.viewDidLoad()
-
+         self.currentMWS = MQFDefaults().string(forKey: MQFDefaults.mds) ?? "C-17"
+    
         //Instantiate form
+        self.setUpForm()
+       //mark set up as shown
+        MQFDefaults().set(true, forKey: MQFDefaults.hasBeenSetup)
+        MQFDefaults().synchronize()
+    
+    }
+    
+    func setUpForm(){
+        let crewPosRow = PushRow<String>() {
+                                $0.title = "Crew Position"
+                                $0.selectorTitle = "Pick a position"
+                                $0.options = DataManager.shared.availableCrewPositionsForMWS(mds: self.currentMWS)
+                                $0.value = MQFDefaults().object(forKey: MQFDefaults.crewPosition) as? String ?? "Pilot"
+                                $0.add(rule: RuleRequired())
+                                $0.validationOptions = .validatesOnChange
+                            }.onChange { row in
+                                if(row.value != nil){
+                                    MQFDefaults().set(row.value, forKey: MQFDefaults.crewPosition)
+                                }else{
+                                    row.value = MQFDefaults().string(forKey: MQFDefaults.crewPosition) ?? "C-17"
+                                }
+                                MQFDefaults().synchronize()
+                            }.cellUpdate { cell, row in
+                                row.options = DataManager.shared.availableCrewPositionsForMWS(mds: self.currentMWS)
+                                if !row.isValid {
+                                    cell.textLabel?.textColor = .red
+                                    print("invalid")
+                                }
+                            }
         form
             
             +++ Section(header: "Choose your MDS & Crew Position", footer: "You can always change them later in Settings. Don't see your MDS or crew position? Contact us to get your MQFs added, this app is open to all AF communities.")
             
             //Adds row to choose MDS from list of all available MDSs
-            <<< PushRow<String>() {
-                $0.title = "MDS (Airframe)"
-                $0.selectorTitle = "Pick an MDS"
-                $0.options = DataManager.shared.availableMDS
-                $0.value = MQFDefaults().object(forKey: MQFDefaults.mds) as? String ?? "C-17"
-                $0.add(rule: RuleRequired())
-                $0.validationOptions = .validatesOnChange
-                }.onChange { row in
-                    if(row.value != nil){
-                        MQFDefaults().set(row.value, forKey: MQFDefaults.mds)
-                    }else{
-                        row.value = MQFDefaults().string(forKey: MQFDefaults.mds) ?? "C-17"
-                    }
-                    MQFDefaults().synchronize()
-                }.cellUpdate { cell, row in
-                    if !row.isValid {
-                        cell.textLabel?.textColor = .red
-                        print("invalid")
-                    }
-            }
+                <<< PushRow<String>() {
+                   $0.title = "MDS (Airframe)"
+                   $0.selectorTitle = "Pick an MDS"
+                   $0.options = DataManager.shared.availableMDS
+                   $0.value = MQFDefaults().object(forKey: MQFDefaults.mds) as? String ?? "C-17"
+                   $0.add(rule: RuleRequired())
+                   $0.validationOptions = .validatesOnChange
+               }.onChange { row in // Handle changes
+                   if(row.value != nil){
+                       MQFDefaults().set(row.value, forKey: MQFDefaults.mds)
+                       self.currentMWS = row.value ?? "C-17"
+                   }else{
+                       row.value = MQFDefaults().string(forKey: MQFDefaults.mds) ?? "C-17"
+                   }
+                   crewPosRow.updateCell()
+                   MQFDefaults().synchronize() // saves defaults
+               }.cellUpdate { cell, row in
+                   
+                   if !row.isValid {
+                       cell.textLabel?.textColor = .red
+                       print("invalid")
+                   }
+               }
             
             //Adds row to choose crew position from list of all available
-            <<< PushRow<String>() {
-                $0.title = "Crew Position"
-                $0.selectorTitle = "Pick a position"
-                $0.options = DataManager.shared.availableCrewPositions
-                $0.value = MQFDefaults().object(forKey: MQFDefaults.crewPosition) as? String ?? "Pilot"
-                $0.add(rule: RuleRequired())
-                $0.validationOptions = .validatesOnChange
-                }.onChange { row in
-                    if(row.value != nil){
-                        MQFDefaults().set(row.value, forKey: MQFDefaults.crewPosition)
-                    }else{
-                        row.value = MQFDefaults().string(forKey: MQFDefaults.crewPosition) ?? "C-17"
-                    }
-                    MQFDefaults().synchronize()
-                }.cellUpdate { cell, row in
-                    if !row.isValid {
-                        cell.textLabel?.textColor = .red
-                        print("invalid")
-                    }
-            }
-        
+            <<< crewPosRow
+            
             //Adds button that dismisses view
             <<< ButtonRow(){ row in
                 row.title = "Begin"
@@ -72,11 +86,7 @@ class SetUpViewController: FormViewController {
                     
                 })
         }
-            
-       //mark set up as shown
-        MQFDefaults().set(true, forKey: MQFDefaults.hasBeenSetup)
-        MQFDefaults().synchronize()
-    
+
     }
     
     ///Dismisses the screen
