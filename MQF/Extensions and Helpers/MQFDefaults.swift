@@ -25,11 +25,7 @@ class MQFDefaults: UserDefaults {
         super.init(suiteName: "RQ9T47YT3S.group.mqf")!
     }
     
-    public convenience init (suiteName:String){
-        self.init();
-        super.removeSuite(named: "RQ9T47YT3S.group.mqf")
-        super.addSuite(named: "test")
-    }
+
     
   
     
