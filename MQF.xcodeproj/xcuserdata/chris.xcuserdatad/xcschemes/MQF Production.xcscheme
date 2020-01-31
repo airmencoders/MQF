@@ -10,7 +10,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Copy Prod Data"
-               scriptText = "dirsToCopy=(&quot;MQF/JSONData&quot;)&#10;for INPATTERN in &quot;${dirsToCopy[@]}&quot;; do&#10;    INDIR=&quot;${PROJECT_DIR}/$INPATTERN/&quot;&#10;    OUTDIR=$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH&#10;    cp -R &quot;$INDIR&quot; $OUTDIR&#10;done&#10;exec &gt; &quot;/Users/chris/Desktop/OneDrive/xCode Files/Development/MQF/prebuild.log&quot; 2&gt;&amp;1&#10;&#10;&#10;">
+               scriptText = "#exec &gt; &quot;/Users/chris/Desktop/OneDrive/xCode Files/Development/MQF/prebuild.log&quot; 2&gt;&amp;1&#10;#dirsToCopy=(&quot;JSONData&quot;)&#10;#for INPATTERN in &quot;${dirsToCopy[@]}&quot;; do&#10;#    INDIR=&quot;${PROJECT_DIR}/$INPATTERN/&quot;&#10; #   OUTDIR=&quot;$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH&quot;&#10; #   cp -R &quot;$INDIR&quot; &quot;$OUTDIR&quot;&#10;#done&#10;&#10;&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
@@ -23,6 +23,24 @@
             </ActionContent>
          </ExecutionAction>
       </PreActions>
+      <PostActions>
+         <ExecutionAction
+            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
+            <ActionContent
+               title = "Run Script"
+               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;exec &gt; &quot;/Users/chris/Desktop/OneDrive/xCode Files/Development/MQF/post-build.log&quot; 2&gt;&amp;1&#10;dirsToCopy=(&quot;JSONData&quot;)&#10;for INPATTERN in &quot;${dirsToCopy[@]}&quot;; do&#10;    INDIR=&quot;${PROJECT_DIR}/$INPATTERN/&quot;&#10;    OUTDIR=&quot;$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH&quot;&#10;    cp -R &quot;$INDIR&quot; &quot;$OUTDIR&quot;&#10;done&#10;&#10;&#10;&#10;">
+               <EnvironmentBuildable>
+                  <BuildableReference
+                     BuildableIdentifier = "primary"
+                     BlueprintIdentifier = "83A9C7052299BBEB00040119"
+                     BuildableName = "MQF.app"
+                     BlueprintName = "MQF"
+                     ReferencedContainer = "container:MQF.xcodeproj">
+                  </BuildableReference>
+               </EnvironmentBuildable>
+            </ActionContent>
+         </ExecutionAction>
+      </PostActions>
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -89,19 +107,6 @@
             ReferencedContainer = "container:MQF.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <CommandLineArguments>
-         <CommandLineArgument
-            argument = "MQF-ENV-VAR-IS-PROD"
-            isEnabled = "YES">
-         </CommandLineArgument>
-      </CommandLineArguments>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "MQF_ENV_IS_PROD"
-            value = "true"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
