@@ -15,7 +15,7 @@ class DataManagerTests: XCTestCase {
 
       override func setUp() {
 
-                      DataManager.shared.load()
+                      DataManager.shared.load(file: "test-available")
         }
 
     override func tearDown() {
