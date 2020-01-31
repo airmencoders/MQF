@@ -3,19 +3,7 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "MQFUITests.testViewSettings():MQFUITests.swift">
-      </ContextState>
-      <ContextState
-         contextName = "QuestionCollectionViewController.nextQuestion():QuestionCollectionViewController.swift">
-      </ContextState>
-      <ContextState
          contextName = "MQFUITests.testEntireMQF():MQFUITests.swift">
-      </ContextState>
-      <ContextState
-         contextName = "MQFTests.testCreateBase():MQFTests.swift">
-      </ContextState>
-      <ContextState
-         contextName = "MQFTests.testCreatePreset():MQFTests.swift">
       </ContextState>
       <ContextState
          contextName = "QKQuiz.appendQuiz(quiz:limit:):QKQuiz.swift">
@@ -24,6 +12,26 @@
                value = "quiz.shuffledQuestions">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MQFTests.testCreatePreset():MQFTests.swift">
+      </ContextState>
+      <ContextState
+         contextName = "MQFTests.testAllMQFs():MQFTests.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "superQuiz.orderedQuestions.count">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "QuestionCollectionViewController.nextQuestion():QuestionCollectionViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "MQFTests.testCreateBase():MQFTests.swift">
+      </ContextState>
+      <ContextState
+         contextName = "MQFUITests.testViewSettings():MQFUITests.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>
