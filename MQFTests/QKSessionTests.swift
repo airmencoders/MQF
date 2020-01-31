@@ -20,15 +20,15 @@ class QKSessionTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testStartWithNoSession(){
-        do {
-            let session = try QKSession.default.start()
-            
-        } catch error {
-            <#statements#>
-        }
-        
-    }
+//    func testStartWithNoSession(){
+//        do {
+//            let session = try QKSession.default.start()
+//            
+//        } catch error {
+//            <#statements#>
+//        }
+//        
+//    }
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
