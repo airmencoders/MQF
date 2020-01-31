@@ -124,10 +124,12 @@ class MQFTests: XCTestCase {
                
                quizSession.load(quiz: superQuiz)
                XCTAssert(superQuiz.orderedQuestions.count > 0, "No questions found")
-            XCTAssert(superQuiz.orderedQuestions.count == mqf.expectedTotal, "Wrong number of questions loaded in MQF \(mqf.filename)")
+            XCTAssert(superQuiz.orderedQuestions.count == mqf.expectedTotal, "Wrong number of questions loaded in MQF \(mqf.filename) Expected \(mqf.expectedTotal), found \(superQuiz.orderedQuestions.count)")
+     
                for question in superQuiz.orderedQuestions{
                    XCTAssert(question.responses.count > 1, "Not enough responses found for \(question.question)")
                    XCTAssert(question.responses.count < 8, "Too many possible answers found for \(question.question)") //If more than 7 ammend QKQuestion to include more labels and then update test
+           
                }
         
                do {
@@ -151,7 +153,19 @@ class MQFTests: XCTestCase {
            }
            
           }
-    
+    /// Iterates through each airframe to make sure we have a picture for it
+       func testAllAirframses(){
+        let airframes = DataManager.shared.availableMDS
+ 
+     
+           XCTAssert(airframes.count > 0, "No Airframes found")
+           
+           for airframe in airframes{ // For each airframe
+            let image = UIImage.init(named: airframe)
+            XCTAssertNotNil(image, "Image not found for \(airframe)")
+        }
+           
+          }
     /// Iterates through every MQF to make sure there are no bad charectors
        func testAllAnswersBadChars(){
      
