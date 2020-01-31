@@ -32,6 +32,10 @@
 		8326A40923DE563B009B2934 /* test-c17-ILM.json in Resources */ = {isa = PBXBuildFile; fileRef = 8326A3FD23DE563B009B2934 /* test-c17-ILM.json */; };
 		8326A40A23DE563B009B2934 /* test-kc135-pilot-sep13.json in Resources */ = {isa = PBXBuildFile; fileRef = 8326A3FE23DE563B009B2934 /* test-kc135-pilot-sep13.json */; };
 		8326A40B23DE563B009B2934 /* test-c17-LM-AD.json in Resources */ = {isa = PBXBuildFile; fileRef = 8326A3FF23DE563B009B2934 /* test-c17-LM-AD.json */; };
+		832F079F23E2865600BBA3C6 /* QKQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F079E23E2865600BBA3C6 /* QKQuestion.swift */; };
+		832F07A123E287C700BBA3C6 /* MQFBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F07A023E287C700BBA3C6 /* MQFBaseTests.swift */; };
+		832F07A323E2899E00BBA3C6 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F07A223E2899E00BBA3C6 /* DataManagerTests.swift */; };
+		832F07A523E3297300BBA3C6 /* QKSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F07A423E3297300BBA3C6 /* QKSessionTests.swift */; };
 		837E02A923B136B000489C2A /* Quiz Kit LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 837E02A823B136B000489C2A /* Quiz Kit LICENSE */; };
 		837E02AB23B136E000489C2A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 837E02AA23B136E000489C2A /* README.md */; };
 		838838D822A39303000896C6 /* pentagon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 838838D722A39303000896C6 /* pentagon.jpg */; };
@@ -109,7 +113,10 @@
 		8326A3FE23DE563B009B2934 /* test-kc135-pilot-sep13.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-kc135-pilot-sep13.json"; sourceTree = "<group>"; };
 		8326A3FF23DE563B009B2934 /* test-c17-LM-AD.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-c17-LM-AD.json"; sourceTree = "<group>"; };
 		8326A40C23DE56DA009B2934 /* PROD-Data.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "PROD-Data.md"; sourceTree = "<group>"; };
-		832F079D23E2669200BBA3C6 /* c130h-pilot-mission.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "c130h-pilot-mission.json"; sourceTree = "<group>"; };
+		832F079E23E2865600BBA3C6 /* QKQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QKQuestion.swift; sourceTree = "<group>"; };
+		832F07A023E287C700BBA3C6 /* MQFBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQFBaseTests.swift; sourceTree = "<group>"; };
+		832F07A223E2899E00BBA3C6 /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
+		832F07A423E3297300BBA3C6 /* QKSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QKSessionTests.swift; sourceTree = "<group>"; };
 		835594BD23D38D39005A7530 /* kc135-pilot-sep13.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "kc135-pilot-sep13.json"; sourceTree = "<group>"; };
 		8378DECB23B55AC00031579A /* test-available.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "test-available.json"; sourceTree = "<group>"; };
 		837E02A823B136B000489C2A /* Quiz Kit LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Quiz Kit LICENSE"; sourceTree = "<group>"; };
@@ -332,6 +339,10 @@
 		83A9C71F2299BBEC00040119 /* MQFTests */ = {
 			isa = PBXGroup;
 			children = (
+				832F07A423E3297300BBA3C6 /* QKSessionTests.swift */,
+				832F07A223E2899E00BBA3C6 /* DataManagerTests.swift */,
+				832F07A023E287C700BBA3C6 /* MQFBaseTests.swift */,
+				832F079E23E2865600BBA3C6 /* QKQuestion.swift */,
 				83A9C7202299BBEC00040119 /* MQFTests.swift */,
 				83A9C7222299BBEC00040119 /* Info.plist */,
 			);
@@ -683,6 +694,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				83A9C7212299BBEC00040119 /* MQFTests.swift in Sources */,
+				832F07A323E2899E00BBA3C6 /* DataManagerTests.swift in Sources */,
+				832F07A123E287C700BBA3C6 /* MQFBaseTests.swift in Sources */,
+				832F07A523E3297300BBA3C6 /* QKSessionTests.swift in Sources */,
+				832F079F23E2865600BBA3C6 /* QKQuestion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -858,8 +873,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
-				PRODUCT_BUNDLE_IDENTIFIER = mil.airmen.coders.mqf;
+				MARKETING_VERSION = 1.4.1;
+				PRODUCT_BUNDLE_IDENTIFIER = mil.airmencoders.mqf.efb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -879,8 +894,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4;
-				PRODUCT_BUNDLE_IDENTIFIER = mil.airmen.coders.mqf;
+				MARKETING_VERSION = 1.4.1;
+				PRODUCT_BUNDLE_IDENTIFIER = mil.airmencoders.mqf.efb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
