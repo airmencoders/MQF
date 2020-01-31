@@ -36,6 +36,7 @@
 		832F07A123E287C700BBA3C6 /* MQFBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F07A023E287C700BBA3C6 /* MQFBaseTests.swift */; };
 		832F07A323E2899E00BBA3C6 /* DataManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F07A223E2899E00BBA3C6 /* DataManagerTests.swift */; };
 		832F07A523E3297300BBA3C6 /* QKSessionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 832F07A423E3297300BBA3C6 /* QKSessionTests.swift */; };
+		832F07AA23E3ECFA00BBA3C6 /* test-available.json in Resources */ = {isa = PBXBuildFile; fileRef = 832F07A923E3ECF900BBA3C6 /* test-available.json */; };
 		837E02A923B136B000489C2A /* Quiz Kit LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 837E02A823B136B000489C2A /* Quiz Kit LICENSE */; };
 		837E02AB23B136E000489C2A /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 837E02AA23B136E000489C2A /* README.md */; };
 		838838D822A39303000896C6 /* pentagon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 838838D722A39303000896C6 /* pentagon.jpg */; };
@@ -115,6 +116,7 @@
 		832F07A023E287C700BBA3C6 /* MQFBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQFBaseTests.swift; sourceTree = "<group>"; };
 		832F07A223E2899E00BBA3C6 /* DataManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManagerTests.swift; sourceTree = "<group>"; };
 		832F07A423E3297300BBA3C6 /* QKSessionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QKSessionTests.swift; sourceTree = "<group>"; };
+		832F07A923E3ECF900BBA3C6 /* test-available.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "test-available.json"; sourceTree = "<group>"; };
 		8378DECB23B55AC00031579A /* available.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = available.json; sourceTree = "<group>"; };
 		837E02A823B136B000489C2A /* Quiz Kit LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Quiz Kit LICENSE"; sourceTree = "<group>"; };
 		837E02AA23B136E000489C2A /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				8326A3F823DE563B009B2934 /* test-c17-Pilot-IP-1nov.json */,
 				8326A3FB23DE563B009B2934 /* test-kc135-boom-sep13.json */,
 				8326A3FE23DE563B009B2934 /* test-kc135-pilot-sep13.json */,
+				832F07A923E3ECF900BBA3C6 /* test-available.json */,
 				8378DECB23B55AC00031579A /* available.json */,
 			);
 			path = "Test JSON Data";
@@ -500,6 +503,7 @@
 				83A9C7112299BBEB00040119 /* Main.storyboard in Resources */,
 				8326A40723DE563B009B2934 /* test-kc135-boom-sep13.json in Resources */,
 				83A9C7492299BF9400040119 /* example-quiz.json in Resources */,
+				832F07AA23E3ECFA00BBA3C6 /* test-available.json in Resources */,
 				838838DA22A3993E000896C6 /* BG.png in Resources */,
 				8326A40623DE563B009B2934 /* test-c17-LM.json in Resources */,
 			);
