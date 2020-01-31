@@ -1,6 +1,7 @@
 MQF/JSONData/*
 MQF/JSONData/available.json
 JSONData/*
+Pods/*
 prebuild.log
 prebuild-archive.log
 archive-env
