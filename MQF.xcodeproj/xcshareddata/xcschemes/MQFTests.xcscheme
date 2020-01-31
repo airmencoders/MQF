@@ -22,6 +22,16 @@
                ReferencedContainer = "container:MQF.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "832F080023E3F35900BBA3C6"
+               BuildableName = "MQFTestsWithFrameworks.xctest"
+               BlueprintName = "MQFTestsWithFrameworks"
+               ReferencedContainer = "container:MQF.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
