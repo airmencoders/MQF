@@ -32,9 +32,13 @@ class MQFUITests: XCTestCase {
 
     /// Only works if the app is first run
     func testSetUp() {
+        
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-
+        
+                                        
+        
+      
         let app = XCUIApplication()
           app.launchArguments.append("ui-testing-setup")
            app.launch()

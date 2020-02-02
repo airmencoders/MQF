@@ -201,7 +201,7 @@
 		832F07F523E3F2E800BBA3C6 /* ValueFormatterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueFormatterTests.swift; sourceTree = "<group>"; };
 		832F07F623E3F2E900BBA3C6 /* UICircularTimerRingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICircularTimerRingTests.swift; sourceTree = "<group>"; };
 		832F07F723E3F2E900BBA3C6 /* UICircularProgressRingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICircularProgressRingTests.swift; sourceTree = "<group>"; };
-		832F07FC23E3F31D00BBA3C6 /* MQFOnly.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; name = MQFOnly.xctestplan; path = MQFTests/MQFOnly.xctestplan; sourceTree = SOURCE_ROOT; };
+		832F07FC23E3F31D00BBA3C6 /* MQFOnly.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = MQFOnly.xctestplan; path = MQFTests/MQFOnly.xctestplan; sourceTree = SOURCE_ROOT; };
 		832F080123E3F35900BBA3C6 /* MQFTestsWithFrameworks.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MQFTestsWithFrameworks.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		832F080323E3F35900BBA3C6 /* MQFTestsWithFrameworks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MQFTestsWithFrameworks.swift; sourceTree = "<group>"; };
 		832F080523E3F35900BBA3C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1149,7 +1149,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MQF/MQF.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1404;
+				CURRENT_PROJECT_VERSION = 1454;
 				DEVELOPMENT_TEAM = RQ9T47YT3S;
 				INFOPLIST_FILE = MQF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1171,7 +1171,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = MQF/MQF.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1404;
+				CURRENT_PROJECT_VERSION = 1454;
 				DEVELOPMENT_TEAM = RQ9T47YT3S;
 				INFOPLIST_FILE = MQF/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
