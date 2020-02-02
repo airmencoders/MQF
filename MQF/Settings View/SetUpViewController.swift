@@ -91,10 +91,30 @@ var currentMWS = "C-17"
     
     ///Dismisses the screen
     func dismissSetup(){
+        if(self.checkCanDismiss()){
         self.dismiss(animated: true, completion: nil)
+        }else{
+            let mws = MQFDefaults().string(forKey: MQFDefaults.mds) ?? "UNKN"
+            let pos = MQFDefaults().string(forKey: MQFDefaults.crewPosition) ?? "Pilot"
+            let alert = UIAlertController(title: "Oops", message: "Looks like we don't currently have any MQFs for \(mws) \(pos)s. Please select a different crew position or MWS.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }
+    }
+    
+    func checkCanDismiss()->Bool{
+        let mws = MQFDefaults().string(forKey: MQFDefaults.mds) ?? "UNKN"
+        let pos = MQFDefaults().string(forKey: MQFDefaults.crewPosition) ?? "Pilot"
+        return checkValidMWSCrewPositionCombo(mws: mws, crewPosition: pos)
     }
     
 
+    func checkValidMWSCrewPositionCombo(mws:String, crewPosition:String)->Bool{
+        if(DataManager.shared.availableMQFsFor(mws: mws, crewPosition: crewPosition).count > 0){
+            return true
+        }
+        return false
+    }
 
     /*
     // MARK: - Navigation
