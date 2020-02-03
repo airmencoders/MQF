@@ -94,7 +94,7 @@ var currentMWS = "C-17"
         if(self.checkCanDismiss()){
         self.dismiss(animated: true, completion: nil)
         }else{
-            let mws = MQFDefaults().string(forKey: MQFDefaults.mds) ?? "UNKN"
+            let mws = MQFDefaults().string(forKey: MQFDefaults.mds) ?? "C-17"
             let pos = MQFDefaults().string(forKey: MQFDefaults.crewPosition) ?? "Pilot"
             let alert = UIAlertController(title: "Oops", message: "Looks like we don't currently have any MQFs for \(mws) \(pos)s. Please select a different crew position or MWS.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
