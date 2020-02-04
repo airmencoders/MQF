@@ -141,7 +141,25 @@ class SettingsViewController: FormViewController {
             }
             
             +++ Section(header: "Disclaimer:", footer: "This app is not the official source for MQF studying, just a tool to help you. Check your ePubs and with your OGV & A3V for the official MQF. We have made every effort to have the app reflect your MQF, including all typos.")
-            +++ Section(header: "Credits:", footer: "We built this app using some awesome images including in app icons made by Freepik from www.flaticon.com and other frameworks licensed with the MIT License.")
+            +++ Section(header: "Credits:", footer: "We built this app using some awesome images including in app icons made by Freepik from www.flaticon.com and other frameworks licensed with the MIT License. Special thanks to 'RC' for designing the icons and logo!")
+        
+        +++ Section(){ section in
+            section.header = {
+                  var header = HeaderFooterView<UIView>(.callback({
+                      let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 200))
+                      view.backgroundColor = .clear
+                    let image = UIImage(named: "ACLogoAll")
+                   let iv = UIImageView()
+ 
+                    iv.image = image
+                    iv.contentMode = .scaleAspectFit
+       
+                      return iv
+                  }))
+                  header.height = { 200 }
+                  return header
+                }()
+        }
         
     }
     
