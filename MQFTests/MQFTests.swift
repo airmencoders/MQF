@@ -140,7 +140,11 @@ class MQFTests: XCTestCase {
                var activeQuestion:QKQuestion? = nil
                while let question = quizSession.nextQuestion(after: activeQuestion){
                    XCTAssert(question.responses.count > 1, "No question responses found for \(question.question)")
-                   quizSession.submit(response: question.correctResponse, for: question)
+                
+                //Test that there is a correct answer
+                let selectedAnswer = question.responses[question.correctResponseIndex]
+                   quizSession.submit(response: selectedAnswer, for: question)
+                XCTAssertEqual(selectedAnswer, question.correctResponse, "No correct response")
                    
                    activeQuestion = question
                }
