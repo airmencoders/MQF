@@ -34,7 +34,7 @@ public struct QKQuestion: Hashable {
     
     /// The correct response for the question
     public var correctResponse: String {
-        if(responses.count > correctResponseIndex && correctResponseIndex > 0){
+        if(responses.count > correctResponseIndex && correctResponseIndex >= 0){
         return responses[correctResponseIndex]
         }
             return ""
@@ -42,7 +42,7 @@ public struct QKQuestion: Hashable {
     }
     
     /// The index of the correct response
-    private let correctResponseIndex: Int
+    public let correctResponseIndex: Int
     
     /// An image relating to the question
     public let imageUrl: String?
