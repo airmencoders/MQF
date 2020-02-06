@@ -13,13 +13,13 @@ class MQFTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-//        let isProduction = ProcessInfo.processInfo.arguments.contains("MQF-ENV-VAR-IS-PROD")
-//              if (isProduction){
-//                  DataManager.shared.load(file: "available")
-//              }else{
-//                  DataManager.shared.load()
-//              }
-//        
+        let isProduction = ProcessInfo.processInfo.arguments.contains("MQF-ENV-VAR-IS-PROD")
+              if (isProduction){
+                  DataManager.shared.load(file: "available")
+              }else{
+                  DataManager.shared.load()
+              }
+        
     }
 
     override func tearDown() {
@@ -124,10 +124,12 @@ class MQFTests: XCTestCase {
                
                quizSession.load(quiz: superQuiz)
                XCTAssert(superQuiz.orderedQuestions.count > 0, "No questions found")
-            XCTAssert(superQuiz.orderedQuestions.count == mqf.expectedTotal, "Wrong number of questions loaded in MQF \(mqf.filename)")
+            XCTAssert(superQuiz.orderedQuestions.count == mqf.expectedTotal, "Wrong number of questions loaded in MQF \(mqf.filename) Expected \(mqf.expectedTotal), found \(superQuiz.orderedQuestions.count)")
+     
                for question in superQuiz.orderedQuestions{
                    XCTAssert(question.responses.count > 1, "Not enough responses found for \(question.question)")
                    XCTAssert(question.responses.count < 8, "Too many possible answers found for \(question.question)") //If more than 7 ammend QKQuestion to include more labels and then update test
+           
                }
         
                do {
@@ -138,7 +140,11 @@ class MQFTests: XCTestCase {
                var activeQuestion:QKQuestion? = nil
                while let question = quizSession.nextQuestion(after: activeQuestion){
                    XCTAssert(question.responses.count > 1, "No question responses found for \(question.question)")
-                   quizSession.submit(response: question.correctResponse, for: question)
+                
+                //Test that there is a correct answer
+                let selectedAnswer = question.responses[question.correctResponseIndex]
+                   quizSession.submit(response: selectedAnswer, for: question)
+                XCTAssertEqual(selectedAnswer, question.correctResponse, "No correct response")
                    
                    activeQuestion = question
                }
@@ -151,7 +157,19 @@ class MQFTests: XCTestCase {
            }
            
           }
-    
+    /// Iterates through each airframe to make sure we have a picture for it
+       func testAllAirframses(){
+        let airframes = DataManager.shared.availableMDS
+ 
+     
+           XCTAssert(airframes.count > 0, "No Airframes found")
+           
+           for airframe in airframes{ // For each airframe
+            let image = UIImage.init(named: airframe)
+            XCTAssertNotNil(image, "Image not found for \(airframe)")
+        }
+           
+          }
     /// Iterates through every MQF to make sure there are no bad charectors
        func testAllAnswersBadChars(){
      
@@ -217,27 +235,7 @@ class MQFTests: XCTestCase {
 //        XCTAssertEqual(preset.mqfs.count, 2, "Wrong number of MQFs")
 //       }
 
-    
-    func testCreateBase(){
-        let jsonString = "{\"name\":\"Charleston AFB Test\",\"id\":\"1\",\"presets\":[{\"name\":\"437/315 AW Pilot\",\"id\":\"KCHS-Pilot-Airland\",\"positions\":[\"Pilot\"],\"mqfs\":[{\"testNum\":30,\"file\":\"c17-Pilot-1nov\"},{\"testNum\":5,\"file\":\"c17-KCHS-Pilot\"}],\"testTotal\":35}]}"
-        let json = JSON(parseJSON: jsonString)
-        let base = MQFBase.init(json: json)
-        
-        XCTAssertEqual(base.name, "Charleston AFB Test", "Wrong base name")
-        XCTAssertEqual(base.presets.count, 1, "Wrong number of presets")
-    }
-    
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
 
 }

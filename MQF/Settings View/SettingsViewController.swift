@@ -10,10 +10,12 @@ import Eureka
 
 /// `SettingsViewController`  subclasses `FormViewController`. It controls the Settings view that users see.
 class SettingsViewController: FormViewController {
-    
+    var currentMWS = "C-5"
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.currentMWS = MQFDefaults().string(forKey: MQFDefaults.mds) ?? "C-17"
         self.setUpForm()
+        
     }
     
     /// Overides `valueHasBeenChanged` to save new value to  `MQFDefaults` for Quiz Size
@@ -36,7 +38,27 @@ class SettingsViewController: FormViewController {
     func setUpForm(){
         let previousQuizSize = MQFDefaults().object(forKey: MQFDefaults.quizSize) as? Int ?? 0
         super.viewDidLoad()
-        
+        let crewPosRow = PushRow<String>() {
+                       $0.title = "Crew Position"
+                       $0.selectorTitle = "Pick a position"
+                       $0.options = DataManager.shared.availableCrewPositionsForMWS(mds: self.currentMWS)
+                       $0.value = MQFDefaults().object(forKey: MQFDefaults.crewPosition) as? String ?? "Pilot"
+                       $0.add(rule: RuleRequired())
+                       $0.validationOptions = .validatesOnChange
+                   }.onChange { row in
+                       if(row.value != nil){
+                           MQFDefaults().set(row.value, forKey: MQFDefaults.crewPosition)
+                       }else{
+                           row.value = MQFDefaults().string(forKey: MQFDefaults.crewPosition) ?? "C-17"
+                       }
+                       MQFDefaults().synchronize()
+                   }.cellUpdate { cell, row in
+                    row.options = DataManager.shared.availableCrewPositionsForMWS(mds: self.currentMWS)
+                       if !row.isValid {
+                           cell.textLabel?.textColor = .red
+                           print("invalid")
+                       }
+                   }
         // Instantiates an Eureka form instance
         form
         
@@ -76,36 +98,21 @@ class SettingsViewController: FormViewController {
             }.onChange { row in // Handle changes
                 if(row.value != nil){
                     MQFDefaults().set(row.value, forKey: MQFDefaults.mds)
+                    self.currentMWS = row.value ?? "C-17"
                 }else{
                     row.value = MQFDefaults().string(forKey: MQFDefaults.mds) ?? "C-17"
                 }
+                crewPosRow.reload()
                 MQFDefaults().synchronize() // saves defaults
             }.cellUpdate { cell, row in
+                
                 if !row.isValid {
                     cell.textLabel?.textColor = .red
                     print("invalid")
                 }
             }
-            <<< PushRow<String>() {
-                $0.title = "Crew Position"
-                $0.selectorTitle = "Pick a position"
-                $0.options = DataManager.shared.availableCrewPositions
-                $0.value = MQFDefaults().object(forKey: MQFDefaults.crewPosition) as? String ?? "Pilot"
-                $0.add(rule: RuleRequired())
-                $0.validationOptions = .validatesOnChange
-            }.onChange { row in
-                if(row.value != nil){
-                    MQFDefaults().set(row.value, forKey: MQFDefaults.crewPosition)
-                }else{
-                    row.value = MQFDefaults().string(forKey: MQFDefaults.crewPosition) ?? "C-17"
-                }
-                MQFDefaults().synchronize()
-            }.cellUpdate { cell, row in
-                if !row.isValid {
-                    cell.textLabel?.textColor = .red
-                    print("invalid")
-                }
-            }
+           
+            <<< crewPosRow
             <<< SwitchRow() {
                 $0.title = "Study on a Loop"
                 $0.value = MQFDefaults().object(forKey: MQFDefaults.studyLoop) as? Bool ?? true
@@ -122,7 +129,7 @@ class SettingsViewController: FormViewController {
             
             
             //Adds section with information, disclaimers, and credits
-            +++ Section(header: "About", footer: "MQFs was built by aircrew for aircrew. We hope to make one small aspect of your life simpler and easier with this app. Please help us continue to improve this app by sending feedback to AirmenCoders@us.af.mil.")
+            +++ Section(header: "About", footer: "MQFs was #BuiltByAirmen for Airmen. We hope to make one small aspect of your life simpler and easier with this app. Please help us continue to improve this app by sending feedback to AirmenCoders@us.af.mil.")
             
             <<< LabelRow() {
                 $0.title = "Version"
@@ -134,7 +141,25 @@ class SettingsViewController: FormViewController {
             }
             
             +++ Section(header: "Disclaimer:", footer: "This app is not the official source for MQF studying, just a tool to help you. Check your ePubs and with your OGV & A3V for the official MQF. We have made every effort to have the app reflect your MQF, including all typos.")
-            +++ Section(header: "Credits:", footer: "We built this app using some awesome images including in app icons made by Freepik from www.flaticon.com and other frameworks licensed with the MIT License.")
+            +++ Section(header: "Credits:", footer: "We built this app using some awesome images including in app icons made by Freepik from www.flaticon.com and other frameworks licensed with the MIT License. Special thanks to 'RC' for designing the icons and logo!")
+        
+        +++ Section(){ section in
+            section.header = {
+                  var header = HeaderFooterView<UIView>(.callback({
+                      let view = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 200))
+                      view.backgroundColor = .clear
+                    let image = UIImage(named: "ACLogoAll")
+                   let iv = UIImageView()
+ 
+                    iv.image = image
+                    iv.contentMode = .scaleAspectFit
+       
+                      return iv
+                  }))
+                  header.height = { 200 }
+                  return header
+                }()
+        }
         
     }
     

@@ -34,6 +34,32 @@ class DataManager: NSObject {
         return cps.unique()
     }
     
+    /// List all available crew positions
+    /// - returns: `[String]` containing each available crew position
+    public func availableCrewPositionsForMWS(mds:String)->[String]{
+        var cps = [String]()
+        for mqf in availableMQFs{
+            if(mqf.mds == mds){
+            for position in mqf.crewPositions{
+                cps.append(position)
+            }
+            }
+        }
+        return cps.unique()
+    }
+    
+    /// All available MQFs for Crew Position  and MWS
+    /// - returns: `[String]` containing each available crew position
+    public func availableMQFsFor(mws:String, crewPosition:String)->[MQFData]{
+        var mqfs = [MQFData]()
+        for mqf in availableMQFs{
+            if(mqf.mds == mws && mqf.crewPositions.contains(crewPosition)){
+                mqfs.append(mqf)
+            }
+        }
+        return mqfs.unique()
+    }
+    
     /// List of all available MDSs
     /// - returns: `[String]`of each MDS found
     public var availableMDS: [String] {
@@ -46,7 +72,7 @@ class DataManager: NSObject {
     
     /// Loads MQFs listed in `available.json`
     /// Does not take any parameters or return anything. Once called the loaded MQFs can be accessed view the `DataManager` class, shared instantiation.
-    public func load(file:String = "test-available"){
+    public func load(file:String = "available"){
         print("loading data")
         guard let path = Bundle.main.path(forResource: file, ofType: "json") else {
             return
