@@ -1,5 +1,5 @@
 PODS:
-  - Eureka (5.0.0)
+  - Eureka (5.2.0)
   - SwiftyJSON (4.3.0)
   - UICircularProgressRing (6.1.0)
 
@@ -10,15 +10,16 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
-    - Eureka
     - SwiftyJSON
     - UICircularProgressRing
+  trunk:
+    - Eureka
 
 SPEC CHECKSUMS:
-  Eureka: 0f64f477ec8ef6201c6fec143d60ff5c201cf654
+  Eureka: 820a761c700f6eaab3b60758f138e0d9b99072b3
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   UICircularProgressRing: b3eba859a515e4d9d38503eec913f09c28450785
 
-PODFILE CHECKSUM: 60b233f7bdf05c587022629195ee617ea1d19d90
+PODFILE CHECKSUM: 66ee1e6a655a5df1518f9be7ea23c873a7d388c6
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.8.4

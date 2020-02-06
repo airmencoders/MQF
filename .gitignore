@@ -1,7 +1,8 @@
 MQF/JSONData/*
+MQF/JSONData/available.json
 JSONData/*
-MQF/JSONData/*
 Pods/*
 prebuild.log
+prebuild-archive.log
 archive-env
 post-build.log
