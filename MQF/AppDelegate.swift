@@ -44,13 +44,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             MQFDefaults().synchronize()
             
         }
-        let isProduction = ProcessInfo.processInfo.arguments.contains("MQF-ENV-VAR-IS-PROD")
-        if (isProduction){
-            DataManager.shared.load(file: "available")
-        }else{
-            DataManager.shared.load()
-        }
+//        let isProduction = ProcessInfo.processInfo.arguments.contains("MQF-ENV-VAR-IS-PROD")
+//        if (isProduction){
+//            DataManager.shared.load(file: "available")
+//        }else{
+//            DataManager.shared.load()
+//        }
         
+        DataManager.shared.load()
         
         
         return true
