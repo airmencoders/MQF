@@ -86,7 +86,7 @@ class MQFTests: XCTestCase {
                 activeQuestion = question
             }
             
-            XCTAssertEqual(quizSession.responseCount, superQuiz.orderedQuestions.count, "Different number of answers than questions")
+            XCTAssertEqual(quizSession.responseCount, superQuiz.orderedQuestions.count, "Different number of answers than questions \(preset.name)")
             XCTAssertEqual(quizSession.score, superQuiz.orderedQuestions.count, "Score was not 100")
             quizSession.score
             
@@ -140,6 +140,7 @@ class MQFTests: XCTestCase {
                var activeQuestion:QKQuestion? = nil
                while let question = quizSession.nextQuestion(after: activeQuestion){
                    XCTAssert(question.responses.count > 1, "No question responses found for \(question.question)")
+                
                 
                 //Test that there is a correct answer
                 let selectedAnswer = question.responses[question.correctResponseIndex]
@@ -209,10 +210,18 @@ class MQFTests: XCTestCase {
                }
                var activeQuestion:QKQuestion? = nil
                while let question = quizSession.nextQuestion(after: activeQuestion){
-                   
+                if activeQuestion != nil && activeQuestion!.question.contains("â€"){
+                                           XCTFail("Question contains \"â€\" \(mqf.name) - \(activeQuestion!.question)")
+                                      }
                 for answer in activeQuestion?.responses ?? [String](){
                     if answer.contains("\\/") {
                         XCTFail("Answer includes \\/ ")
+                    }
+                    if answer.contains("u20"){
+                        XCTFail("Answer contains \"u20\" \(mqf.name) - \(activeQuestion!.question) - \(answer)")
+                    }
+                    if answer.contains("â€"){
+                         XCTFail("Answer contains \"â€\" \(mqf.name) - \(activeQuestion!.question) - \(answer)")
                     }
                 }
                    
