@@ -53,6 +53,8 @@ class MenuViewController: UIViewController {
         }else{
             let preset = DataManager.shared.getPreset(for: activePresetID) ?? MQFPreset()
             for mqf in preset.mqfs{
+                //Set current test number from preset
+                self.setTestNumFromPreset(mqf: mqf, preset: preset)
                 self.addLabelToStakcView(text: mqf.name)
                 self.activeMQFs.append(mqf)
             }
@@ -128,6 +130,11 @@ class MenuViewController: UIViewController {
                     }
                     print("Proportion: \(proportion) - Limit: \(limit)")
                 }
+                
+                if(segue.identifier == "Test"){
+                    limit = mqf.testNum
+                }
+                print(limit)
                 let name = mqf.filename.replacingOccurrences(of: ".json", with: "")
                 guard let path = Bundle.main.path(forResource: name, ofType: "json") else {
                     return
@@ -188,5 +195,10 @@ class MenuViewController: UIViewController {
         label.textColor = .lightText
         self.mqfsStackView.addArrangedSubview(label)
         
+    }
+    
+    private func setTestNumFromPreset(mqf:MQFData, preset:MQFPreset){
+        let testNum = preset.testNumbers[mqf]
+        mqf.testNum = testNum ?? 0
     }
 }

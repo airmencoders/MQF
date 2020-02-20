@@ -22,6 +22,8 @@ class MQFPreset: NSObject, NSCoding {
     public var testTotal:Int
     /// Array of the MQFs used in this preset (`[MQFData]`)
     public var mqfs:[MQFData]
+    /// Array of test numbers for each MQF
+    public var testNumbers:[MQFData:Int]
    
     
     override init() {
@@ -31,6 +33,7 @@ class MQFPreset: NSObject, NSCoding {
         self.id = ""
         self.testTotal = 0
         self.mqfs = [MQFData]();
+        self.testNumbers = [MQFData:Int]()
     
     }
     
@@ -47,6 +50,7 @@ class MQFPreset: NSObject, NSCoding {
         self.mds = dict["mds"]?.string ?? "MDS-NF"
         self.testTotal = dict["testTotal"]?.int ?? 0
         self.crewPositions = [String]()
+        self.testNumbers = [MQFData:Int]()
         for position in dict["positions"]?.array ?? [JSON]() {
             self.crewPositions.append(position.string ?? "Not Found")
         }
@@ -60,6 +64,7 @@ class MQFPreset: NSObject, NSCoding {
                 let tni = tn?.intValue
                 mqf!.testNum = tni ?? 0 //If there is no test number, use 0
                 self.mqfs.append(mqf!)
+                self.testNumbers[mqf!] = tni ?? 0
             }
         }
         
@@ -76,6 +81,7 @@ class MQFPreset: NSObject, NSCoding {
         self.mds = decoder.decodeObject(forKey: "mds") as? String ?? ""
         self.testTotal = decoder.decodeInteger(forKey: "testTotal")
         self.crewPositions = decoder.decodeObject(forKey: "crewPositions") as? [String] ?? [String]()
+        self.testNumbers = decoder.decodeObject(forKey: "testNumbers") as? [MQFData:Int] ?? [MQFData:Int]()
         self.mqfs = [MQFData]()
     }
     
@@ -89,6 +95,7 @@ class MQFPreset: NSObject, NSCoding {
         coder.encode(self.mds, forKey: "mds")
         coder.encode(self.testTotal, forKey: "testTotal")
         coder.encode(self.crewPositions, forKey: "crewPositions")
+        coder.encode(self.testNumbers, forKey: "testNumbers")
         
     }
 }
