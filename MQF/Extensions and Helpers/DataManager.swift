@@ -99,6 +99,12 @@ class DataManager: NSObject {
         }
   
         
+        for base in self.availableBases{
+            print(base.name)
+            for preset in base.presets{
+                print(preset.mqfs)
+            }
+        }
         
     }
     
