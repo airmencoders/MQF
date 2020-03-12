@@ -163,7 +163,7 @@ class MenuViewController: UIViewController {
     }
 
     @IBAction func sendFeedback(_ sender: Any) {
-        let alert = UIAlertController.init(title: "We'd love to hear from you!", message: "This app was built for aircrew by aircrew to make one small part of your life simpler and easier. Help us achieve that goal with your feedback. Please email it to AirmenCoders@us.af.mil. Thanks!", preferredStyle: .alert)
+        let alert = UIAlertController.init(title: "We'd love to hear from you!", message: "This app was built for aircrew by aircrew to make one small part of your life simpler and easier. Help us achieve that goal with your feedback. Please email it to AirmenCoders@afwerx.af.mil. Thanks!", preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "Will Do!", style: .default, handler: nil)
         
         //now we are adding the default action to our alertcontroller
