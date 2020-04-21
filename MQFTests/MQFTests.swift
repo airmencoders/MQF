@@ -4,7 +4,6 @@
 //
 //  Created by Christian Brechbuhl on 5/25/19.
 //
-
 import XCTest
 @testable import MQF
 @testable import SwiftyJSON
@@ -266,7 +265,6 @@ class MQFTests: XCTestCase {
 //        XCTAssertEqual(preset.crewPositions, ["Pilot"], "Wrong crew positions")
 //        XCTAssertEqual(preset.mqfs.count, 2, "Wrong number of MQFs")
 //       }
-
 
 
 
