@@ -4,7 +4,6 @@
 //
 //  Created by Christian Brechbuhl on 5/25/19.
 //
-
 import XCTest
 @testable import MQF
 @testable import SwiftyJSON
@@ -141,13 +140,17 @@ class MQFTests: XCTestCase {
                while let question = quizSession.nextQuestion(after: activeQuestion){
                    XCTAssert(question.responses.count > 1, "No question responses found for \(question.question)")
                 
-                
+                if(question.responses.count > 0){
                 //Test that there is a correct answer
                 let selectedAnswer = question.responses[question.correctResponseIndex]
                    quizSession.submit(response: selectedAnswer, for: question)
                 XCTAssertEqual(selectedAnswer, question.correctResponse, "No correct response")
                    
-                   activeQuestion = question
+                   
+                }else{
+                    XCTFail("No possible responses")
+                }
+                activeQuestion = question
                }
                
                XCTAssertEqual(quizSession.responseCount, superQuiz.orderedQuestions.count, "Different number of answers than questions")
@@ -213,7 +216,8 @@ class MQFTests: XCTestCase {
                 if activeQuestion != nil && activeQuestion!.question.contains("â€"){
                                            XCTFail("Question contains \"â€\" \(mqf.name) - \(activeQuestion!.question)")
                                       }
-                for answer in activeQuestion?.responses ?? [String](){
+                let answers:[String] = activeQuestion?.responses ?? [String]()
+                for answer in answers{
                     if answer.contains("\\/") {
                         XCTFail("Answer includes \\/ ")
                     }
@@ -222,6 +226,24 @@ class MQFTests: XCTestCase {
                     }
                     if answer.contains("â€"){
                          XCTFail("Answer contains \"â€\" \(mqf.name) - \(activeQuestion!.question) - \(answer)")
+                    }
+                }
+                
+                // Test to see if it is a bad TF
+                
+                if (answers.count <= 2){
+                    if answers.contains("TRUE") || answers.contains("FALSE"){
+                        if !(answers.contains("TRUE") && answers.contains("FALSE")){
+                            var bad = false
+                            for answer in answers{
+                                if (answer.count <= 2){
+                                    bad = true
+                                }
+                            }
+                            if(bad){
+                                XCTFail("Malformed T/F \(mqf.name) - \(activeQuestion!.question) - \(answers)")
+                            }
+                        }
                     }
                 }
                    
@@ -243,7 +265,6 @@ class MQFTests: XCTestCase {
 //        XCTAssertEqual(preset.crewPositions, ["Pilot"], "Wrong crew positions")
 //        XCTAssertEqual(preset.mqfs.count, 2, "Wrong number of MQFs")
 //       }
-
 
 
 
