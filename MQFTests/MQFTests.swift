@@ -217,7 +217,8 @@ class MQFTests: XCTestCase {
                 if activeQuestion != nil && activeQuestion!.question.contains("â€"){
                                            XCTFail("Question contains \"â€\" \(mqf.name) - \(activeQuestion!.question)")
                                       }
-                for answer in activeQuestion?.responses ?? [String](){
+                let answers:[String] = activeQuestion?.responses ?? [String]()
+                for answer in answers{
                     if answer.contains("\\/") {
                         XCTFail("Answer includes \\/ ")
                     }
@@ -226,6 +227,24 @@ class MQFTests: XCTestCase {
                     }
                     if answer.contains("â€"){
                          XCTFail("Answer contains \"â€\" \(mqf.name) - \(activeQuestion!.question) - \(answer)")
+                    }
+                }
+                
+                // Test to see if it is a bad TF
+                
+                if (answers.count <= 2){
+                    if answers.contains("TRUE") || answers.contains("FALSE"){
+                        if !(answers.contains("TRUE") && answers.contains("FALSE")){
+                            var bad = false
+                            for answer in answers{
+                                if (answer.count <= 2){
+                                    bad = true
+                                }
+                            }
+                            if(bad){
+                                XCTFail("Malformed T/F \(mqf.name) - \(activeQuestion!.question) - \(answers)")
+                            }
+                        }
                     }
                 }
                    
