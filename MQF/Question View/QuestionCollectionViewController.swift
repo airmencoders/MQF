@@ -81,12 +81,6 @@ class QuestionCollectionViewController: UICollectionViewController {
             cell.answerLabel.text = "Response not available"
         }
         
-        cell.contentView.layer.cornerRadius = 20.0
-        cell.contentView.layer.borderWidth = 1.0
-        cell.contentView.layer.borderColor = UIColor.clear.cgColor
-        cell.contentView.backgroundColor = UIColor.white
-        cell.contentView.layer.masksToBounds = true;
-        
         return cell
     }
     
