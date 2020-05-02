@@ -38,7 +38,7 @@ class QuestionAnswerCollectionViewCell: UICollectionViewCell {
         case .Selected:
             return UIColor.blue
         default:
-            return UIColor.black
+            return UIColor.white
         }
     }
 }
