@@ -421,7 +421,7 @@
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="0.0" sectionInsetReference="safeArea" id="19R-ha-LQK">
                             <size key="itemSize" width="391" height="55"/>
                             <size key="headerReferenceSize" width="50" height="284"/>
-                            <size key="footerReferenceSize" width="50" height="380"/>
+                            <size key="footerReferenceSize" width="50" height="180"/>
                             <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
@@ -615,11 +615,11 @@
                             </connections>
                         </collectionReusableView>
                         <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="questionFooter" id="ha9-Bj-BMg" customClass="QuestionFooterCollectionReusableView" customModule="MQF" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="393" width="414" height="380"/>
+                            <rect key="frame" x="0.0" y="393" width="414" height="180"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinY="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKs-Ak-kno">
-                                    <rect key="frame" x="180" y="254.5" width="54" height="42"/>
+                                    <rect key="frame" x="180" y="54.5" width="54" height="42"/>
                                     <viewLayoutGuide key="safeArea" id="1RZ-xA-zgc"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                     <state key="normal" title="Next">
@@ -630,7 +630,7 @@
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reference:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qoO-6S-0mW">
-                                    <rect key="frame" x="15" y="301.5" width="384" height="20.5"/>
+                                    <rect key="frame" x="15" y="101.5" width="384" height="20.5"/>
                                     <viewLayoutGuide key="safeArea" id="UNs-Z3-ovM"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
