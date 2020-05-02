@@ -18,7 +18,12 @@ class QuestionAnswerCollectionViewCell: UICollectionViewCell {
     ///     - answerColor: `AnswerColor` type of color to  be appiied
     func setColor(answerColor:AnswerColor){
         let color = colorForAnswerColor(answerColor: answerColor)
-        self.answerLabel.textColor = color
+        
+        self.contentView.layer.cornerRadius = 20.0
+        self.contentView.layer.borderWidth = 1.0
+        self.contentView.layer.borderColor = UIColor.clear.cgColor
+        self.contentView.backgroundColor = color
+        self.contentView.layer.masksToBounds = true;
     }
     /// Enum for answer colors, based on type of action, converts to a `UIColor`
     enum AnswerColor {
