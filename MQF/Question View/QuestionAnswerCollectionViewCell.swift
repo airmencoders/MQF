@@ -18,7 +18,8 @@ class QuestionAnswerCollectionViewCell: UICollectionViewCell {
     ///     - answerColor: `AnswerColor` type of color to  be appiied
     func setColor(answerColor:AnswerColor){
         let color = colorForAnswerColor(answerColor: answerColor)
-        self.answerLabel.textColor = color
+        
+        self.contentView.backgroundColor = color
     }
     /// Enum for answer colors, based on type of action, converts to a `UIColor`
     enum AnswerColor {
@@ -38,7 +39,7 @@ class QuestionAnswerCollectionViewCell: UICollectionViewCell {
         case .Selected:
             return UIColor.blue
         default:
-            return UIColor.black
+            return UIColor.white
         }
     }
 }
