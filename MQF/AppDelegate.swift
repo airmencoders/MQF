@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             MQFDefaults().removeObject(forKey: MQFDefaults.activeMode)
             MQFDefaults().removeObject(forKey: MQFDefaults.pickerMode)
             MQFDefaults().removeObject(forKey: MQFDefaults.crewPosition)
+            MQFDefaults().set(Date().timeIntervalSince1970, forKey: MQFDefaults.lastShownUpdatePrompt)
             
             MQFDefaults().synchronize()
         }else if(uiTesting){
@@ -41,6 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             MQFDefaults().set("PRESET", forKey: MQFDefaults.activeMode)
             MQFDefaults().set("OGV Presets", forKey: MQFDefaults.pickerMode)
             MQFDefaults().set("C-17", forKey: MQFDefaults.mds)
+            MQFDefaults().set(Date().timeIntervalSince1970, forKey: MQFDefaults.lastShownUpdatePrompt)
             MQFDefaults().synchronize()
             
         }

@@ -31,6 +31,7 @@ class MenuViewController: UIViewController {
         self.mdsOutlet.addGestureRecognizer(gr)
         let grtwo = UITapGestureRecognizer(target: self, action: #selector(MenuViewController.openSettings))
         self.crewPositionOutlet.addGestureRecognizer(grtwo)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,6 +64,8 @@ class MenuViewController: UIViewController {
         let gr = UITapGestureRecognizer(target: self, action: #selector(MenuViewController.openMQFPicker))
         self.mqfsStackView.addGestureRecognizer(gr)
         print("View will Appear")
+        
+   
     }
    
     
@@ -76,7 +79,7 @@ class MenuViewController: UIViewController {
         }else if(mqf == "NONECHOSEN"){
             self.openMQFPicker()
         }
-        
+        self.showUpdatePrompt()
         print("View Did Appear")
     }
     
@@ -200,5 +203,33 @@ class MenuViewController: UIViewController {
     private func setTestNumFromPreset(mqf:MQFData, preset:MQFPreset){
         let testNum = preset.testNumbers[mqf]
         mqf.testNum = testNum ?? 0
+    }
+    
+    /*
+     Shows a prompt to the user to manually update the app every 30 days
+     */
+    private func showUpdatePrompt(){
+
+        
+        if(self.determineIfLastShownIn30()){// show prompt if last shown more than 30 days ago
+        
+        let alert = UIAlertController(title: "Update MQF", message: "Hello, please go to Work Apps and click \"Install\" or \"Prepaid\" to get the latest version of this app and your MQFs", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Will Do!", style: .default, handler: nil))
+
+        self.present(alert, animated: true)
+        MQFDefaults().set(Date().timeIntervalSince1970, forKey: MQFDefaults.lastShownUpdatePrompt)
+        MQFDefaults().synchronize()
+        }
+    }
+    
+    private func determineIfLastShownIn30()->Bool {
+        let lastShown = Date(timeIntervalSince1970: MQFDefaults().double(forKey: MQFDefaults.lastShownUpdatePrompt))
+             let nowLess30 = Date().addingTimeInterval(-30*24*60*60)
+             
+             if(lastShown < nowLess30){
+                return true;
+        }
+        return false;
     }
 }
