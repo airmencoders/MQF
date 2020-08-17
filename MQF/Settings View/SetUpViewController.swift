@@ -13,6 +13,9 @@ class SetUpViewController: FormViewController {
 var currentMWS = "C-17"
     override func viewDidLoad() {
         super.viewDidLoad()
+        MQFDefaults().set("C-17", forKey: MQFDefaults.mds)
+        MQFDefaults().set("Pilot", forKey: MQFDefaults.crewPosition)
+
          self.currentMWS = MQFDefaults().string(forKey: MQFDefaults.mds) ?? "C-17"
     
         //Instantiate form
