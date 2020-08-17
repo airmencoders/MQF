@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6KG-it-pw7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6KG-it-pw7">
     <device id="ipad9_7" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -125,14 +125,14 @@
                                 <rect key="frame" x="10" y="10" width="748" height="994"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x2v-DO-uvO">
-                                        <rect key="frame" x="254" y="0.0" width="240" height="178"/>
+                                        <rect key="frame" x="254" y="0.0" width="240" height="125"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="178" id="Igi-ak-3kb"/>
+                                            <constraint firstAttribute="height" constant="125" id="Igi-ak-3kb"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="tdp-dN-aOT">
-                                        <rect key="frame" x="275" y="296.5" width="198" height="213"/>
+                                        <rect key="frame" x="275" y="259.5" width="198" height="219"/>
                                         <subviews>
                                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="C-17" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtw-gY-6Xr">
                                                 <rect key="frame" x="0.0" y="0.0" width="198" height="119.5"/>
@@ -148,7 +148,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VCh-fg-wdL">
-                                                <rect key="frame" x="0.0" y="170" width="198" height="43"/>
+                                                <rect key="frame" x="0.0" y="170" width="198" height="49"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="AMC C-17 Pilot" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y69-39-Tcg">
                                                         <rect key="frame" x="41" y="0.0" width="116" height="20.5"/>
@@ -157,7 +157,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="437/315 AW Pilot Sup" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yjo-tu-VoN">
-                                                        <rect key="frame" x="16" y="28.5" width="166" height="14.5"/>
+                                                        <rect key="frame" x="16" y="28.5" width="166" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                         <nil key="highlightedColor"/>
@@ -165,12 +165,9 @@
                                                 </subviews>
                                             </stackView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="213" id="J2X-Ef-NGy"/>
-                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cNc-Pe-nN0">
-                                        <rect key="frame" x="249" y="628.5" width="250" height="164"/>
+                                        <rect key="frame" x="249" y="612.5" width="250" height="164"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1m-YJ-rRp" customClass="BorderedButton" customModule="MQF" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="250" height="77"/>
