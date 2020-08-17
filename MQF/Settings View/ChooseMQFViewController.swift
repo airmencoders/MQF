@@ -83,6 +83,8 @@ class ChooseMQFViewController: FormViewController {
                 //Add row for each MQF available to the selected crew position
                 for option in DataManager.shared.availableMQFs {
                     if((option.crewPositions.contains(crewPosition) || option.crewPositions.contains("All")) && option.mds == mds){
+                        //print(DataManager.shared.availableMQFs)
+                        //print(option.name)
                         $0 <<< ListCheckRow<String>(option.name){ listRow in
                             listRow.title = option.name
                             listRow.selectableValue = option.filename
