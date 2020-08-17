@@ -1,8 +1,8 @@
 {
   "images" : [
     {
+      "filename" : "89372291-c02ebd00-d6b3-11ea-8cf0-b8a32be67c55.png",
       "idiom" : "universal",
-      "filename" : "1000w_q95-4.jpg",
       "scale" : "1x"
     },
     {
@@ -15,7 +15,7 @@
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }
