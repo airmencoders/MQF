@@ -52,6 +52,7 @@ class SettingsViewController: FormViewController {
                            row.value = MQFDefaults().string(forKey: MQFDefaults.crewPosition) ?? "C-17"
                        }
                        MQFDefaults().synchronize()
+                    self.resetSelectedMQF()
                    }.cellUpdate { cell, row in
                     row.options = DataManager.shared.availableCrewPositionsForMWS(mds: self.currentMWS)
                        if !row.isValid {
@@ -98,10 +99,13 @@ class SettingsViewController: FormViewController {
             }.onChange { row in // Handle changes
                 if(row.value != nil){
                     MQFDefaults().set(row.value, forKey: MQFDefaults.mds)
+                    let crewPosOps = DataManager.shared.availableCrewPositionsForMWS(mds: row.value ?? "C-17")
+                    crewPosRow.value = crewPosOps.first ?? "Pilot"
                     self.currentMWS = row.value ?? "C-17"
                 }else{
                     row.value = MQFDefaults().string(forKey: MQFDefaults.mds) ?? "C-17"
                 }
+                self.resetSelectedMQF()
                 crewPosRow.reload()
                 MQFDefaults().synchronize() // saves defaults
             }.cellUpdate { cell, row in
@@ -180,6 +184,15 @@ class SettingsViewController: FormViewController {
         let dictionary = Bundle.main.infoDictionary!
         let build = dictionary["CFBundleVersion"] as? String
         return build ?? "None"
+    }
+    /*
+     Resets the selected MQF to null
+     */
+    func resetSelectedMQF(){
+        MQFDefaults().removeObject(forKey: MQFDefaults.activePresetID)
+        MQFDefaults().removeObject(forKey: MQFDefaults.activeMode)
+        MQFDefaults().removeObject(forKey: MQFDefaults.pickerMode)
+        MQFDefaults().synchronize()
     }
     /*
      // MARK: - Navigation
