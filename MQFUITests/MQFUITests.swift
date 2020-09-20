@@ -83,7 +83,7 @@ class MQFUITests: XCTestCase {
         settingsNavigationBar.staticTexts["Settings"].tap()
         
         let tablesQuery = app.tables
-       let numQ =  tablesQuery.children(matching: .other)["NUMBER OF QUESTIONS IN QUIZ"].children(matching: .other)["NUMBER OF QUESTIONS IN QUIZ"]
+       let numQ =  tablesQuery.children(matching: .other)["NUMBER OF QUESTIONS IN STUDY MODE"].children(matching: .other)["NUMBER OF QUESTIONS IN STUDY MODE"]
         
         let settings = tablesQuery.children(matching: .other)["SETTINGS"].children(matching: .other)["SETTINGS"]
         let about = tablesQuery.children(matching: .other)["ABOUT"].children(matching: .other)["ABOUT"]

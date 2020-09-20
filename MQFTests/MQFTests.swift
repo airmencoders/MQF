@@ -142,6 +142,7 @@ class MQFTests: XCTestCase {
                 
                 if(question.responses.count > 0){
                 //Test that there is a correct answer
+                 //   print(question.question)
                 let selectedAnswer = question.responses[question.correctResponseIndex]
                    quizSession.submit(response: selectedAnswer, for: question)
                 XCTAssertEqual(selectedAnswer, question.correctResponse, "No correct response")

@@ -64,7 +64,7 @@ class SettingsViewController: FormViewController {
         form
         
             //Add section for number of questions in quiz
-            +++ SelectableSection<ListCheckRow<Int>>(header:"Number of Questions in Quiz",footer: "Applies to Study mode only.", selectionType: .singleSelection(enableDeselection: false)){
+            +++ SelectableSection<ListCheckRow<Int>>(header:"Number of Questions in Study Mode",footer: "Applies to Study mode only.", selectionType: .singleSelection(enableDeselection: false)){
                 
             //Options available (static)
             let options = [["title":"All", "number":0],["title":"Random 10", "number":10],["title":"Random 25", "number":25],["title":"Random 50", "number":50],["title":"Random 100", "number":100], ["title":"Random 200", "number":200]]
