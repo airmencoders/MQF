@@ -15,5 +15,5 @@ jobs:
         pod install
         
     - name: Test
-      run: xcodebuild -workspace MQF.xcworkspace -scheme "MQF"  -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.6' test
+      run: xcodebuild -workspace MQF.xcworkspace -scheme "MQF"  -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.7' test
 
