@@ -3,7 +3,7 @@
 
 
 def shared_pods
-  pod 'SwiftyJSON', '~> 4.0'
+  pod 'SwiftyJSON', '~> 5.0.1'
   pod 'UICircularProgressRing'
   pod 'Eureka'
 end
