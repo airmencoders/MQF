@@ -7,3 +7,4 @@ prebuild.log
 prebuild-archive.log
 archive-env
 post-build.log
+Pods/
