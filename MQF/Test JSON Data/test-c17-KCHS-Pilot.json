@@ -1,0 +1,19 @@
+{
+  "description": "A set of questions to test the software with",
+  "name": "KCHS Local Pilot",
+  "version": 1,
+  "questions": [
+    {
+      "question": "1. Example question? KCHS Pilot",
+      "type": "multiple_choice",
+      "correct_response": 0,
+      "ref": "Example TO",
+      "responses": [
+        "Example A",
+        "Example B",
+        "Example C",
+        "Example D"
+      ]
+    }
+  ]
+}
