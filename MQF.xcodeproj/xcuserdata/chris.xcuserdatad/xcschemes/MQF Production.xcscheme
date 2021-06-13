@@ -28,7 +28,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;exec &gt; &quot;/Users/chris/OneDrive/xCode Files/Development/MQF/post-build.log&quot; 2&gt;&amp;1&#10;dirsToCopy=(&quot;JSONData&quot;)&#10;for INPATTERN in &quot;${dirsToCopy[@]}&quot;; do&#10;    INDIR=&quot;/Users/chris/GitCode/airmencoders/mqf-generator/$INPATTERN/&quot;&#10;    OUTDIR=&quot;$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH&quot;&#10;    cp -R &quot;$INDIR&quot; &quot;$OUTDIR&quot;&#10;    echo $OUTDIR&#10;done&#10;&#10;&#10;&#10;">
+               scriptText = "# Type a script or drag a script file from your workspace to insert its path.&#10;exec &gt; &quot;/Users/chris/GitCode/airmencoders/MQF/post-build.log&quot; 2&gt;&amp;1&#10;dirsToCopy=(&quot;JSONData&quot;)&#10;for INPATTERN in &quot;${dirsToCopy[@]}&quot;; do&#10;    INDIR=&quot;/Users/chris/GitCode/airmencoders/mqf-generator/$INPATTERN/&quot;&#10;    OUTDIR=&quot;$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH&quot;&#10;    cp -R &quot;$INDIR&quot; &quot;$OUTDIR&quot;&#10;    echo $OUTDIR&#10;done&#10;&#10;&#10;&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
