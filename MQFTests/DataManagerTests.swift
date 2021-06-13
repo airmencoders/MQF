@@ -24,18 +24,18 @@ class DataManagerTests: XCTestCase {
 
     func testAvailableCrewPositions(){
         let cp = DataManager.shared.availableCrewPositions
-        XCTAssertEqual(cp, ["Pilot", "Loadmaster", "Boom"], "Wrong crew positions")
+        XCTAssertEqual(cp, ["Pilot", "Loadmaster"], "Wrong crew positions")
     }
     
     func testAvailableMDS(){
         let mds = DataManager.shared.availableMDS
         
-        XCTAssertEqual(mds, ["C-17", "KC-135"], "Wrong MDS")
+        XCTAssertEqual(mds, ["C-17"], "Wrong MDS")
     }
     
     func testGetPresets(){
         let presets = DataManager.shared.getPresets()
-        XCTAssertEqual(presets.count, 17, "Wrong number of presets")
+        XCTAssertEqual(presets.count, 16, "Wrong number of presets")
     }
     
     func testLoadBadPath(){

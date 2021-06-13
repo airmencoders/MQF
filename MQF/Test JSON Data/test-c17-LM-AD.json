@@ -1,0 +1,31 @@
+{
+  "description": "A set of questions to test the software with",
+  "name": "Loadmaster Airdrop",
+  "version": 1,
+  "questions": [
+    {
+      "question": "1. Example question? LM AD",
+      "type": "multiple_choice",
+      "correct_response": 0,
+      "ref": "Example TO",
+      "responses": [
+        "Example A",
+        "Example B",
+        "Example C",
+        "Example D"
+      ]
+    },
+    {
+      "question": "118. Unattended phones should be",
+      "type": "multiple_choice",
+      "correct_response": 3,
+      "ref": "Example TO",
+      "responses": [
+        "locked",
+        "unlocked",
+        "tested",
+        "secured"
+      ]
+    }
+  ]
+}

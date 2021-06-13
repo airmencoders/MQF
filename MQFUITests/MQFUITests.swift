@@ -58,7 +58,7 @@ class MQFUITests: XCTestCase {
         app.buttons["Study"].tap()
 
         let collectionViewsQuery = app.collectionViews
-        let takeoffMsnStaticText = collectionViewsQuery/*@START_MENU_TOKEN@*/.staticTexts["TAKEOFF, MSN"]/*[[".cells.staticTexts[\"TAKEOFF, MSN\"]",".staticTexts[\"TAKEOFF, MSN\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/
+        let takeoffMsnStaticText = collectionViewsQuery.staticTexts["Example A"]
         takeoffMsnStaticText.tap()
         takeoffMsnStaticText.tap()
         collectionViewsQuery.buttons["End Quiz"].tap()
