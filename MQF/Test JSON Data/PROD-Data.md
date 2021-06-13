@@ -6,4 +6,4 @@ To use production data you must build using the MQF Production scheme not the de
 In the MQF Production scheme there is a script that copies production data into the app
 
 
-All demo data was derived from publicly accessible data at AF E-Publishing
+All demo data was derived from publicly accessible data at AF E-Publishing or made up.
