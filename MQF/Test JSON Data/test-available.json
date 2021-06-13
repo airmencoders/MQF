@@ -1,0 +1,429 @@
+{
+  "presets": {
+    "1": {
+      "name": "Charleston AFB",
+      "id": "1",
+      "presets": [
+        {
+          "name": "437/315 AW Pilot",
+          "id": "KCHS-Pilot-Airland",
+          "mds": "C-17",
+          "positions": [
+            "Pilot"
+          ],
+          "mqfs": [
+            {
+              "testNum": 30,
+              "file": "test-c17-Pilot-1nov"
+            },
+            {
+              "testNum": 5,
+              "file": "test-c17-KCHS-Pilot"
+            }
+          ],
+          "testTotal": 35
+        },
+        {
+          "name": "437/315 AW IP",
+          "id": "KCHS-Pilot-IP",
+          "mds": "C-17",
+          "positions": [
+            "Pilot"
+          ],
+          "mqfs": [
+            {
+              "testNum": 30,
+              "file": "test-c17-Pilot-1nov"
+            },
+            {
+              "testNum": 5,
+              "file": "test-c17-Pilot-IP-1nov"
+            },
+            {
+              "testNum": 5,
+              "file": "test-c17-KCHS-Pilot"
+            }
+          ],
+          "testTotal": 40
+        },
+        {
+          "name": "437/315 AW Pilot Airdrop",
+          "id": "KCHS-Pilot-AD",
+          "mds": "C-17",
+          "positions": [
+            "Pilot"
+          ],
+          "mqfs": [
+            {
+              "testNum": 30,
+              "file": "test-c17-Pilot-1nov"
+            },
+            {
+              "testNum": 15,
+              "file": "test-c17-Pilot-AD-1nov"
+            },
+            {
+              "testNum": 5,
+              "file": "test-c17-KCHS-Pilot"
+            }
+          ],
+          "testTotal": 50
+        },
+        {
+          "name": "437/315 AW IP Airdrop",
+          "id": "KCHS-IP-AD",
+          "mds": "C-17",
+          "positions": [
+            "Pilot"
+          ],
+          "mqfs": [
+            {
+              "testNum": 30,
+              "file": "test-c17-Pilot-1nov"
+            },
+            {
+              "testNum": 15,
+              "file": "test-c17-Pilot-AD-1nov"
+            },
+            {
+              "testNum": 5,
+              "file": "test-c17-Pilot-IP-1nov"
+            },
+            {
+              "testNum": 5,
+              "file": "test-c17-KCHS-Pilot"
+            }
+          ],
+          "testTotal": 55
+        },
+        {
+          "name": "KCHS Loadmaster",
+          "id": "KCHS-LM",
+          "mds": "C-17",
+          "positions": [
+            "Loadmaster"
+          ],
+          "mqfs": [
+            {
+              "testNum": 25,
+              "file": "test-c17-LM-May18"
+            }
+          ],
+          "testTotal": 25
+        },
+        {
+          "name": "KCHS IL",
+          "id": "KCHS-IL",
+          "mds": "C-17",
+          "positions": [
+            "Loadmaster"
+          ],
+          "mqfs": [
+            {
+              "testNum": 25,
+              "file": "test-c17-LM-May18"
+            },
+            {
+              "testNum": 5,
+              "file": "test-c17-ILM-May18"
+            }
+          ],
+          "testTotal": 30
+        },
+        {
+          "name": "KCHS LM AD",
+          "id": "KCHS-LM-AD",
+          "mds": "C-17",
+          "positions": [
+            "Loadmaster"
+          ],
+          "mqfs": [
+            {
+              "testNum": 25,
+              "file": "test-c17-LM-May18"
+            },
+            {
+              "testNum": 5,
+              "file": "test-c17-LM-AD-May18"
+            }
+          ],
+          "testTotal": 30
+        },
+        {
+          "name": "KCHS IL AD",
+          "id": "KCHS-IL-AD",
+          "mds": "C-17",
+          "positions": [
+            "Loadmaster"
+          ],
+          "mqfs": [
+            {
+              "testNum": 25,
+              "file": "test-c17-LM-May18"
+            },
+            {
+              "testNum": 5,
+              "file": "test-c17-LM-AD-May18"
+            },
+            {
+              "testNum": 5,
+              "file": "test-c17-ILM-May18"
+            }
+          ],
+          "testTotal": 35
+        },
+        {
+          "name": "Airland Pilot",
+          "id": "MAF-Pilot-Airland",
+          "mds": "C-17",
+          "positions": [
+            "Pilot"
+          ],
+          "mqfs": [
+            {
+              "testNum": 30,
+              "file": "test-c17-Pilot-1nov"
+            }
+          ],
+          "testTotal": 30
+        }
+      ]
+    },
+    "3": {
+      "name": "MAF Wide",
+      "id": "3",
+      "presets": [
+        {
+          "name": "Airland IP",
+          "id": "MAF-Pilot-IP",
+          "mds": "C-17",
+          "positions": [
+            "Pilot"
+          ],
+          "mqfs": [
+            {
+              "testNum": 30,
+              "file": "test-c17-Pilot-1nov"
+            },
+            {
+              "testNum": 5,
+              "file": "test-c17-Pilot-IP-1nov"
+            }
+          ],
+          "testTotal": 35
+        },
+        {
+          "name": "Pilot Airdrop",
+          "id": "MAF-Pilot-AD",
+          "mds": "C-17",
+          "positions": [
+            "Pilot"
+          ],
+          "mqfs": [
+            {
+              "testNum": 15,
+              "file": "test-c17-Pilot-AD-1nov"
+            },
+            {
+              "testNum": 30,
+              "file": "test-c17-Pilot-1nov"
+            }
+          ],
+          "testTotal": 45
+        },
+        {
+          "name": "IP Airdrop",
+          "id": "MAF-IP-AD",
+          "mds": "C-17",
+          "positions": [
+            "Pilot"
+          ],
+          "mqfs": [
+            {
+              "testNum": 30,
+              "file": "test-c17-Pilot-1nov"
+            },
+            {
+              "testNum": 15,
+              "file": "test-c17-Pilot-AD-1nov"
+            },
+            {
+              "testNum": 5,
+              "file": "test-c17-Pilot-IP-1nov"
+            }
+          ],
+          "testTotal": 50
+        },
+        {
+          "name": "Airland Loadmaster",
+          "id": "MAF-LM",
+          "mds": "C-17",
+          "positions": [
+            "Loadmaster"
+          ],
+          "mqfs": [
+            {
+              "testNum": 25,
+              "file": "test-c17-LM-May18"
+            }
+          ],
+          "testTotal": 25
+        },
+        {
+          "name": "Airland IL",
+          "id": "MAF-IL",
+          "mds": "C-17",
+          "positions": [
+            "Loadmaster"
+          ],
+          "mqfs": [
+            {
+              "testNum": 5,
+              "file": "test-c17-ILM-May18"
+            },
+            {
+              "testNum": 25,
+              "file": "test-c17-LM-May18"
+            }
+          ],
+          "testTotal": 30
+        },
+        {
+          "name": "LM AD",
+          "id": "MAF-LM-AD",
+          "mds": "C-17",
+          "positions": [
+            "Loadmaster"
+          ],
+          "mqfs": [
+            {
+              "testNum": 5,
+              "file": "test-c17-LM-AD-May18"
+            },
+            {
+              "testNum": 25,
+              "file": "test-c17-LM-May18"
+            }
+          ],
+          "testTotal": 30
+        },
+        {
+          "name": "IL AD",
+          "id": "MAF-IL-AD",
+          "mds": "C-17",
+          "positions": [
+            "Loadmaster"
+          ],
+          "mqfs": [
+            {
+              "testNum": 5,
+              "file": "test-c17-ILM-May18"
+            },
+            {
+              "testNum": 5,
+              "file": "test-c17-LM-AD-May18"
+            },
+            {
+              "testNum": 25,
+              "file": "test-c17-LM-May18"
+            }
+          ],
+          "testTotal": 35
+        }
+      ]
+    }
+  },
+  "available": [
+    {
+      "name": "KCHS Local Pilot (2016)",
+      "version": 1,
+      "description": "A set of questions to test the software with",
+      "qual": "All",
+      "positions": [
+        "Pilot"
+      ],
+      "file": "test-c17-KCHS-Pilot",
+      "mds": "C-17",
+      "id": "4",
+      "expected": 1
+    },
+    {
+      "name": "Pilot All (Oct 19)",
+      "version": 1,
+      "description": "A set of questions to test the software with",
+      "qual": "All",
+      "positions": [
+        "Pilot"
+      ],
+      "file": "test-c17-Pilot-1nov",
+      "mds": "C-17",
+      "id": "8",
+      "expected": 1
+    },
+    {
+      "name": "Pilot IP (Oct 19)",
+      "version": 1,
+      "description": "A set of questions to test the software with",
+      "qual": "All",
+      "positions": [
+        "Pilot"
+      ],
+      "file": "test-c17-Pilot-IP-1nov",
+      "mds": "C-17",
+      "id": "9",
+      "expected": 1
+    },
+    {
+      "name": "Pilot AD (Oct 19)",
+      "version": 1,
+      "description": "A set of questions to test the software with",
+      "qual": "All",
+      "positions": [
+        "Pilot"
+      ],
+      "file": "test-c17-Pilot-AD-1nov",
+      "mds": "C-17",
+      "id": "10",
+      "expected": 1
+    },
+    {
+      "name": "Loadmaster All (May 18)",
+      "version": 1,
+      "description": "A set of questions to test the software with",
+      "qual": "All",
+      "positions": [
+        "Loadmaster"
+      ],
+      "file": "test-c17-LM-May18",
+      "mds": "C-17",
+      "id": "11",
+      "expected": 1
+    },
+    {
+      "name": "Loadmaster Airdrop (May 18)",
+      "version": 1,
+      "description": "A set of questions to test the software with",
+      "qual": "All",
+      "positions": [
+        "Loadmaster"
+      ],
+      "file": "test-c17-LM-AD-May18",
+      "mds": "C-17",
+      "id": "12",
+      "expected": 1
+    },
+    {
+      "name": "Instructor Loadmaster (May 18)",
+      "version": 1,
+      "description": "A set of questions to test the software with",
+      "qual": "All",
+      "positions": [
+        "Loadmaster"
+      ],
+      "file": "test-c17-ILM-May18",
+      "mds": "C-17",
+      "id": "13",
+      "expected": 1
+    }
+  ]
+}
