@@ -1162,7 +1162,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.17;
+				MARKETING_VERSION = 1.6.18;
 				PRODUCT_BUNDLE_IDENTIFIER = mil.airmencoders.mqf.efb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1185,7 +1185,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6.17;
+				MARKETING_VERSION = 1.6.18;
 				PRODUCT_BUNDLE_IDENTIFIER = mil.airmencoders.mqf.efb;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

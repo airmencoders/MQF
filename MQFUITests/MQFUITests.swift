@@ -49,10 +49,10 @@ class MQFUITests: XCTestCase {
 
 //
 //        XCUIApplication().children(matching: .window).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.children(matching: .other).element(boundBy: 1).children(matching: .other).element(boundBy: 0).children(matching: .other).element.tap()
-        
+        func testLaunchMQF(){
+
     }
     /// Only works if certain MQF is set
-    func testLaunchMQF(){
 
         let app = XCUIApplication()
         app.buttons["Study"].tap()
