@@ -54,7 +54,7 @@ class MQFUITests: XCTestCase {
     }
     /// Only works if certain MQF is set
 
-        let app = XCUIApplication()
+       // let app = XCUIApplication()
         app.buttons["Study"].tap()
 
         let collectionViewsQuery = app.collectionViews
