@@ -133,7 +133,7 @@ class SettingsViewController: FormViewController {
             
             
             //Adds section with information, disclaimers, and credits
-            +++ Section(header: "About", footer: "MQFs was #BuiltByAirmen for Airmen. We hope to make one small aspect of your life simpler and easier with this app. Please help us continue to improve this app by sending feedback to AirmenCoders@afwerx.af.mil.")
+            +++ Section(header: "About", footer: "MQFs was #BuiltByAirmen for Airmen. We hope to make one small aspect of your life simpler and easier with this app. Please help us continue to improve this app by sending feedback to AirmenCoders@us.af.mil.")
             
             <<< LabelRow() {
                 $0.title = "Version"
