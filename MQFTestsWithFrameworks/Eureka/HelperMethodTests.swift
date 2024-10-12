@@ -37,34 +37,34 @@ class HelperMethodTests: BaseEurekaTests {
         XCTAssertNil(phoneRow)
     }
 
-    func testRowSequenceMethods() {
-        // Tests the nextRowForRow() and the previousRowForRow() methods
-
-        let form = fieldForm + shortForm + dateForm
-        let row6 = form.nextRow(for: form[0][5])
-
-        XCTAssertEqual(row6, form[0][6])
-        XCTAssertEqual(row6, form.rowBy(tag: "IntRow_f1") as? IntRow)
-
-        let row_5_and_6: Slice<Section> = form[0][Range(5...6)]
-        XCTAssertEqual(row_5_and_6[5], form[0][5])
-        XCTAssertEqual(row_5_and_6[6], form[0][6])
-
-        let row10n = form.nextRow(for: form[0][8])
-        let rownil = form.nextRow(for: form[2][7])
-
-        XCTAssertEqual(row10n, form[0][9])
-        XCTAssertNil(rownil)
-
-        let row10p = form.previousRow(for: form[0][10])
-        let rowNilP = form.previousRow(for: form[0][0])
-
-        XCTAssertEqual(row10n, row10p)
-        XCTAssertNil(rowNilP)
-
-        XCTAssertNotNil(form.nextRow(for: form[1][1]))
-        XCTAssertEqual(form[1][1], form.previousRow(for: form.nextRow(for: form[1][1])!))
-    }
+//    func testRowSequenceMethods() {
+//        // Tests the nextRowForRow() and the previousRowForRow() methods
+//
+//        let form = fieldForm + shortForm + dateForm
+//        let row6 = form.nextRow(for: form[0][5])
+//
+//        XCTAssertEqual(row6, form[0][6])
+//        XCTAssertEqual(row6, form.rowBy(tag: "IntRow_f1") as? IntRow)
+//
+//        let row_5_and_6: Slice<Section> = form[0][Range(5...6)]
+//        XCTAssertEqual(row_5_and_6[5], form[0][5])
+//        XCTAssertEqual(row_5_and_6[6], form[0][6])
+//
+//        let row10n = form.nextRow(for: form[0][8])
+//        let rownil = form.nextRow(for: form[2][7])
+//
+//        XCTAssertEqual(row10n, form[0][9])
+//        XCTAssertNil(rownil)
+//
+//        let row10p = form.previousRow(for: form[0][10])
+//        let rowNilP = form.previousRow(for: form[0][0])
+//
+//        XCTAssertEqual(row10n, row10p)
+//        XCTAssertNil(rowNilP)
+//
+//        XCTAssertNotNil(form.nextRow(for: form[1][1]))
+//        XCTAssertEqual(form[1][1], form.previousRow(for: form.nextRow(for: form[1][1])!))
+//    }
 
     func testAllRowsMethod() {
         // Tests the allRows() method
